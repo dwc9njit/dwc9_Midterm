@@ -2,7 +2,7 @@
 from decimal import Decimal
 import pytest
 from calculator.calculation import Calculation
-from calculator.operations import add, subtract, multiply, divide
+from calculator.operations import add, subtract, multiply, divide, exponent
 
 
 def test_operation_add():
@@ -30,3 +30,8 @@ def test_divide_by_zero():
     with pytest.raises(ValueError, match="Cannot divide by zero"):
         calculation = Calculation(Decimal('10'), Decimal('0'), divide)
         calculation.perform()
+
+def test_operation_exponent():
+    '''Testing the exponential function'''
+    calculation = Calculation(Decimal('2'), Decimal('3'), exponent)
+    assert calculation.perform() == Decimal("8"), "Exponential operation failed"
