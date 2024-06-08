@@ -14,3 +14,5 @@ def divide(a: Decimal, b: Decimal) -> Decimal:
         raise ValueError("Cannot divide by zero")
     return a / b
 
+def exponent(base: Decimal, exp: Decimal) -> Decimal:
+    return base ** exp
