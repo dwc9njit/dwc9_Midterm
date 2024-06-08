@@ -16,3 +16,7 @@ def test_divide():
 def test_multiply():
     '''Test that multiply function works '''    
     assert Calculator.multiply(2,2) == 4
+
+def test_exponent():
+    '''Test that exponential function works'''
+    assert Calculator.exponent(2,3) == 8
