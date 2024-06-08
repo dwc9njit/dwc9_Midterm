@@ -16,7 +16,7 @@ as well as the functionality of the Calculation class that encapsulates these op
 from decimal import Decimal
 import pytest
 from calculator.calculation import Calculation
-from calculator.operations import add, subtract, multiply, divide
+from calculator.operations import add, subtract, multiply, divide, exponent
 
 # pytest.mark.parametrize decorator is used to parameterize a test function, enabling it to be called
 # with different sets of arguments. Here, it's used to test various scenarios of arithmetic operations
@@ -30,6 +30,8 @@ from calculator.operations import add, subtract, multiply, divide
     (Decimal('10.5'), Decimal('0.5'), subtract, Decimal('10.0')),  # Test subtraction with decimals
     (Decimal('10.5'), Decimal('2'), multiply, Decimal('21.0')),  # Test multiplication with decimals
     (Decimal('10'), Decimal('0.5'), divide, Decimal('20')),  # Test division with decimals
+    (Decimal('2'), Decimal('3'), exponent, Decimal('8')),  # Test exponentiation
+    (Decimal('5'), Decimal('2'), exponent, Decimal('25')),  # Test exponentiation
 ])
 def test_calculation_operations(a, b, operation, expected):
     """
