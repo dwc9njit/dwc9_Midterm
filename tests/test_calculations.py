@@ -10,8 +10,8 @@ import pytest
 from calculator.calculation import Calculation
 from calculator.calculations import Calculations
 
-# Import arithmetic operation functions (add and subtract) to be tested.
-from calculator.operations import add, subtract
+# Import arithmetic operation functions (add, subtract, multiply, divide, exponent) to be tested.
+from calculator.operations import add, subtract, multiply, divide, exponent
 
 # pytest.fixture is a decorator that marks a function as a fixture,
 # a setup mechanism used by pytest to initialize a test environment.
@@ -26,6 +26,9 @@ def setup_calculations():
     # the history functionality is working as expected.
     Calculations.add_calculation(Calculation(Decimal('10'), Decimal('5'), add))
     Calculations.add_calculation(Calculation(Decimal('20'), Decimal('3'), subtract))
+    Calculations.add_calculation(Calculation(Decimal('2'), Decimal('3'), multiply))
+    Calculations.add_calculation(Calculation(Decimal('10'), Decimal('2'), divide))
+    Calculations.add_calculation(Calculation(Decimal('2'), Decimal('3'), exponent))
 
 def test_add_calculation(setup_calculations):
     """Test adding a calculation to the history."""
@@ -41,9 +44,9 @@ def test_get_history(setup_calculations):
     """Test retrieving the entire calculation history."""
     # Retrieve the calculation history.
     history = Calculations.get_history()
-    # Assert that the history contains exactly 2 calculations,
+    # Assert that the history contains exactly 5 calculations,
     # which matches our setup in the setup_calculations fixture.
-    assert len(history) == 2, "History does not contain the expected number of calculations"
+    assert len(history) == 5, "History does not contain the expected number of calculations"
 
 def test_clear_history(setup_calculations):
     """Test clearing the entire calculation history."""
@@ -59,7 +62,10 @@ def test_get_latest(setup_calculations):
     # Assert that the latest calculation matches the expected values,
     # specifically the operands and operation used in the last added calculation
     # in the setup_calculations fixture.
-    assert latest.a == Decimal('20') and latest.b == Decimal('3'), "Did not get the correct latest calculation"
+    assert latest.a == Decimal('2'), "The operand a is incorrect"
+    assert latest.b == Decimal('3'), "The operand b is incorrect"
+    assert latest.operation.__name__ == exponent.__name__, "The operation is incorrect"
+
 
 def test_find_by_operation(setup_calculations):
     """Test finding calculations in the history by operation type."""
@@ -67,10 +73,32 @@ def test_find_by_operation(setup_calculations):
     add_operations = Calculations.find_by_operation("add")
     # Assert that exactly one calculation with the 'add' operation was found.
     assert len(add_operations) == 1, "Did not find the correct number of calculations with add operation"
+    # Check that the found operation is indeed 'add'
+    assert add_operations[0].operation.__name__ == add.__name__, "Found operation is not 'add'"
     # Find all calculations with the 'subtract' operation.
     subtract_operations = Calculations.find_by_operation("subtract")
     # Assert that exactly one calculation with the 'subtract' operation was found.
     assert len(subtract_operations) == 1, "Did not find the correct number of calculations with subtract operation"
+    # Check that the found operation is indeed 'subtract'
+    assert subtract_operations[0].operation.__name__ == subtract.__name__, "Found operation is not 'subtract'"
+    # Find all calculations with the 'multiply' operation.
+    multiply_operations = Calculations.find_by_operation("multiply")
+    # Assert that exactly one calculation with the 'multiply' operation was found.
+    assert len(multiply_operations) == 1, "Did not find the correct number of calculations with multiply operation"
+    # Check that the found operation is indeed 'multiply'
+    assert multiply_operations[0].operation.__name__ == multiply.__name__, "Found operation is not 'multiply'"
+    # Find all calculations with the 'divide' operation.
+    divide_operations = Calculations.find_by_operation("divide")
+    # Assert that exactly one calculation with the 'divide' operation was found.
+    assert len(divide_operations) == 1, "Did not find the correct number of calculations with divide operation"
+    # Check that the found operation is indeed 'divide'
+    assert divide_operations[0].operation.__name__ == divide.__name__, "Found operation is not 'divide'"
+    # Find all calculations with the 'exponent' operation.
+    exponent_operations = Calculations.find_by_operation("exponent")
+    # Assert that exactly one calculation with the 'exponent' operation was found.
+    assert len(exponent_operations) == 1, "Did not find the correct number of calculations with exponent operation"
+    # Check that the found operation is indeed 'exponent'
+    assert exponent_operations[0].operation.__name__ == exponent.__name__, "Found operation is not 'exponent'"
 
 def test_get_latest_with_empty_history():
     """Test getting the latest calculation when the history is empty."""
