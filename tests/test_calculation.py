@@ -2,7 +2,7 @@
 This module contains tests for the calculator operations and Calculation class.
 
 The tests are designed to verify the correctness of basic arithmetic operations
-(addition, subtraction, multiplication, division) implemented in the calculator.operations module,
+(addition, subtraction, multiplication, division, exponentiation) implemented in the calculator.operations module,
 as well as the functionality of the Calculation class that encapsulates these operations.
 """
 
@@ -16,39 +16,25 @@ as well as the functionality of the Calculation class that encapsulates these op
 from decimal import Decimal
 import pytest
 from calculator.calculation import Calculation
-from calculator.operations import add, subtract, multiply, divide, exponent
+from calculator.operations import add, divide
 
-# pytest.mark.parametrize decorator is used to parameterize a test function, enabling it to be called
-# with different sets of arguments. Here, it's used to test various scenarios of arithmetic operations
-# with both integer and decimal operands to ensure the operations work correctly under different conditions.
-@pytest.mark.parametrize("a, b, operation, expected", [
-    (Decimal('10'), Decimal('5'), add, Decimal('15')),  # Test addition
-    (Decimal('10'), Decimal('5'), subtract, Decimal('5')),  # Test subtraction
-    (Decimal('10'), Decimal('5'), multiply, Decimal('50')),  # Test multiplication
-    (Decimal('10'), Decimal('2'), divide, Decimal('5')),  # Test division
-    (Decimal('10.5'), Decimal('0.5'), add, Decimal('11.0')),  # Test addition with decimals
-    (Decimal('10.5'), Decimal('0.5'), subtract, Decimal('10.0')),  # Test subtraction with decimals
-    (Decimal('10.5'), Decimal('2'), multiply, Decimal('21.0')),  # Test multiplication with decimals
-    (Decimal('10'), Decimal('0.5'), divide, Decimal('20')),  # Test division with decimals
-    (Decimal('2'), Decimal('3'), exponent, Decimal('8')),  # Test exponentiation
-    (Decimal('5'), Decimal('2'), exponent, Decimal('25')),  # Test exponentiation
-])
-def test_calculation_operations(a, b, operation, expected):
+
+def test_calculation_operations(operand_a, operand_b, operation_func, expected):
     """
     Test calculation operations with various scenarios.
     
     This test ensures that the Calculation class correctly performs the arithmetic operation
-    (specified by the 'operation' parameter) on two Decimal operands ('a' and 'b'),
+    (specified by the 'operation_func' parameter) on two Decimal operands ('operand_a' and 'operand_b'),
     and that the result matches the expected outcome.
     
     Parameters:
-        a (Decimal): The first operand in the calculation.
-        b (Decimal): The second operand in the calculation.
-        operation (function): The arithmetic operation to perform.
+        operand_a (Decimal): The first operand in the calculation.
+        operand_b (Decimal): The second operand in the calculation.
+        operation_func (function): The arithmetic operation to perform.
         expected (Decimal): The expected result of the operation.
     """
-    calc = Calculation(a, b, operation)  # Create a Calculation instance with the provided operands and operation.
-    assert calc.perform() == expected, f"Failed {operation.__name__} operation with {a} and {b}"  # Perform the operation and assert that the result matches the expected value.
+    calc = Calculation(operand_a, operand_b, operation_func)  # Create a Calculation instance with the provided operands and operation.
+    assert calc.perform() == expected, f"Failed {operation_func.__name__} operation with {operand_a} and {operand_b}"  # Perform the operation and assert that the result matches the expected value.
 
 def test_calculation_repr():
     """
