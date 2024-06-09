@@ -1,6 +1,6 @@
-## Homework 3
+# Homework 3
 
-# 3 Levels Of Homework 
+## 3 Levels Of Homework 
 
 - Cloned the git repository on the calculator.
 - Created a new directory with all the necessary files to run the calculator app.
@@ -11,4 +11,11 @@
 - Added all calculations and test calculations from the original code to include add, subtract, multiply, divide, and exponent.
 - Updated all the commits for the new code put into the files.
 - Created a second branch to work on Parameterizing the testing functions.
-- Push both branches to my GitHub repository.    
+- Push both branches to my GitHub repository. 
+
+# Homework 4 
+
+## All changes to files for faker are in my version2 branch.
+
+- Both branches for each homework are executing well and passing all tests.
+- When necessary I will merge the branches. 
