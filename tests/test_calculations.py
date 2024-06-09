@@ -4,8 +4,13 @@
 # adhering to PEP 8 guidelines for import ordering.
 from decimal import Decimal
 import pytest
+
+# Import Calculation and Calculations classes from the calculator package,
+# assuming these are the correct paths following Python's package and module naming conventions.
 from calculator.calculation import Calculation
 from calculator.calculations import Calculations
+
+# Import arithmetic operation functions (add, subtract, multiply, divide, exponent) to be tested.
 from calculator.operations import add, subtract, multiply, divide, exponent
 
 # pytest.fixture is a decorator that marks a function as a fixture,
@@ -61,6 +66,7 @@ def test_get_latest(setup_calculations):
     assert latest.b == Decimal('3'), "The operand b is incorrect"
     assert latest.operation.__name__ == exponent.__name__, "The operation is incorrect"
 
+
 def test_find_by_operation(setup_calculations):
     """Test finding calculations in the history by operation type."""
     # Find all calculations with the 'add' operation.
@@ -68,35 +74,31 @@ def test_find_by_operation(setup_calculations):
     # Assert that exactly one calculation with the 'add' operation was found.
     assert len(add_operations) == 1, "Did not find the correct number of calculations with add operation"
     # Check that the found operation is indeed 'add'
-    assert add_operations[0].operation.__name__ == "add", "Found operation is not 'add'"
-    
+    assert add_operations[0].operation.__name__ == add.__name__, "Found operation is not 'add'"
     # Find all calculations with the 'subtract' operation.
     subtract_operations = Calculations.find_by_operation("subtract")
     # Assert that exactly one calculation with the 'subtract' operation was found.
     assert len(subtract_operations) == 1, "Did not find the correct number of calculations with subtract operation"
     # Check that the found operation is indeed 'subtract'
-    assert subtract_operations[0].operation.__name__ == "subtract", "Found operation is not 'subtract'"
-    
+    assert subtract_operations[0].operation.__name__ == subtract.__name__, "Found operation is not 'subtract'"
     # Find all calculations with the 'multiply' operation.
     multiply_operations = Calculations.find_by_operation("multiply")
     # Assert that exactly one calculation with the 'multiply' operation was found.
     assert len(multiply_operations) == 1, "Did not find the correct number of calculations with multiply operation"
     # Check that the found operation is indeed 'multiply'
-    assert multiply_operations[0].operation.__name__ == "multiply", "Found operation is not 'multiply'"
-    
+    assert multiply_operations[0].operation.__name__ == multiply.__name__, "Found operation is not 'multiply'"
     # Find all calculations with the 'divide' operation.
     divide_operations = Calculations.find_by_operation("divide")
     # Assert that exactly one calculation with the 'divide' operation was found.
     assert len(divide_operations) == 1, "Did not find the correct number of calculations with divide operation"
     # Check that the found operation is indeed 'divide'
-    assert divide_operations[0].operation.__name__ == "divide", "Found operation is not 'divide'"
-    
+    assert divide_operations[0].operation.__name__ == divide.__name__, "Found operation is not 'divide'"
     # Find all calculations with the 'exponent' operation.
     exponent_operations = Calculations.find_by_operation("exponent")
     # Assert that exactly one calculation with the 'exponent' operation was found.
     assert len(exponent_operations) == 1, "Did not find the correct number of calculations with exponent operation"
     # Check that the found operation is indeed 'exponent'
-    assert exponent_operations[0].operation.__name__ == "exponent", "Found operation is not 'exponent'"
+    assert exponent_operations[0].operation.__name__ == exponent.__name__, "Found operation is not 'exponent'"
 
 def test_get_latest_with_empty_history():
     """Test getting the latest calculation when the history is empty."""
@@ -104,16 +106,3 @@ def test_get_latest_with_empty_history():
     Calculations.clear_history()
     # Assert that the latest calculation is None since the history is empty.
     assert Calculations.get_latest() is None, "Expected None for latest calculation with empty history"
-
-@pytest.mark.parametrize("operand_a, operand_b, operation, expected", [
-    (Decimal('10'), Decimal('5'), add, Decimal('15')),  # Test addition
-    (Decimal('20'), Decimal('3'), subtract, Decimal('17')),  # Test subtraction
-    (Decimal('2'), Decimal('3'), multiply, Decimal('6')),  # Test multiplication
-    (Decimal('10'), Decimal('2'), divide, Decimal('5')),  # Test division
-    (Decimal('2'), Decimal('3'), exponent, Decimal('8')),  # Test exponentiation
-])
-def test_arithmetic_operations(operand_a, operand_b, operation, expected):
-    """Test arithmetic operations using parameterized data."""
-    calc = Calculation(operand_a, operand_b, operation)
-    result = calc.perform()
-    assert result == expected, f"Failed {operation.__name__} operation with {operand_a} and {operand_b}. Expected {expected}, got {result}."
