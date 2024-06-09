@@ -11,4 +11,10 @@
 - Added all calculations and test calculations from the original code to include add, subtract, multiply, divide, and exponent.
 - Updated all the commits for the new code put into the files.
 - Created a second branch to work on Parameterizing the testing functions.
-- Push both branches to my GitHub repository. 
+- Push both branches to my GitHub repository.
+
+## Homewrok 4
+# All changes to files for faker are in my branch version2.
+
+- Both branches are executing well and passing all test.
+- When necessary I will merge them. 
