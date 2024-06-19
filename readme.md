@@ -13,8 +13,18 @@
 - Created a second branch to work on Parameterizing the testing functions.
 - Push both branches to my GitHub repository.
 
-# Homewrok 4
+# Homework 4
 ## All changes to files for faker are in my branch version2.
 
 - Both branches are executing well and passing all test.
 - When necessary I will merge them. 
+
+# Homework # 5
+
+## Changes to meet Homework # 5 Requirements branch "version4'
+- Integrated concepts for add, subtract, multiply, divide, and exponential function.
+- Implemented the meni command alongside the calculator.
+- typing menu display all commands.
+- I acheived 95% coverage.
+- Difficulties implemneting plugins. 
+
