@@ -1,38 +1,75 @@
-"""
-This module contains tests for the calculate_and_print function from the main module.
+"""Tests for the main functionality of the calculator application."""
 
-The tests verify the correctness of the calculate_and_print function using various scenarios,
-including valid operations, division by zero, unknown operations, and invalid number inputs.
-"""
-
-from main import calculate_and_print  # Ensure this import matches your project structure
+import sys
+import pytest
+from main import main, calculate_and_print, App
 
 def test_calculate_and_print(capsys):
-    """
-    Test the calculate_and_print function with various scenarios.
-
-    Args:
-        capsys (CaptureFixture): Pytest fixture to capture system output.
-
-    The test cases cover:
-        - Valid operations (add, subtract, multiply, divide, exponent)
-        - Division by zero
-        - Unknown operations
-        - Invalid number inputs
-    """
+    """Test the calculate_and_print function with various inputs and expected outputs."""
     test_cases = [
         ("5", "3", 'add', "The result of 5 add 3 is equal to 8"),
         ("10", "2", 'subtract', "The result of 10 subtract 2 is equal to 8"),
         ("4", "5", 'multiply', "The result of 4 multiply 5 is equal to 20"),
         ("20", "4", 'divide', "The result of 20 divide 4 is equal to 5"),
-        ("1", "0", 'divide', "An error occurred: Cannot divide by zero"),  # Updated to match the actual error message
-        ("2", "3", 'exponent', "The result of 2 exponent 3 is equal to 8"),  # Test for exponentiation
-        ("9", "3", 'unknown', "Unknown operation: unknown"),  # Test for unknown operation
-        ("a", "3", 'add', "Invalid number input: a or 3 is not a valid number."),  # Testing invalid number input
-        ("5", "b", 'subtract', "Invalid number input: 5 or b is not a valid number.")  # Testing another invalid number input
+        ("1", "0", 'divide', "An error occurred: Cannot divide by zero"),
+        ("2", "3", 'exponent', "The result of 2 exponent 3 is equal to 8"),
+        ("9", "3", 'unknown', "Unknown operation: unknown"),
+        ("a", "3", 'add', "Invalid number input: a or 3 is not a valid number."),
+        ("5", "b", 'subtract', "Invalid number input: 5 or b is not a valid number.")
     ]
 
     for a_string, b_string, operation_string, expected_string in test_cases:
         calculate_and_print(a_string, b_string, operation_string)
         captured = capsys.readouterr()
-        assert captured.out.strip() == expected_string
+        assert captured.out.strip() == expected_string, f"Failed on {a_string} {operation_string} {b_string}"
+
+def test_main_no_arguments(monkeypatch, capsys):
+    """Test the main function behavior with no arguments provided."""
+    monkeypatch.setattr(sys, 'argv', ['main.py'])
+    with pytest.raises(SystemExit) as e:
+        main()
+    captured = capsys.readouterr()
+    expected_output = "Usage: python main.py <number1> <number2> <operation>\nOr run without arguments to enter command mode."
+    assert captured.out.strip() == expected_output
+    assert e.type == SystemExit
+    assert e.value.code == 1
+
+def test_main_with_arguments(monkeypatch, capsys):
+    """Test the main function behavior with valid arguments provided."""
+    monkeypatch.setattr(sys, 'argv', ['main.py', '5', '3', 'add'])
+    main()
+    captured = capsys.readouterr()
+    assert captured.out.strip() == "The result of 5 add 3 is equal to 8"
+
+def test_main_invalid_operation(monkeypatch, capsys):
+    """Test the main function behavior with an invalid operation provided."""
+    monkeypatch.setattr(sys, 'argv', ['main.py', '5', '3', 'unknown'])
+    main()
+    captured = capsys.readouterr()
+    assert captured.out.strip() == "Unknown operation: unknown"
+
+def test_main_invalid_number(monkeypatch, capsys):
+    """Test the main function behavior with invalid number input provided."""
+    monkeypatch.setattr(sys, 'argv', ['main.py', 'a', '3', 'add'])
+    main()
+    captured = capsys.readouterr()
+    assert captured.out.strip() == "Invalid number input: a or 3 is not a valid number."
+
+def test_main_division_by_zero(monkeypatch, capsys):
+    """Test the main function behavior when division by zero is attempted."""
+    monkeypatch.setattr(sys, 'argv', ['main.py', '10', '0', 'divide'])
+    main()
+    captured = capsys.readouterr()
+    assert captured.out.strip() == "An error occurred: Cannot divide by zero"
+
+def test_app_exit_command(monkeypatch, capsys):
+    """Test the REPL exit command in the App class."""
+    inputs = iter(['exit'])
+    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
+
+    app = App()
+    with pytest.raises(SystemExit):
+        app.start()
+    
+    captured = capsys.readouterr()
+    assert "Exiting the application." in captured.out
