@@ -1,3 +1,7 @@
+"""
+Calculator module that provides basic arithmetic operations.
+"""
+
 from decimal import Decimal
 from typing import Callable
 from .calculations import Calculations
@@ -5,15 +9,18 @@ from .calculation import Calculation
 from .operations import add, subtract, multiply, divide, exponent
 
 class Calculator:
+    """A simple calculator class to perform basic arithmetic operations."""
+
     @staticmethod
-    def _perform_operation(a: Decimal, b: Decimal, operation: Callable[[Decimal, Decimal], Decimal]) -> Decimal:
+    def _perform_operation(operand_a: Decimal, operand_b: Decimal, operation: Callable[[Decimal, Decimal], Decimal]) -> Decimal:
         """Create and perform a calculation, then return the result."""
         try:
-            if operation == Calculator.divide and b == 0:
+            if operation == Calculator.divide and operand_b == 0:
                 raise ZeroDivisionError("Cannot divide by zero")
-            calculation = Calculation(operation, a, b)
+            calculation = Calculation(operation, operand_a, operand_b)
+            result = calculation.perform_operation()
             Calculations.add_calculation(calculation)
-            return calculation.perform_operation()
+            return result
         except ZeroDivisionError as e:
             raise e
         except Exception as e:
@@ -21,21 +28,31 @@ class Calculator:
             return Decimal('0')
 
     @staticmethod
-    def add(a: Decimal, b: Decimal) -> Decimal:
-        return Calculator._perform_operation(a, b, add)
+    def perform_operation(operand_a: Decimal, operand_b: Decimal, operation: Callable[[Decimal, Decimal], Decimal]) -> Decimal:
+        """Public method to perform an operation."""
+        return Calculator._perform_operation(operand_a, operand_b, operation)
 
     @staticmethod
-    def subtract(a: Decimal, b: Decimal) -> Decimal:
-        return Calculator._perform_operation(a, b, subtract)
+    def add(operand_a: Decimal, operand_b: Decimal) -> Decimal:
+        """Perform addition."""
+        return Calculator.perform_operation(operand_a, operand_b, add)
 
     @staticmethod
-    def multiply(a: Decimal, b: Decimal) -> Decimal:
-        return Calculator._perform_operation(a, b, multiply)
+    def subtract(operand_a: Decimal, operand_b: Decimal) -> Decimal:
+        """Perform subtraction."""
+        return Calculator.perform_operation(operand_a, operand_b, subtract)
 
     @staticmethod
-    def divide(a: Decimal, b: Decimal) -> Decimal:
-        return Calculator._perform_operation(a, b, divide)
+    def multiply(operand_a: Decimal, operand_b: Decimal) -> Decimal:
+        """Perform multiplication."""
+        return Calculator.perform_operation(operand_a, operand_b, multiply)
+
+    @staticmethod
+    def divide(operand_a: Decimal, operand_b: Decimal) -> Decimal:
+        """Perform division."""
+        return Calculator.perform_operation(operand_a, operand_b, divide)
     
     @staticmethod
-    def exponent(a: Decimal, b: Decimal) -> Decimal:
-        return Calculator._perform_operation(a, b, exponent)
+    def exponent(operand_a: Decimal, operand_b: Decimal) -> Decimal:
+        """Perform exponentiation."""
+        return Calculator.perform_operation(operand_a, operand_b, exponent)

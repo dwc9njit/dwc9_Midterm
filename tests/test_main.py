@@ -1,3 +1,7 @@
+"""
+Unit tests for the main functionality of the calculator application.
+"""
+
 import sys
 import pytest
 from main import main, calculate_and_print, App

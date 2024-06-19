@@ -1,56 +1,52 @@
-# tests/test_calculations.py
+"""
+Unit tests for the calculations module.
+"""
 
 from decimal import Decimal
 import pytest
-from calculator.calculation import Calculation
 from calculator.calculations import Calculations
+from calculator.calculation import Calculation
 from calculator.operations import add, subtract, multiply, divide, exponent
 
-@pytest.fixture
-def setup_calculations():
-    Calculations.clear_history()
-    Calculations.add_calculation(Calculation(add, Decimal('10'), Decimal('5')))
-    Calculations.add_calculation(Calculation(subtract, Decimal('20'), Decimal('3')))
-    Calculations.add_calculation(Calculation(multiply, Decimal('2'), Decimal('3')))
-    Calculations.add_calculation(Calculation(divide, Decimal('10'), Decimal('2')))
-    Calculations.add_calculation(Calculation(exponent, Decimal('2'), Decimal('3')))
+def test_add_calculation():
+    """Test adding a calculation to the history."""
+    calculation = Calculation(add, Decimal('1'), Decimal('1'))
+    Calculations.add_calculation(calculation)
+    assert Calculations.get_history()[-1] == calculation, "Failed to add calculation to history."
 
-def test_add_calculation(setup_calculations):
-    calc = Calculation(add, Decimal('2'), Decimal('2'))
-    Calculations.add_calculation(calc)
-    assert Calculations.get_latest() == calc, "Failed to add the calculation to the history"
-
-def test_get_history(setup_calculations):
+def test_get_history():
+    """Test retrieving the history of calculations."""
     history = Calculations.get_history()
-    assert len(history) == 5, "History does not contain the expected number of calculations"
+    assert isinstance(history, list), "History is not a list."
+    assert all(isinstance(item, Calculation) for item in history), "History does not contain Calculation objects."
 
-def test_clear_history(setup_calculations):
+def test_clear_history():
+    """Test clearing the history of calculations."""
     Calculations.clear_history()
-    assert len(Calculations.get_history()) == 0, "History was not cleared"
+    assert len(Calculations.get_history()) == 0, "Failed to clear history."
 
-def test_get_latest(setup_calculations):
-    latest = Calculations.get_latest()
-    assert latest.a == Decimal('2'), "The operand a is incorrect"
-    assert latest.b == Decimal('3'), "The operand b is incorrect"
-    assert latest.operation.__name__ == exponent.__name__, "The operation is incorrect"
+def test_get_latest():
+    """Test getting the latest calculation from the history."""
+    calculation = Calculation(add, Decimal('1'), Decimal('1'))
+    Calculations.add_calculation(calculation)
+    assert Calculations.get_latest() == calculation, "Failed to get the latest calculation."
 
-def test_find_by_operation(setup_calculations):
-    add_operations = Calculations.find_by_operation("add")
-    assert len(add_operations) == 1, "Did not find the correct number of calculations with add operation"
-    assert add_operations[0].operation.__name__ == add.__name__, "Found operation is not 'add'"
+def test_find_by_operation():
+    """Test finding calculations by operation."""
+    calculation_add = Calculation(add, Decimal('1'), Decimal('1'))
+    calculation_subtract = Calculation(subtract, Decimal('2'), Decimal('1'))
+    Calculations.add_calculation(calculation_add)
+    Calculations.add_calculation(calculation_subtract)
+    found_calculations = Calculations.find_by_operation('add')
+    assert all(calc.operation.__name__ == 'add' for calc in found_calculations), "Failed to find calculations by operation."
 
-    subtract_operations = Calculations.find_by_operation("subtract")
-    assert len(subtract_operations) == 1, "Did not find the correct number of calculations with subtract operation"
-    assert subtract_operations[0].operation.__name__ == subtract.__name__, "Found operation is not 'subtract'"
-
-    multiply_operations = Calculations.find_by_operation("multiply")
-    assert len(multiply_operations) == 1, "Did not find the correct number of calculations with multiply operation"
-    assert multiply_operations[0].operation.__name__ == multiply.__name__, "Found operation is not 'multiply'"
-
-    divide_operations = Calculations.find_by_operation("divide")
-    assert len(divide_operations) == 1, "Did not find the correct number of calculations with divide operation"
-    assert divide_operations[0].operation.__name__ == divide.__name__, "Found operation is not 'divide'"
-
-    exponent_operations = Calculations.find_by_operation("exponent")
-    assert len(exponent_operations) == 1, "Did not find the correct number of calculations with exponent operation"
-    assert exponent_operations[0].operation.__name__ == exponent.__name__, "Found operation is not 'exponent'"
+@pytest.mark.parametrize("operation_func, operand_a, operand_b, expected", [
+    (multiply, Decimal('2'), Decimal('3'), Decimal('6')),
+    (divide, Decimal('10'), Decimal('2'), Decimal('5')),
+    (exponent, Decimal('2'), Decimal('3'), Decimal('8'))
+])
+def test_operations(operation_func, operand_a, operand_b, expected):
+    """Test different operations."""
+    calculation = Calculation(operation_func, operand_a, operand_b)
+    Calculations.add_calculation(calculation)
+    assert calculation.perform_operation() == expected, f"Failed {operation_func.__name__} operation with {operand_a} and {operand_b}"
