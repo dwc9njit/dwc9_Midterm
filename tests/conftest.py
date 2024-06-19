@@ -1,9 +1,9 @@
-# conftest.py
 """
 This module sets up fixtures and configurations for pytest.
 """
 
-from decimal import Decimal
+from decimal import Decimal  # Corrected import order
+import pytest
 from faker import Faker
 from calculator.operations import add, subtract, multiply, divide, exponent
 
@@ -69,3 +69,22 @@ def pytest_generate_tests(metafunc):
             metafunc.parametrize("operand_a, operand_b, operation_name, expected", modified_parameters)
         else:
             metafunc.parametrize("operand_a, operand_b, operation_func, expected", modified_parameters)
+
+@pytest.fixture
+def sample_fixture():
+    """
+    A sample fixture for testing purposes.
+    
+    Returns:
+        str: A sample string data.
+    """
+    return "sample data"
+
+def test_sample_fixture(sample_fixture):
+    """
+    Test the sample_fixture to ensure it returns the expected data.
+
+    Args:
+        sample_fixture (str): The sample data fixture.
+    """
+    assert sample_fixture == "sample data"
