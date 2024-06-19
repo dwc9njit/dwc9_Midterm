@@ -1,7 +1,7 @@
 import sys
-from calculator import Calculator
 from decimal import Decimal, InvalidOperation
-from calculator.commands import CommandHandler, MenuCommand, GreetCommand, GoodbyeCommand, ExitCommand
+from calculator.operations import Calculator
+from commands import CommandHandler, MenuCommand, GreetCommand, GoodbyeCommand, ExitCommand
 
 def calculate_and_print(a_string, b_string, operation_string):
     try:
@@ -47,21 +47,26 @@ class App:
         print("Type 'exit' to exit.")
         while self.running:
             try:
+                print("Waiting for user input...")
                 user_input = input(">>> ").strip()
                 if user_input == "exit":
                     self.running = False
                     print("Exiting the application.")
                     raise SystemExit(0)  # Raise SystemExit with a status code
+                print(f"Executing command: {user_input}")
                 self.command_handler.execute_command(user_input)
             except Exception as e:
                 print(f"An error occurred: {e}")
 
+
 def main():
     if len(sys.argv) == 1:
-        # No arguments provided, print usage message and exit
+        # No arguments provided, print usage message and enter command mode
+        print("No arguments provided. Entering command mode.")
         print("Usage: python main.py <number1> <number2> <operation>")
         print("Or run without arguments to enter command mode.")
-        sys.exit(1)  # Exit with status 1 to indicate an error
+        app = App()
+        app.start()
     elif len(sys.argv) == 4:
         # Calculation mode
         _, a, b, operation = sys.argv
@@ -70,6 +75,7 @@ def main():
         print("Usage: python main.py <number1> <number2> <operation>")
         print("Or run without arguments to enter command mode.")
         sys.exit(1)  # Exit with status 1 to indicate an error
+
 
 if __name__ == '__main__':
     main()

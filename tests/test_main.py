@@ -1,5 +1,3 @@
-"""Tests for the main functionality of the calculator application."""
-
 import sys
 import pytest
 from main import main, calculate_and_print, App
@@ -23,16 +21,28 @@ def test_calculate_and_print(capsys):
         captured = capsys.readouterr()
         assert captured.out.strip() == expected_string, f"Failed on {a_string} {operation_string} {b_string}"
 
+@pytest.mark.timeout(10)
 def test_main_no_arguments(monkeypatch, capsys):
     """Test the main function behavior with no arguments provided."""
+    
+    # Replace sys.argv to simulate no arguments
     monkeypatch.setattr(sys, 'argv', ['main.py'])
+    
+    # Mock input to simulate the 'exit' command
+    inputs = iter(['exit'])
+    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
+    
     with pytest.raises(SystemExit) as e:
         main()
+    
     captured = capsys.readouterr()
     expected_output = "Usage: python main.py <number1> <number2> <operation>\nOr run without arguments to enter command mode."
-    assert captured.out.strip() == expected_output
+    
+    # Check if the output contains the expected usage message and the exit message
+    assert expected_output in captured.out.strip()
+    assert "Exiting the application." in captured.out.strip()
     assert e.type == SystemExit
-    assert e.value.code == 1
+    assert e.value.code == 0
 
 def test_main_with_arguments(monkeypatch, capsys):
     """Test the main function behavior with valid arguments provided."""

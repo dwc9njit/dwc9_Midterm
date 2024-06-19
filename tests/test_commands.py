@@ -3,12 +3,12 @@ This module contains tests for the command handler and commands.
 """
 
 import pytest
-from calculator.commands import Command, CommandHandler
-from calculator.commands.goodbye import GoodbyeCommand
-from calculator.commands.greet import GreetCommand
-from calculator.commands.menu import MenuCommand
-from calculator.commands.exit import ExitCommand
-from calculator import App
+from commands import Command, CommandHandler
+from commands.goodbye import GoodbyeCommand
+from commands.greet import GreetCommand
+from commands.menu import MenuCommand
+from commands.exit import ExitCommand
+from main import App
 
 class MockCommand(Command):
     """A mock command for testing purposes."""
@@ -16,18 +16,18 @@ class MockCommand(Command):
         print("Mock command executed")
 
 def test_greet_command(capfd):
-    """Test that the greet command prints 'Hello! How can I help you today?'."""
+    """Test that the greet command prints 'Hello!'."""
     command = GreetCommand()
     command.execute()
     out, _ = capfd.readouterr()
-    assert out == "Hello! How can I help you today?\n", "The GreetCommand should print 'Hello! How can I help you today?'"
+    assert out == "Hello!\n", "The GreetCommand should print 'Hello!'"
 
 def test_goodbye_command(capfd):
-    """Test that the goodbye command prints 'Goodbye! Have a nice day!'."""
+    """Test that the goodbye command prints 'Goodbye!'."""
     command = GoodbyeCommand()
     command.execute()
     out, _ = capfd.readouterr()
-    assert out == "Goodbye! Have a nice day!\n", "The GoodbyeCommand should print 'Goodbye! Have a nice day!'"
+    assert out == "Goodbye!\n", "The GoodbyeCommand should print 'Goodbye!'"
 
 def test_app_greet_command(capfd, monkeypatch):
     """Test that the REPL correctly handles the 'greet' command."""
@@ -39,7 +39,7 @@ def test_app_greet_command(capfd, monkeypatch):
     with pytest.raises(SystemExit):
         app.start()
     out, _ = capfd.readouterr()
-    assert "Hello! How can I help you today?" in out, "The app did not print the greet message"
+    assert "Hello!" in out, "The app did not print the greet message"
 
 def test_command_handler_execution(capfd):
     """Test command handler registration and execution."""
@@ -51,15 +51,15 @@ def test_command_handler_execution(capfd):
 
     handler.execute_command("greet")
     out, _ = capfd.readouterr()
-    assert "Hello! How can I help you today?" in out
+    assert "Hello!" in out
 
     handler.execute_command("goodbye")
     out, _ = capfd.readouterr()
-    assert "Goodbye! Have a nice day!" in out
+    assert "Goodbye!" in out
 
     handler.execute_command("menu")
     out, _ = capfd.readouterr()
-    assert "Menu" in out
+    assert "Available commands: greet, goodbye, exit, menu" in out
 
     with pytest.raises(SystemExit):
         handler.execute_command("exit")
