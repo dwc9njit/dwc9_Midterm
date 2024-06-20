@@ -1,3 +1,4 @@
+# plugins/command_handler.py
 from abc import ABC, abstractmethod
 
 class Command(ABC):

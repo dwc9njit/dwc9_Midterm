@@ -1,13 +1,14 @@
+# tests/test_commands.py
 """
 This module contains tests for the command handler and commands.
 """
 
 import pytest
-from commands import Command, CommandHandler
-from commands.goodbye import GoodbyeCommand
-from commands.greet import GreetCommand
-from commands.menu import MenuCommand
-from commands.exit import ExitCommand
+from plugins.command_handler import Command, CommandHandler
+from plugins.goodbye import GoodbyeCommand
+from plugins.greet import GreetCommand
+from plugins.menu import MenuCommand
+from plugins.exit import ExitCommand
 from main import App
 
 class MockCommand(Command):
@@ -20,7 +21,7 @@ def test_greet_command(capfd):
     command = GreetCommand()
     command.execute()
     out, _ = capfd.readouterr()
-    assert out == "Hello!\n", "The GreetCommand should print 'Hello!'"
+    assert out == "Hello! Welcome to the calculator app.\n", "The GreetCommand should print 'Hello! Welcome to the calculator app.'"
 
 def test_goodbye_command(capfd):
     """Test that the goodbye command prints 'Goodbye!'."""
@@ -39,7 +40,7 @@ def test_app_greet_command(capfd, monkeypatch):
     with pytest.raises(SystemExit):
         app.start()
     out, _ = capfd.readouterr()
-    assert "Hello!" in out, "The app did not print the greet message"
+    assert "Hello! Welcome to the calculator app." in out, "The app did not print the greet message"
 
 def test_command_handler_execution(capfd):
     """Test command handler registration and execution."""
@@ -51,7 +52,7 @@ def test_command_handler_execution(capfd):
 
     handler.execute_command("greet")
     out, _ = capfd.readouterr()
-    assert "Hello!" in out
+    assert "Hello! Welcome to the calculator app." in out
 
     handler.execute_command("goodbye")
     out, _ = capfd.readouterr()

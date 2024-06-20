@@ -1,7 +1,7 @@
 import sys
 from decimal import Decimal, InvalidOperation
-from calculator.operations import Calculator
-from commands import CommandHandler, MenuCommand, GreetCommand, GoodbyeCommand, ExitCommand
+from calculator import Calculator
+from plugins.command_loader import CommandLoader
 
 def calculate_and_print(a_string, b_string, operation_string):
     try:
@@ -34,16 +34,12 @@ def calculate_and_print(a_string, b_string, operation_string):
 class App:
     def __init__(self):
         """Constructor"""
-        self.command_handler = CommandHandler()
+        self.command_loader = CommandLoader('plugins')
+        self.command_loader.load_plugins()
         self.running = True
 
     def start(self):
         """Register commands and start the REPL."""
-        self.command_handler.register_command("greet", GreetCommand())
-        self.command_handler.register_command("goodbye", GoodbyeCommand())
-        self.command_handler.register_command("exit", ExitCommand())
-        self.command_handler.register_command("menu", MenuCommand())
-
         print("Type 'exit' to exit.")
         while self.running:
             try:
@@ -54,10 +50,13 @@ class App:
                     print("Exiting the application.")
                     raise SystemExit(0)  # Raise SystemExit with a status code
                 print(f"Executing command: {user_input}")
-                self.command_handler.execute_command(user_input)
+                command = self.command_loader.get_command(user_input)
+                if command:
+                    command.execute()
+                else:
+                    print(f"Command '{user_input}' not found.")
             except Exception as e:
                 print(f"An error occurred: {e}")
-
 
 def main():
     if len(sys.argv) == 1:
@@ -75,7 +74,6 @@ def main():
         print("Usage: python main.py <number1> <number2> <operation>")
         print("Or run without arguments to enter command mode.")
         sys.exit(1)  # Exit with status 1 to indicate an error
-
 
 if __name__ == '__main__':
     main()

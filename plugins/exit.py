@@ -1,4 +1,4 @@
-from .command_handler import Command
+from plugins.command_handler import Command
 
 class ExitCommand(Command):
     def execute(self):

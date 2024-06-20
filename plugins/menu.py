@@ -1,4 +1,5 @@
-from .command_handler import Command
+# plugins/menu.py
+from plugins.command_handler import Command
 
 class MenuCommand(Command):
     def execute(self):
