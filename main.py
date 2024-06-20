@@ -1,6 +1,7 @@
 import sys
 from decimal import Decimal, InvalidOperation
-from calculator import Calculator
+from calculator.operations import Calculator
+from plugins.command_handler import CommandHandler
 from plugins.command_loader import CommandLoader
 
 def calculate_and_print(a_string, b_string, operation_string):
@@ -34,12 +35,13 @@ def calculate_and_print(a_string, b_string, operation_string):
 class App:
     def __init__(self):
         """Constructor"""
-        self.command_loader = CommandLoader('plugins')
-        self.command_loader.load_plugins()
+        self.command_handler = CommandHandler()
         self.running = True
+        self.command_loader = CommandLoader('plugins', self.command_handler)
+        self.command_loader.load_plugins()
 
     def start(self):
-        """Register commands and start the REPL."""
+        """Start the REPL."""
         print("Type 'exit' to exit.")
         while self.running:
             try:
@@ -50,11 +52,9 @@ class App:
                     print("Exiting the application.")
                     raise SystemExit(0)  # Raise SystemExit with a status code
                 print(f"Executing command: {user_input}")
-                command = self.command_loader.get_command(user_input)
-                if command:
-                    command.execute()
-                else:
-                    print(f"Command '{user_input}' not found.")
+                response = self.command_handler.execute_command(user_input)
+                if response:
+                    print(response)
             except Exception as e:
                 print(f"An error occurred: {e}")
 

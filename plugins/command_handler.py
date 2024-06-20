@@ -20,3 +20,6 @@ class CommandHandler:
             command.execute()
         else:
             print(f"Unknown command: {name}")
+
+    def get_command(self, name):
+        return self.commands.get(name)

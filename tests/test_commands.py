@@ -1,14 +1,14 @@
-# tests/test_commands.py
 """
 This module contains tests for the command handler and commands.
 """
 
 import pytest
-from plugins.command_handler import Command, CommandHandler
+from plugins import Command, CommandHandler
 from plugins.goodbye import GoodbyeCommand
 from plugins.greet import GreetCommand
 from plugins.menu import MenuCommand
 from plugins.exit import ExitCommand
+from plugins.help import HelpCommand
 from main import App
 
 class MockCommand(Command):
@@ -49,6 +49,7 @@ def test_command_handler_execution(capfd):
     handler.register_command("goodbye", GoodbyeCommand())
     handler.register_command("menu", MenuCommand())
     handler.register_command("exit", ExitCommand())
+    handler.register_command("help", HelpCommand(handler))
 
     handler.execute_command("greet")
     out, _ = capfd.readouterr()
@@ -60,7 +61,35 @@ def test_command_handler_execution(capfd):
 
     handler.execute_command("menu")
     out, _ = capfd.readouterr()
-    assert "Available commands: greet, goodbye, exit, menu" in out
+    assert "Available commands: help, greet, goodbye, exit, menu" in out
 
     with pytest.raises(SystemExit):
         handler.execute_command("exit")
+
+def test_all_commands_execution(capfd):
+    """Test that all registered commands in the CommandHandler can be executed."""
+    app = App()
+    app.command_loader.load_plugins()  # Ensure plugins are loaded
+
+    expected_outputs = {
+        'greet': "Hello! Welcome to the calculator app.\n",
+        'goodbye': "Goodbye!\n",
+        'menu': "Available commands: help, greet, goodbye, exit, menu\n",
+        'help': "Available commands: greet, goodbye, exit, menu, help\n",
+        'exit': "Exiting...\n"
+    }
+
+    for command_name in app.command_handler.commands:
+        handler = app.command_handler
+        if command_name == 'exit':
+            with pytest.raises(SystemExit):
+                handler.execute_command(command_name)
+        else:
+            handler.execute_command(command_name)
+            out, _ = capfd.readouterr()
+            if command_name == 'help':
+                # Handle multi-line output for 'help' command
+                assert 'Available commands' in out, f"Expected 'Available commands' in output but got '{out}'"
+            else:
+                assert out == expected_outputs[command_name], f"Expected '{expected_outputs[command_name]}' but got '{out}'"
+                

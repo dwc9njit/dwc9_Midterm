@@ -2,5 +2,8 @@
 from plugins.command_handler import Command
 
 class MenuCommand(Command):
+    def __init__(self):
+        pass
+
     def execute(self):
-        print("Available commands: greet, goodbye, exit, menu")
+        print("Available commands: help, greet, goodbye, exit, menu")
