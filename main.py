@@ -1,8 +1,12 @@
+import os
 import sys
 from decimal import Decimal, InvalidOperation
 from calculator.operations import Calculator
 from plugins.command_handler import CommandHandler
 from plugins.command_loader import CommandLoader
+from dotenv import load_dotenv
+import logging
+
 
 def calculate_and_print(a_string, b_string, operation_string):
     try:
@@ -32,6 +36,8 @@ def calculate_and_print(a_string, b_string, operation_string):
     except Exception as e:
         print(f"Error performing calculation: {e}")
 
+load_dotenv()
+
 class App:
     def __init__(self):
         """Constructor"""
@@ -40,8 +46,17 @@ class App:
         self.command_loader = CommandLoader('plugins', self.command_handler)
         self.command_loader.load_plugins()
 
+        log_level = os.getenv('LOG_LEVEL', 'INFO').upper()
+        logging.basicConfig(level=log_level)
+        self.logger = logging.getLogger(__name__)
+
+        api_key = os.getenv('API_KEY')
+        self.logger.info(f"API Key Loaded: {api_key}")
+
     def start(self):
-        """Start the REPL."""
+        """Register commands and start the REPL."""
+        self.logger.info("Starting the application")
+        
         print("Type 'exit' to exit.")
         while self.running:
             try:
@@ -50,12 +65,14 @@ class App:
                 if user_input == "exit":
                     self.running = False
                     print("Exiting the application.")
+                    self.logger.info("Exiting the application")
                     raise SystemExit(0)  # Raise SystemExit with a status code
-                print(f"Executing command: {user_input}")
+                self.logger.info(f"Executing command: {user_input}")
                 response = self.command_handler.execute_command(user_input)
                 if response:
                     print(response)
             except Exception as e:
+                self.logger.error(f"An error occurred: {e}")
                 print(f"An error occurred: {e}")
 
 def main():
@@ -77,3 +94,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+    app = App()
+    app.start()
