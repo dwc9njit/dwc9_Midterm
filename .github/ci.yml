@@ -23,7 +23,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: 3.10
+        python-version: '3.10'
 
     - name: Install dependencies
       run: |
@@ -42,7 +42,8 @@ jobs:
         source venv/bin/activate
         pylint plugins tests
 
-    - #name: Upload test coverage
-      #uses: codecov/codecov-action@v3
-      #with:
-       # token: ${{ secrets.CODECOV_TOKEN }}
+    # Uncomment the following lines if you want to upload test coverage
+    #- name: Upload test coverage
+    #  uses: codecov/codecov-action@v3
+    #  with:
+    #    token: ${{ secrets.CODECOV_TOKEN }}
