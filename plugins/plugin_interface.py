@@ -1,3 +1,7 @@
+"""
+This module provides help functionalities for the application.
+"""
+
 from abc import ABC, abstractmethod
 
 class CommandPlugin(ABC):
@@ -6,9 +10,9 @@ class CommandPlugin(ABC):
     @abstractmethod
     def execute(self, *args, **kwargs):
         """Execute the command."""
-        pass
+        raise NotImplementedError("This method should be overridden by subclasses")
 
     @abstractmethod
     def get_command_name(self) -> str:
         """Return the name of the command."""
-        pass
+        raise NotImplementedError("This method should be overridden by subclasses")
