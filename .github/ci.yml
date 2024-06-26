@@ -42,7 +42,7 @@ jobs:
         source venv/bin/activate
         pylint plugins tests
 
-    - name: Upload test coverage
-      uses: codecov/codecov-action@v3
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
+    - #name: Upload test coverage
+      #uses: codecov/codecov-action@v3
+      #with:
+       # token: ${{ secrets.CODECOV_TOKEN }}
