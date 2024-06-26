@@ -46,9 +46,9 @@ class CommandHandler:
         if name in self.commands:
             self.logger.info("Executing command: %s", name)
             return self.commands[name].execute()
-        else:
-            self.logger.warning("Command not found: %s", name)
-            return "Command not found."
+        
+        self.logger.warning("Command not found: %s", name)
+        return "Command not found."
 
     def get_command(self, name):
         """
