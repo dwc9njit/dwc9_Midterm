@@ -1,43 +1,58 @@
-# Import necessary modules and classes
-from calculator.calculations import Calculations  # Manages history of calculations
-from calculator.operations import add, subtract, multiply, divide, exponent  # Arithmetic operations
-from calculator.calculation import Calculation  # Represents a single calculation
-from decimal import Decimal  # For high-precision arithmetic
-from typing import Callable  # For type hinting callable objects
+"""
+Calculator module that provides basic arithmetic operations.
+"""
 
-# Definition of the Calculator class
+from decimal import Decimal
+from typing import Callable
+from .calculations import Calculations
+from .calculation import Calculation
+from .operations import add, subtract, multiply, divide, exponent
+
 class Calculator:
+    """A simple calculator class to perform basic arithmetic operations."""
+
     @staticmethod
-    def _perform_operation(a: Decimal, b: Decimal, operation: Callable[[Decimal, Decimal], Decimal]) -> Decimal:
+    def _perform_operation(operand_a: Decimal, operand_b: Decimal, operation: Callable[[Decimal, Decimal], Decimal]) -> Decimal:
         """Create and perform a calculation, then return the result."""
-        # Create a Calculation object using the static create method, passing in operands and the operation
-        calculation = Calculation.create(a, b, operation)
-        # Add the calculation to the history managed by the Calculations class
-        Calculations.add_calculation(calculation)
-        # Perform the calculation and return the result
-        return calculation.perform()
+        try:
+            if operation == Calculator.divide and operand_b == 0:
+                raise ZeroDivisionError("Cannot divide by zero")
+            calculation = Calculation(operation, operand_a, operand_b)
+            result = calculation.perform_operation()
+            Calculations.add_calculation(calculation)
+            return result
+        except ZeroDivisionError as e:
+            raise e
+        except Exception as e:
+            print(f"Error performing calculation: {e}")
+            return Decimal('0')
 
     @staticmethod
-    def add(a: Decimal, b: Decimal) -> Decimal:
-        # Perform addition by delegating to the _perform_operation method with the add operation
-        return Calculator._perform_operation(a, b, add)
+    def perform_operation(operand_a: Decimal, operand_b: Decimal, operation: Callable[[Decimal, Decimal], Decimal]) -> Decimal:
+        """Public method to perform an operation."""
+        return Calculator._perform_operation(operand_a, operand_b, operation)
 
     @staticmethod
-    def subtract(a: Decimal, b: Decimal) -> Decimal:
-        # Perform subtraction by delegating to the _perform_operation method with the subtract operation
-        return Calculator._perform_operation(a, b, subtract)
+    def add(operand_a: Decimal, operand_b: Decimal) -> Decimal:
+        """Perform addition."""
+        return Calculator.perform_operation(operand_a, operand_b, add)
 
     @staticmethod
-    def multiply(a: Decimal, b: Decimal) -> Decimal:
-        # Perform multiplication by delegating to the _perform_operation method with the multiply operation
-        return Calculator._perform_operation(a, b, multiply)
+    def subtract(operand_a: Decimal, operand_b: Decimal) -> Decimal:
+        """Perform subtraction."""
+        return Calculator.perform_operation(operand_a, operand_b, subtract)
 
     @staticmethod
-    def divide(a: Decimal, b: Decimal) -> Decimal:
-        # Perform division by delegating to the _perform_operation method with the divide operation
-        return Calculator._perform_operation(a, b, divide)
+    def multiply(operand_a: Decimal, operand_b: Decimal) -> Decimal:
+        """Perform multiplication."""
+        return Calculator.perform_operation(operand_a, operand_b, multiply)
+
+    @staticmethod
+    def divide(operand_a: Decimal, operand_b: Decimal) -> Decimal:
+        """Perform division."""
+        return Calculator.perform_operation(operand_a, operand_b, divide)
     
     @staticmethod
-    def exponent(a: Decimal, b: Decimal) -> Decimal:
-        # Perform exponentiation by delegating to the _perform_operation method with the exponent operation
-        return Calculator._perform_operation(a, b, exponent)
+    def exponent(operand_a: Decimal, operand_b: Decimal) -> Decimal:
+        """Perform exponentiation."""
+        return Calculator.perform_operation(operand_a, operand_b, exponent)

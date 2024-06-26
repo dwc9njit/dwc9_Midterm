@@ -2,7 +2,6 @@
 # A list of file extensions of the files that will be checked for Python code
 init-hook='import sys; sys.path.append(".")'
 extension-pkg-whitelist=pydantic
-load-plugins=pylint_django
 
 [MESSAGES CONTROL]
 # Only show these errors
@@ -18,9 +17,6 @@ output-format=colorized
 
 # Include a report at the end of the log
 reports=yes
-
-# Put a full report at the end of the file
-report-full=no
 
 [DESIGN]
 # Maximum number of parents for a class (see R0901).
@@ -51,5 +47,48 @@ method-rgx=[a-z_][a-z0-9_]{2,50}$
 # Module names should have short, all-lowercase names. The use of underscores is discouraged.
 module-rgx=[a-z_][a-z0-9_]{1,30}$
 
-# Class names
+# Class names should use the CapWords convention.
+class-rgx=[A-Z_][a-zA-Z0-9]+$
 
+# Constant names should be uppercase, with words separated by underscores as necessary to improve readability.
+const-rgx=(([A-Z_][A-Z0-9_]*)|(__.*__))$
+
+[FORMAT]
+# Maximum number of characters on a single line.
+max-line-length=120
+
+# Regexp for a line that is allowed to be longer than the limit.
+ignore-long-lines=^\s*(# )?<?https?://\S+>?$
+
+# Allow the body of a class to be on the same line as the declaration if body is empty.
+single-line-class-stmt=no
+
+# Allow the body of an if to be on the same line as the test if there is no else.
+single-line-if-stmt=no
+
+[IMPORTS]
+# Allow wildcard imports from modules that define __all__.
+allow-wildcard-with-all=no
+
+# Analyse import graph to find which are unused.
+analyse-fallback-blocks=no
+
+[MISCELLANEOUS]
+# List of note tags to take in consideration, separated by a comma.
+notes=FIXME,XXX,TODO
+
+[SIMILARITIES]
+# Minimum lines number of a similarity.
+min-similarity-lines=4
+
+[VARIABLES]
+# List of additional names supposed to be defined in builtins.
+additional-builtins=
+
+[CLASSES]
+# List of method names used to declare (i.e. assign) instance attributes.
+defining-attr-methods=__init__,__new__,setUp
+
+[EXCEPTIONS]
+# Exceptions that will emit a warning when being caught.
+overgeneral-exceptions=builtins.Exception

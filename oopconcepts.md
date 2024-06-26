@@ -33,32 +33,35 @@
 class Operation:
     """Base class for operations, utilizing polymorphism for extendability."""
     @staticmethod
-    def add(a, b):
+    def add(a: float, b: float) -> float:
         return a + b
     
     @staticmethod
-    def subtract(a, b):
+    def subtract(a: float, b: float) -> float:
         return a - b
     
     @staticmethod
-    def multiply(a, b):
+    def multiply(a: float, b: float) -> float:
         return a * b
     
     @staticmethod
-    def divide(a, b):
-        if b != 0:
-            return a / b
-        else:
-            return "Error: Division by zero"
+    def divide(a: float, b: float) -> float:
+        if b == 0:
+            raise ValueError("Cannot divide by zero")
+        return a / b
+
+    @staticmethod
+    def exponent(a: float, b: float) -> float:
+        return a ** b
 
 class Calculation:
     """Encapsulates a single calculation."""
-    def __init__(self, a, b, operation):
+    def __init__(self, a: float, b: float, operation: callable):
         self.a = a
         self.b = b
         self.operation = operation
 
-    def compute(self):
+    def compute(self) -> float:
         """Executes the calculation."""
         return self.operation(self.a, self.b)
 
@@ -67,7 +70,7 @@ class CalculationsHistory:
     history = []
     
     @classmethod
-    def add_history(cls, calculation):
+    def add_history(cls, calculation: Calculation):
         cls.history.append(calculation)
 
     @classmethod
@@ -79,7 +82,7 @@ class Calculator:
     def __init__(self):
         self.operations = Operation()
 
-    def perform_calculation(self, a, b, operation):
+    def perform_calculation(self, a: float, b: float, operation: callable) -> float:
         calculation = Calculation(a, b, operation)
         result = calculation.compute()
         CalculationsHistory.add_history(calculation)
@@ -90,6 +93,7 @@ class Calculator:
 
 # Example usage
 calculator = Calculator()
-print(calculator.perform_calculation(10, 5, Operation.add))
-print(calculator.perform_calculation(10, 5, Operation.subtract))
+print(calculator.perform_calculation(10, 5, Operation.add))        # Output: 15
+print(calculator.perform_calculation(10, 5, Operation.subtract))   # Output: 5
+print(calculator.perform_calculation(2, 3, Operation.exponent))    # Output: 8
 print(calculator.get_calculation_history())  # Display history

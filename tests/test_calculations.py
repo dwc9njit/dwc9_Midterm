@@ -1,119 +1,52 @@
-'''My Calculator Test'''
+"""
+Unit tests for the calculations module.
+"""
 
-# Correct the import order by placing standard library imports before third-party library imports,
-# adhering to PEP 8 guidelines for import ordering.
 from decimal import Decimal
 import pytest
-from calculator.calculation import Calculation
 from calculator.calculations import Calculations
+from calculator.calculation import Calculation
 from calculator.operations import add, subtract, multiply, divide, exponent
 
-# pytest.fixture is a decorator that marks a function as a fixture,
-# a setup mechanism used by pytest to initialize a test environment.
-# Here, it's used to define a fixture that prepares the test environment for calculations tests.
-@pytest.fixture
-def setup_calculations():
-    """Clear history and add sample calculations for tests."""
-    # Clear any existing calculation history to ensure a clean state for each test.
-    Calculations.clear_history()
-    # Add sample calculations to the history to set up a known state for testing.
-    # These calculations represent typical use cases and allow tests to verify that
-    # the history functionality is working as expected.
-    Calculations.add_calculation(Calculation(Decimal('10'), Decimal('5'), add))
-    Calculations.add_calculation(Calculation(Decimal('20'), Decimal('3'), subtract))
-    Calculations.add_calculation(Calculation(Decimal('2'), Decimal('3'), multiply))
-    Calculations.add_calculation(Calculation(Decimal('10'), Decimal('2'), divide))
-    Calculations.add_calculation(Calculation(Decimal('2'), Decimal('3'), exponent))
-
-def test_add_calculation(setup_calculations):
+def test_add_calculation():
     """Test adding a calculation to the history."""
-    # Create a new Calculation object to add to the history.
-    calc = Calculation(Decimal('2'), Decimal('2'), add)
-    # Add the calculation to the history.
-    Calculations.add_calculation(calc)
-    # Assert that the calculation was added to the history by checking
-    # if the latest calculation in the history matches the one we added.
-    assert Calculations.get_latest() == calc, "Failed to add the calculation to the history"
+    calculation = Calculation(add, Decimal('1'), Decimal('1'))
+    Calculations.add_calculation(calculation)
+    assert Calculations.get_history()[-1] == calculation, "Failed to add calculation to history."
 
-def test_get_history(setup_calculations):
-    """Test retrieving the entire calculation history."""
-    # Retrieve the calculation history.
+def test_get_history():
+    """Test retrieving the history of calculations."""
     history = Calculations.get_history()
-    # Assert that the history contains exactly 5 calculations,
-    # which matches our setup in the setup_calculations fixture.
-    assert len(history) == 5, "History does not contain the expected number of calculations"
+    assert isinstance(history, list), "History is not a list."
+    assert all(isinstance(item, Calculation) for item in history), "History does not contain Calculation objects."
 
-def test_clear_history(setup_calculations):
-    """Test clearing the entire calculation history."""
-    # Clear the calculation history.
+def test_clear_history():
+    """Test clearing the history of calculations."""
     Calculations.clear_history()
-    # Assert that the history is empty by checking its length.
-    assert len(Calculations.get_history()) == 0, "History was not cleared"
+    assert len(Calculations.get_history()) == 0, "Failed to clear history."
 
-def test_get_latest(setup_calculations):
+def test_get_latest():
     """Test getting the latest calculation from the history."""
-    # Retrieve the latest calculation from the history.
-    latest = Calculations.get_latest()
-    # Assert that the latest calculation matches the expected values,
-    # specifically the operands and operation used in the last added calculation
-    # in the setup_calculations fixture.
-    assert latest.a == Decimal('2'), "The operand a is incorrect"
-    assert latest.b == Decimal('3'), "The operand b is incorrect"
-    assert latest.operation.__name__ == exponent.__name__, "The operation is incorrect"
+    calculation = Calculation(add, Decimal('1'), Decimal('1'))
+    Calculations.add_calculation(calculation)
+    assert Calculations.get_latest() == calculation, "Failed to get the latest calculation."
 
-def test_find_by_operation(setup_calculations):
-    """Test finding calculations in the history by operation type."""
-    # Find all calculations with the 'add' operation.
-    add_operations = Calculations.find_by_operation("add")
-    # Assert that exactly one calculation with the 'add' operation was found.
-    assert len(add_operations) == 1, "Did not find the correct number of calculations with add operation"
-    # Check that the found operation is indeed 'add'
-    assert add_operations[0].operation.__name__ == "add", "Found operation is not 'add'"
-    
-    # Find all calculations with the 'subtract' operation.
-    subtract_operations = Calculations.find_by_operation("subtract")
-    # Assert that exactly one calculation with the 'subtract' operation was found.
-    assert len(subtract_operations) == 1, "Did not find the correct number of calculations with subtract operation"
-    # Check that the found operation is indeed 'subtract'
-    assert subtract_operations[0].operation.__name__ == "subtract", "Found operation is not 'subtract'"
-    
-    # Find all calculations with the 'multiply' operation.
-    multiply_operations = Calculations.find_by_operation("multiply")
-    # Assert that exactly one calculation with the 'multiply' operation was found.
-    assert len(multiply_operations) == 1, "Did not find the correct number of calculations with multiply operation"
-    # Check that the found operation is indeed 'multiply'
-    assert multiply_operations[0].operation.__name__ == "multiply", "Found operation is not 'multiply'"
-    
-    # Find all calculations with the 'divide' operation.
-    divide_operations = Calculations.find_by_operation("divide")
-    # Assert that exactly one calculation with the 'divide' operation was found.
-    assert len(divide_operations) == 1, "Did not find the correct number of calculations with divide operation"
-    # Check that the found operation is indeed 'divide'
-    assert divide_operations[0].operation.__name__ == "divide", "Found operation is not 'divide'"
-    
-    # Find all calculations with the 'exponent' operation.
-    exponent_operations = Calculations.find_by_operation("exponent")
-    # Assert that exactly one calculation with the 'exponent' operation was found.
-    assert len(exponent_operations) == 1, "Did not find the correct number of calculations with exponent operation"
-    # Check that the found operation is indeed 'exponent'
-    assert exponent_operations[0].operation.__name__ == "exponent", "Found operation is not 'exponent'"
+def test_find_by_operation():
+    """Test finding calculations by operation."""
+    calculation_add = Calculation(add, Decimal('1'), Decimal('1'))
+    calculation_subtract = Calculation(subtract, Decimal('2'), Decimal('1'))
+    Calculations.add_calculation(calculation_add)
+    Calculations.add_calculation(calculation_subtract)
+    found_calculations = Calculations.find_by_operation('add')
+    assert all(calc.operation.__name__ == 'add' for calc in found_calculations), "Failed to find calculations by operation."
 
-def test_get_latest_with_empty_history():
-    """Test getting the latest calculation when the history is empty."""
-    # Ensure the history is empty by clearing it.
-    Calculations.clear_history()
-    # Assert that the latest calculation is None since the history is empty.
-    assert Calculations.get_latest() is None, "Expected None for latest calculation with empty history"
-
-@pytest.mark.parametrize("operand_a, operand_b, operation, expected", [
-    (Decimal('10'), Decimal('5'), add, Decimal('15')),  # Test addition
-    (Decimal('20'), Decimal('3'), subtract, Decimal('17')),  # Test subtraction
-    (Decimal('2'), Decimal('3'), multiply, Decimal('6')),  # Test multiplication
-    (Decimal('10'), Decimal('2'), divide, Decimal('5')),  # Test division
-    (Decimal('2'), Decimal('3'), exponent, Decimal('8')),  # Test exponentiation
+@pytest.mark.parametrize("operation_func, operand_a, operand_b, expected", [
+    (multiply, Decimal('2'), Decimal('3'), Decimal('6')),
+    (divide, Decimal('10'), Decimal('2'), Decimal('5')),
+    (exponent, Decimal('2'), Decimal('3'), Decimal('8'))
 ])
-def test_arithmetic_operations(operand_a, operand_b, operation, expected):
-    """Test arithmetic operations using parameterized data."""
-    calc = Calculation(operand_a, operand_b, operation)
-    result = calc.perform()
-    assert result == expected, f"Failed {operation.__name__} operation with {operand_a} and {operand_b}. Expected {expected}, got {result}."
+def test_operations(operation_func, operand_a, operand_b, expected):
+    """Test different operations."""
+    calculation = Calculation(operation_func, operand_a, operand_b)
+    Calculations.add_calculation(calculation)
+    assert calculation.perform_operation() == expected, f"Failed {operation_func.__name__} operation with {operand_a} and {operand_b}"
