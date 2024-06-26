@@ -16,6 +16,11 @@ jobs:
       LOG_LEVEL: INFO  # Example of setting an environment variable
 
     steps:
+    - name: Setup Node.js 20
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+
     - name: Checkout code
       uses: actions/checkout@v3
 
