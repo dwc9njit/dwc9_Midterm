@@ -10,7 +10,7 @@ class MenuCommand(Command):
     """
     def __init__(self):
         """Execute the command."""
-        pass
+        raise NotImplementedError("Subclasses should implement this!")
 
     def execute(self):
         """Execute the command."""
