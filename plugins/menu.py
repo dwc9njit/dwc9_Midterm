@@ -8,9 +8,6 @@ class MenuCommand(Command):
     """
     Command class represents a generic command.
     """
-    def __init__(self):
-        """Execute the command."""
-        raise NotImplementedError("Subclasses should implement this!")
 
     def execute(self):
         """Execute the command."""
