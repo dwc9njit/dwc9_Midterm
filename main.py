@@ -2,11 +2,14 @@ import os
 import sys
 from decimal import Decimal, InvalidOperation
 from calculator.operations import Calculator
-from plugins.command_handler import CommandHandler
-from plugins.command_loader import CommandLoader
+
+# Add the project root to the Python path
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+from command_handler import CommandHandler
+from plugins.plugin_manager import PluginManager
 from dotenv import load_dotenv
 import logging
-
 
 def calculate_and_print(a_string, b_string, operation_string):
     try:
@@ -40,11 +43,9 @@ load_dotenv()
 
 class App:
     def __init__(self):
-        """Constructor"""
-        self.command_handler = CommandHandler()
+        self.plugin_manager = PluginManager('plugins', command_handler=self)
+        self.command_handler = CommandHandler(self.plugin_manager)
         self.running = True
-        self.command_loader = CommandLoader('plugins', self.command_handler)
-        self.command_loader.load_plugins()
 
         log_level = os.getenv('LOG_LEVEL', 'INFO').upper()
         logging.basicConfig(level=log_level)
@@ -54,9 +55,11 @@ class App:
         self.logger.info(f"API Key Loaded: {api_key}")
 
     def start(self):
-        """Register commands and start the REPL."""
         self.logger.info("Starting the application")
         
+        # Execute the 'menu' command on start
+        print(self.command_handler.execute_command('menu'))
+
         print("Type 'exit' to exit.")
         while self.running:
             try:
@@ -66,7 +69,7 @@ class App:
                     self.running = False
                     print("Exiting the application.")
                     self.logger.info("Exiting the application")
-                    raise SystemExit(0)  # Raise SystemExit with a status code
+                    raise SystemExit(0)
                 self.logger.info(f"Executing command: {user_input}")
                 response = self.command_handler.execute_command(user_input)
                 if response:
@@ -77,22 +80,18 @@ class App:
 
 def main():
     if len(sys.argv) == 1:
-        # No arguments provided, print usage message and enter command mode
         print("No arguments provided. Entering command mode.")
         print("Usage: python main.py <number1> <number2> <operation>")
         print("Or run without arguments to enter command mode.")
         app = App()
         app.start()
     elif len(sys.argv) == 4:
-        # Calculation mode
         _, a, b, operation = sys.argv
         calculate_and_print(a, b, operation)
     else:
         print("Usage: python main.py <number1> <number2> <operation>")
         print("Or run without arguments to enter command mode.")
-        sys.exit(1)  # Exit with status 1 to indicate an error
+        sys.exit(1)
 
 if __name__ == '__main__':
     main()
-    app = App()
-    app.start()

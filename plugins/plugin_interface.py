@@ -2,6 +2,7 @@
 This module provides help functionalities for the application.
 """
 
+# plugin_interface.py
 from abc import ABC, abstractmethod
 
 class CommandPlugin(ABC):
@@ -16,3 +17,4 @@ class CommandPlugin(ABC):
     def get_command_name(self) -> str:
         """Return the name of the command."""
         raise NotImplementedError("This method should be overridden by subclasses")
+

@@ -1,12 +1,17 @@
+# goodbye.py
 """
 This module provides help functionalities for the application.
 """
-from plugins.command_handler import Command
+from plugins.plugin_interface import CommandPlugin
 
-class GoodbyeCommand(Command):
+class GoodbyeCommand(CommandPlugin):
     """
     Command class represents a generic command.
     """
     def execute(self):
         """Execute the command."""
-        print("Goodbye!")
+        return "GoodBye! Thank you for using the calculator app."
+    def get_command_name(self):
+        """Execute the command."""
+        return "goodbye"
+    

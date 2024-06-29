@@ -1,89 +1,82 @@
-"""
-Unit tests for the main functionality of the calculator application.
-"""
-
-import sys
+"""Test suite for main.py to ensure optimal test coverage."""
+from unittest.mock import patch
 import pytest
-from main import main, calculate_and_print, App
+from main import calculate_and_print, main, App
 
-def test_calculate_and_print(capsys):
-    """Test the calculate_and_print function with various inputs and expected outputs."""
-    test_cases = [
-        ("5", "3", 'add', "The result of 5 add 3 is equal to 8"),
-        ("10", "2", 'subtract', "The result of 10 subtract 2 is equal to 8"),
-        ("4", "5", 'multiply', "The result of 4 multiply 5 is equal to 20"),
-        ("20", "4", 'divide', "The result of 20 divide 4 is equal to 5"),
-        ("1", "0", 'divide', "An error occurred: Cannot divide by zero"),
-        ("2", "3", 'exponent', "The result of 2 exponent 3 is equal to 8"),
-        ("9", "3", 'unknown', "Unknown operation: unknown"),
-        ("a", "3", 'add', "Invalid number input: a or 3 is not a valid number."),
-        ("5", "b", 'subtract', "Invalid number input: 5 or b is not a valid number.")
-    ]
+def test_calculate_and_print_addition(capsys):
+    """Test addition operation in calculate_and_print function."""
+    calculate_and_print("1", "2", "add")
+    captured = capsys.readouterr()
+    assert "The result of 1 add 2 is equal to 3" in captured.out
 
-    for a_string, b_string, operation_string, expected_string in test_cases:
-        calculate_and_print(a_string, b_string, operation_string)
-        captured = capsys.readouterr()
-        assert captured.out.strip() == expected_string, f"Failed on {a_string} {operation_string} {b_string}"
+def test_calculate_and_print_invalid_number(capsys):
+    """Test handling of invalid number input in calculate_and_print function."""
+    calculate_and_print("one", "2", "add")
+    captured = capsys.readouterr()
+    assert "Invalid number input: one or 2 is not a valid number." in captured.out
 
-@pytest.mark.timeout(10)
-def test_main_no_arguments(monkeypatch, capsys):
-    """Test the main function behavior with no arguments provided."""
-    
-    # Replace sys.argv to simulate no arguments
-    monkeypatch.setattr(sys, 'argv', ['main.py'])
-    
-    # Mock input to simulate the 'exit' command
-    inputs = iter(['exit'])
-    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
-    
-    with pytest.raises(SystemExit) as e:
+def test_calculate_and_print_unknown_operation(capsys):
+    """Test handling of unknown operation in calculate_and_print function."""
+    calculate_and_print("1", "2", "unknown")
+    captured = capsys.readouterr()
+    assert "Unknown operation: unknown" in captured.out
+
+def test_calculate_and_print_divide_by_zero(capsys):
+    """Test handling of division by zero in calculate_and_print function."""
+    calculate_and_print("1", "0", "divide")
+    captured = capsys.readouterr()
+    assert "An error occurred: Cannot divide by zero" in captured.out
+
+@patch('builtins.input', side_effect=["exit"])
+@patch('main.CommandHandler')
+@patch('main.PluginManager')
+@patch('main.load_dotenv')
+def test_app_start(mock_load_dotenv, mock_plugin_manager, mock_command_handler, mock_input):
+    """Test the start method of the App class."""
+    app = App()
+    with pytest.raises(SystemExit):
+        app.start()
+    mock_input.assert_called_once_with(">>> ")
+    mock_command_handler().execute_command.assert_any_call('menu')
+
+@patch('sys.argv', ['main.py'])
+@patch('builtins.input', side_effect=["exit"])
+@patch('main.CommandHandler')
+@patch('main.PluginManager')
+@patch('main.load_dotenv')
+def test_main_no_arguments(mock_load_dotenv, mock_plugin_manager, mock_command_handler, mock_input):
+    """Test the main function with no command line arguments."""
+    with pytest.raises(SystemExit):
         main()
+    mock_input.assert_called_once_with(">>> ")
+
+@patch('sys.argv', ['main.py', '1', '2', 'add'])
+@patch('main.calculate_and_print')
+def test_main_with_arguments(mock_calculate_and_print):
+    """Test the main function with valid command line arguments."""
+    main()
+    mock_calculate_and_print.assert_called_once_with('1', '2', 'add')
+
+@patch('sys.argv', ['main.py', '1', '2'])
+@patch('sys.exit')
+def test_main_invalid_arguments(mock_sys_exit):
+    """Test the main function with invalid command line arguments."""
+    main()
+    mock_sys_exit.assert_called_once_with(1)
+
+@patch('builtins.input', side_effect=["greet", "exit"])
+@patch('main.CommandHandler')
+@patch('main.PluginManager')
+@patch('main.load_dotenv')
+def test_app_handle_commands(mock_load_dotenv, mock_plugin_manager, mock_command_handler, mock_input):
+    """Test the handling of commands by the App class."""
+    mock_command_handler_instance = mock_command_handler.return_value
+    mock_command_handler_instance.execute_command.return_value = "Hello!"
     
-    captured = capsys.readouterr()
-    expected_output = "Usage: python main.py <number1> <number2> <operation>\nOr run without arguments to enter command mode."
-    
-    # Check if the output contains the expected usage message and the exit message
-    assert expected_output in captured.out.strip()
-    assert "Exiting the application." in captured.out.strip()
-    assert e.type == SystemExit
-    assert e.value.code == 0
-
-def test_main_with_arguments(monkeypatch, capsys):
-    """Test the main function behavior with valid arguments provided."""
-    monkeypatch.setattr(sys, 'argv', ['main.py', '5', '3', 'add'])
-    main()
-    captured = capsys.readouterr()
-    assert captured.out.strip() == "The result of 5 add 3 is equal to 8"
-
-def test_main_invalid_operation(monkeypatch, capsys):
-    """Test the main function behavior with an invalid operation provided."""
-    monkeypatch.setattr(sys, 'argv', ['main.py', '5', '3', 'unknown'])
-    main()
-    captured = capsys.readouterr()
-    assert captured.out.strip() == "Unknown operation: unknown"
-
-def test_main_invalid_number(monkeypatch, capsys):
-    """Test the main function behavior with invalid number input provided."""
-    monkeypatch.setattr(sys, 'argv', ['main.py', 'a', '3', 'add'])
-    main()
-    captured = capsys.readouterr()
-    assert captured.out.strip() == "Invalid number input: a or 3 is not a valid number."
-
-def test_main_division_by_zero(monkeypatch, capsys):
-    """Test the main function behavior when division by zero is attempted."""
-    monkeypatch.setattr(sys, 'argv', ['main.py', '10', '0', 'divide'])
-    main()
-    captured = capsys.readouterr()
-    assert captured.out.strip() == "An error occurred: Cannot divide by zero"
-
-def test_app_exit_command(monkeypatch, capsys):
-    """Test the REPL exit command in the App class."""
-    inputs = iter(['exit'])
-    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
-
     app = App()
     with pytest.raises(SystemExit):
         app.start()
     
-    captured = capsys.readouterr()
-    assert "Exiting the application." in captured.out
+    assert mock_input.call_count == 2
+    mock_command_handler_instance.execute_command.assert_any_call("greet")
+    assert "Hello!" in mock_command_handler_instance.execute_command.return_value

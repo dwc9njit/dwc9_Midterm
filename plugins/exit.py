@@ -1,13 +1,14 @@
+# exit.py
 """
 This module provides help functionalities for the application.
 """
-from plugins.command_handler import Command
+from plugins.plugin_interface import CommandPlugin
 
-class ExitCommand(Command):
-    """
-    Command class represents a generic command.
-    """
+class ExitCommand(CommandPlugin):
     def execute(self):
-        """Execute the command."""
         print("Exiting...")
         raise SystemExit(0)
+
+    def get_command_name(self):
+        return "exit"
+
