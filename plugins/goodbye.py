@@ -8,7 +8,7 @@ class GoodbyeCommand(CommandPlugin):
     """
     Command class represents a generic command.
     """
-    def execute(self):
+    def execute(self, *args, **kwargs):
         """Execute the command."""
         return "GoodBye! Thank you for using the calculator app."
     def get_command_name(self):

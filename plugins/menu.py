@@ -1,16 +1,16 @@
-# menu.py
 """
-This module provides help functionalities for the application.
+This module provides menu functionalities for the application.
 """
+
 from plugins.plugin_interface import CommandPlugin
 
 class MenuCommand(CommandPlugin):
     """
-    Command class represents a generic command.
+    MenuCommand provides a list of available commands.
     """
 
-    def execute(self):
-        """Execute the command."""
+    def execute(self, *args, **kwargs):
+        """Execute the menu command."""
         return "Available commands: help, greet, goodbye, exit, menu"
 
     def get_command_name(self):

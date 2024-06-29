@@ -9,11 +9,10 @@ class GreetCommand(CommandPlugin):
     """
     Command class represents a generic command.
     """
-    def execute(self):
+    def execute(self, *args, **kwargs):
         """Execute the command."""
         return "Hello! Welcome to the calculator app."
 
     def get_command_name(self):
         """Execute the command."""
         return "greet"
-
