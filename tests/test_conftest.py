@@ -6,7 +6,7 @@ from decimal import Decimal
 import pytest
 from faker import Faker
 from calculator.operations import add, subtract, multiply, divide, exponent
-from conftest import generate_test_data, pytest_generate_tests
+from tests.conftest import generate_test_data, pytest_generate_tests
 
 @pytest.fixture
 def fake():

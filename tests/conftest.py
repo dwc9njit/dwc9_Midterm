@@ -1,3 +1,5 @@
+"""Test module for conftest.py."""
+
 from decimal import Decimal
 import pytest
 from faker import Faker
@@ -51,9 +53,11 @@ def sample_fixture():
     """Sample fixture for demonstration purposes."""
     return "sample data"
 
-@pytest.fixture
+@pytest.fixture(scope="module")
 def loaded_plugins():
-    """Fixture to load plugins and provide mock inputs for testing."""
+    """
+    Fixture to load all plugins and prepare mock inputs.
+    """
     plugin_manager = PluginManager(['plugins', 'calculator'])
     plugin_manager.load_plugins()
     plugins = plugin_manager.get_all_plugins()
@@ -67,7 +71,8 @@ def loaded_plugins():
         'greet': (),
         'goodbye': (),
         'help': (),
-        'menu': ()
+        'menu': (),
+        'exit': ()
     }
     
     return plugins, mock_inputs

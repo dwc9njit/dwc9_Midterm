@@ -5,11 +5,18 @@ Test suite for main.py to ensure optimal test coverage.
 from unittest.mock import patch
 import pytest
 from main import calculate_and_print, main, App
+from plugins.plugin_manager import PluginManager
+from command_handler import CommandHandler
+from tests.test_utils import execute_plugin_tests  # Ensure this import is correct
 
-def test_calculate_and_print_addition(capsys, loaded_plugins):
+def test_calculate_and_print_addition(capsys):
     """
     Test addition operation in calculate_and_print function.
     """
+    plugin_manager = PluginManager(['calculator'])
+    handler = CommandHandler(plugin_manager)
+    handler.plugin_manager.load_plugins()
+
     calculate_and_print("1", "2", "add")
     captured = capsys.readouterr()
     assert "The result of 1 add 2 is equal to 3" in captured.out
@@ -30,10 +37,14 @@ def test_calculate_and_print_unknown_operation(capsys):
     captured = capsys.readouterr()
     assert "Unknown operation: unknown" in captured.out
 
-def test_calculate_and_print_divide_by_zero(capsys, loaded_plugins):
+def test_calculate_and_print_divide_by_zero(capsys):
     """
     Test handling of division by zero in calculate_and_print function.
     """
+    plugin_manager = PluginManager(['calculator'])
+    handler = CommandHandler(plugin_manager)
+    handler.plugin_manager.load_plugins()
+
     calculate_and_print("1", "0", "divide")
     captured = capsys.readouterr()
     assert "An error occurred: Cannot divide by zero" in captured.out
@@ -107,22 +118,4 @@ def test_dynamic_plugins(loaded_plugins):
     Test all dynamically loaded plugins.
     """
     plugins, mock_inputs = loaded_plugins
-
-    for command_name, plugin in plugins.items():
-        if command_name in mock_inputs:
-            inputs = mock_inputs[command_name]
-            if command_name == "exit":
-                with pytest.raises(SystemExit):
-                    plugin.execute(*inputs)
-            else:
-                result = plugin.execute(*inputs)
-                assert result is not None, f"{command_name} command returned None"
-                print(f"Command {command_name} executed successfully with result: {result}")
-        else:
-            if command_name == "exit":
-                with pytest.raises(SystemExit):
-                    plugin.execute()
-            else:
-                result = plugin.execute()
-                assert result is not None, f"{command_name} command returned None"
-                print(f"Command {command_name} executed successfully with result: {result}")
+    execute_plugin_tests(plugins, mock_inputs)
