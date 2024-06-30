@@ -6,12 +6,16 @@ from plugins.plugin_interface import CommandPlugin
 
 class GoodbyeCommand(CommandPlugin):
     """
-    Command class represents a generic command.
+    GoodbyeCommand prints a goodbye message.
     """
+    def __init__(self, plugin_manager):
+        """Execute the command."""
+        self.plugin_manager = plugin_manager
+
     def execute(self, *args, **kwargs):
-        """Execute the command."""
+        """Execute the goodbye command."""
         return "GoodBye! Thank you for using the calculator app."
+
     def get_command_name(self):
-        """Execute the command."""
+        """Return the name of the command."""
         return "goodbye"
-    

@@ -10,32 +10,32 @@ from plugins.plugin_interface import CommandPlugin
 class PluginManager:
     """Manages the loading and retrieval of command plugins."""
 
-    def __init__(self, plugin_folder: str, command_handler=None):
+    def __init__(self, plugin_folders):
         """
-        Initialize the PluginManager.
+        Initialize the PluginManager with specified plugin folders.
         
         Args:
-            plugin_folder (str): The folder where plugin modules are located.
-            command_handler: Optional; the command handler to pass to certain plugins.
+            plugin_folders (list): List of folders to search for plugins.
         """
-        self.plugin_folder = plugin_folder
+        self.plugin_folders = plugin_folders
         self.plugins = {}
-        self.command_handler = command_handler
         self.logger = logging.getLogger(__name__)
         self.load_plugins()
 
     def load_plugins(self):
-        """
-        Load plugins from the specified plugin folder.
-        """
-        try:
-            for filename in os.listdir(self.plugin_folder):
-                if self._is_valid_plugin_file(filename):
-                    module_name = filename[:-3]
-                    self.logger.info("Loading module: %s", module_name)
-                    self._load_module_plugins(module_name)
-        except (ImportError, AttributeError, TypeError) as e:
-            self.logger.error("Error loading plugins: %s", e)
+        """Load plugins from the specified plugin folders."""
+        for folder in self.plugin_folders:
+            if not os.path.exists(folder):
+                self.logger.error("Plugin folder not found: %s", folder)
+                continue
+            try:
+                for filename in os.listdir(folder):
+                    if self._is_valid_plugin_file(filename):
+                        module_name = filename[:-3]
+                        self.logger.info("Loading module: %s", module_name)
+                        self._load_module_plugins(module_name, folder)
+            except (ImportError, AttributeError, TypeError) as e:
+                self.logger.error("Error loading plugins from %s: %s", folder, e)
 
     def _is_valid_plugin_file(self, filename):
         """
@@ -49,14 +49,15 @@ class PluginManager:
         """
         return filename.endswith(".py") and filename != "__init__.py"
 
-    def _load_module_plugins(self, module_name):
+    def _load_module_plugins(self, module_name, folder):
         """
         Load plugins from a module.
         
         Args:
-            module_name (str): The name of the module to load plugins from.
+            module_name (str): The name of the module to load.
+            folder (str): The folder where the module is located.
         """
-        module = importlib.import_module(f"plugins.{module_name}")
+        module = importlib.import_module(f"{folder}.{module_name}")
         for attr in dir(module):
             cls = getattr(module, attr)
             if self._is_valid_plugin_class(cls):
@@ -82,23 +83,30 @@ class PluginManager:
         Create an instance of a plugin class.
         
         Args:
-            cls (type): The plugin class to create an instance of.
+            cls (type): The plugin class to instantiate.
         
         Returns:
             CommandPlugin: An instance of the plugin class.
         """
-        if cls.__name__ == "HelpCommand" and self.command_handler:
-            return cls(command_handler=self.command_handler)
-        return cls()
+        return cls(self)
 
     def get_plugin(self, name):
         """
         Retrieve a plugin by its command name.
         
         Args:
-            name (str): The command name of the plugin to retrieve.
+            name (str): The command name of the plugin.
         
         Returns:
-            CommandPlugin: The plugin instance associated with the given command name.
+            CommandPlugin: The plugin instance, or None if not found.
         """
         return self.plugins.get(name)
+
+    def get_all_plugins(self):
+        """
+        Retrieve all loaded plugins.
+        
+        Returns:
+            dict: A dictionary of all loaded plugins.
+        """
+        return self.plugins

@@ -7,16 +7,17 @@ from plugins.plugin_interface import CommandPlugin
 
 class HelpCommand(CommandPlugin):
     """
-    Command class represents a generic command.
+    HelpCommand provides a help message.
     """
-    def __init__(self, command_handler=None):
-        """Initialize the HelpCommand."""
-        self.command_handler = command_handler
+    def __init__(self, plugin_manager):
+        """Execute the command."""
+        self.plugin_manager = plugin_manager
 
     def execute(self, *args, **kwargs):
         """Execute the help command."""
-        return 'For help please contact: dwc9@njit.edu'
+        return "For help please contact: support@example.com"
 
     def get_command_name(self):
-        """Get the command name."""
+        """Return the name of the command."""
         return "help"
+

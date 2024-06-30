@@ -8,6 +8,10 @@ class ExitCommand(CommandPlugin):
     """
     Command class represents a generic command.
     """
+    def __init__(self, plugin_manager):
+        """Execute the command."""
+        self.plugin_manager = plugin_manager
+    
     def execute(self, *args, **kwargs):
         """Execute the command."""
         print("Exiting...")

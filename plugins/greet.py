@@ -2,17 +2,21 @@
 """
 This module provides help functionalities for the application.
 """
-# greet.py
 from plugins.plugin_interface import CommandPlugin
 
 class GreetCommand(CommandPlugin):
     """
-    Command class represents a generic command.
+    GreetCommand prints a greeting message.
     """
-    def execute(self, *args, **kwargs):
+    def __init__(self, plugin_manager):
         """Execute the command."""
+        self.plugin_manager = plugin_manager
+
+    def execute(self, *args, **kwargs):
+        """Execute the greet command."""
         return "Hello! Welcome to the calculator app."
 
     def get_command_name(self):
-        """Execute the command."""
+        """Return the name of the command."""
         return "greet"
+
