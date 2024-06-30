@@ -2,6 +2,7 @@ from decimal import Decimal
 import pytest
 from faker import Faker
 from calculator.operations import add, subtract, multiply, divide, exponent
+from plugins.plugin_manager import PluginManager
 
 fake = Faker()
 
@@ -49,6 +50,27 @@ def pytest_generate_tests(metafunc):
 def sample_fixture():
     """Sample fixture for demonstration purposes."""
     return "sample data"
+
+@pytest.fixture
+def loaded_plugins():
+    """Fixture to load plugins and provide mock inputs for testing."""
+    plugin_manager = PluginManager(['plugins', 'calculator'])
+    plugin_manager.load_plugins()
+    plugins = plugin_manager.get_all_plugins()
+    
+    mock_inputs = {
+        'add': (1, 2),
+        'subtract': (5, 3),
+        'multiply': (2, 3),
+        'divide': (6, 2),
+        'exponent': (2, 3),
+        'greet': (),
+        'goodbye': (),
+        'help': (),
+        'menu': ()
+    }
+    
+    return plugins, mock_inputs
 
 def test_sample_fixture(sample_fixture):
     """Test to ensure sample_fixture is working."""

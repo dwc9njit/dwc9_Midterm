@@ -5,17 +5,11 @@ Test suite for main.py to ensure optimal test coverage.
 from unittest.mock import patch
 import pytest
 from main import calculate_and_print, main, App
-from plugins.plugin_manager import PluginManager
-from command_handler import CommandHandler
 
-def test_calculate_and_print_addition(capsys):
+def test_calculate_and_print_addition(capsys, loaded_plugins):
     """
     Test addition operation in calculate_and_print function.
     """
-    plugin_manager = PluginManager(['calculator'])
-    handler = CommandHandler(plugin_manager)
-    handler.plugin_manager.load_plugins()
-
     calculate_and_print("1", "2", "add")
     captured = capsys.readouterr()
     assert "The result of 1 add 2 is equal to 3" in captured.out
@@ -36,14 +30,10 @@ def test_calculate_and_print_unknown_operation(capsys):
     captured = capsys.readouterr()
     assert "Unknown operation: unknown" in captured.out
 
-def test_calculate_and_print_divide_by_zero(capsys):
+def test_calculate_and_print_divide_by_zero(capsys, loaded_plugins):
     """
     Test handling of division by zero in calculate_and_print function.
     """
-    plugin_manager = PluginManager(['calculator'])
-    handler = CommandHandler(plugin_manager)
-    handler.plugin_manager.load_plugins()
-
     calculate_and_print("1", "0", "divide")
     captured = capsys.readouterr()
     assert "An error occurred: Cannot divide by zero" in captured.out
@@ -112,28 +102,13 @@ def test_app_handle_commands(mock_load_dotenv, mock_plugin_manager, mock_command
     mock_command_handler_instance.execute_command.assert_any_call("greet")
     assert "Hello!" in mock_command_handler_instance.execute_command.return_value
 
-def test_dynamic_plugins():
+def test_dynamic_plugins(loaded_plugins):
     """
     Test all dynamically loaded plugins.
     """
-    plugin_manager = PluginManager(['plugins', 'calculator'])
-    plugin_manager.load_plugins()
-    plugins = plugin_manager.get_all_plugins()
+    plugins, mock_inputs = loaded_plugins
 
     for command_name, plugin in plugins.items():
-        # Prepare mock inputs for commands that require inputs
-        mock_inputs = {
-            'add': (1, 2),
-            'subtract': (5, 3),
-            'multiply': (2, 3),
-            'divide': (6, 2),
-            'exponent': (2, 3),
-            'greet': (),
-            'goodbye': (),
-            'help': (),
-            'menu': ()
-        }
-
         if command_name in mock_inputs:
             inputs = mock_inputs[command_name]
             if command_name == "exit":

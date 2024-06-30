@@ -19,4 +19,3 @@ class GreetCommand(CommandPlugin):
     def get_command_name(self):
         """Return the name of the command."""
         return "greet"
-
