@@ -1,5 +1,13 @@
 # Calculator Application
 
+## Link to Video:
+
+https://drive.google.com/file/d/1sSdCkbh6o7AMIcdAxVIu2TTY9f_3upbo/view?usp=sharing
+
+## Link to Calculator Paper:
+
+https://drive.google.com/file/d/1ORAfSXhefVy2xyqg87A8EyRbdIqvV3_n/view?usp=sharing
+
 ## Overview
 
 This calculator application is designed to perform basic arithmetic operations, including addition, subtraction, multiplication, division, and exponentiation. It supports command-line interface (CLI) commands and dynamically loaded plugins. The application also includes comprehensive logging to track operations, data manipulations, and errors.
