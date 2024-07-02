@@ -1,9 +1,10 @@
+# test_plugin_manager.py
 """
 This module contains tests for the command loader.
 """
 
 import unittest
-from plugins.plugin_manager import PluginManager
+from plugin_manager import PluginManager
 from command_handler import CommandHandler
 
 class TestPluginManager(unittest.TestCase):

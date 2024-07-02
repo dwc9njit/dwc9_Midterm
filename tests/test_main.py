@@ -1,3 +1,4 @@
+# test_main.py
 """
 Test suite for main.py to ensure optimal test coverage.
 """
@@ -5,18 +6,12 @@ Test suite for main.py to ensure optimal test coverage.
 from unittest.mock import patch
 import pytest
 from main import calculate_and_print, main, App
-from plugins.plugin_manager import PluginManager
-from command_handler import CommandHandler
 from tests.test_utils import execute_plugin_tests  # Ensure this import is correct
 
 def test_calculate_and_print_addition(capsys):
     """
     Test addition operation in calculate_and_print function.
     """
-    plugin_manager = PluginManager(['calculator'])
-    handler = CommandHandler(plugin_manager)
-    handler.plugin_manager.load_plugins()
-
     calculate_and_print("1", "2", "add")
     captured = capsys.readouterr()
     assert "The result of 1 add 2 is equal to 3" in captured.out
@@ -41,13 +36,10 @@ def test_calculate_and_print_divide_by_zero(capsys):
     """
     Test handling of division by zero in calculate_and_print function.
     """
-    plugin_manager = PluginManager(['calculator'])
-    handler = CommandHandler(plugin_manager)
-    handler.plugin_manager.load_plugins()
-
     calculate_and_print("1", "0", "divide")
     captured = capsys.readouterr()
-    assert "An error occurred: Cannot divide by zero" in captured.out
+    expected_output = "The result of 1 divide 0 is equal to Cannot divide by zero."
+    assert expected_output in captured.out, f"Expected '{expected_output}' in output but got {captured.out}"
 
 @patch('builtins.input', side_effect=["exit"])
 @patch('main.CommandHandler')
@@ -113,7 +105,8 @@ def test_app_handle_commands(mock_load_dotenv, mock_plugin_manager, mock_command
     mock_command_handler_instance.execute_command.assert_any_call("greet")
     assert "Hello!" in mock_command_handler_instance.execute_command.return_value
 
-def test_dynamic_plugins(loaded_plugins):
+@patch('builtins.input', side_effect=["0", "0", "exit"])
+def test_dynamic_plugins(mock_input, loaded_plugins):
     """
     Test all dynamically loaded plugins.
     """

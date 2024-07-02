@@ -1,7 +1,10 @@
+# test_utils.py
 """
 Utility functions for tests.
 """
-
+import sys
+from io import StringIO
+from contextlib import contextmanager
 import pytest
 
 def perform_operation_test(operand_a, operand_b, operation_func, expected):
@@ -29,7 +32,7 @@ def execute_plugin_tests(plugins, mock_inputs):
             else:
                 result = plugin.execute(*inputs)
                 assert result is not None, f"{command_name} command returned None"
-                print(f"Command {command_name} executed successfully with result: {result}")
+#                 print(f"Command {command_name} executed successfully with result: {result}")
         else:
             if command_name == "exit":
                 with pytest.raises(SystemExit):
@@ -37,4 +40,25 @@ def execute_plugin_tests(plugins, mock_inputs):
             else:
                 result = plugin.execute()
                 assert result is not None, f"{command_name} command returned None"
-                print(f"Command {command_name} executed successfully with result: {result}")
+#                 print(f"Command {command_name} executed successfully with result: {result}")
+
+@contextmanager
+def suppress_output():
+    """Suppress stdout and stderr output."""
+    original_stdout = sys.stdout
+    original_stderr = sys.stderr
+    sys.stdout = StringIO()
+    sys.stderr = StringIO()
+    try:
+        yield
+    finally:
+        sys.stdout = original_stdout
+        sys.stderr = original_stderr
+
+def suppress_output_decorator(func):
+    """Decorator to suppress stdout and stderr output for a function."""
+    def wrapper(*args, **kwargs):
+        '''testing wrapper'''
+        with suppress_output():
+            return func(*args, **kwargs)
+    return wrapper

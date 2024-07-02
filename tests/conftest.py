@@ -1,10 +1,10 @@
-"""Test module for conftest.py."""
-
+# conftest.py
+'''Conftest'''
 from decimal import Decimal
 import pytest
 from faker import Faker
-from calculator.operations import add, subtract, multiply, divide, exponent
-from plugins.plugin_manager import PluginManager
+from calculator.operation_functions import add, subtract, multiply, divide, exponent
+from plugin_manager import PluginManager
 
 fake = Faker()
 

@@ -1,9 +1,18 @@
-"""
-Unit tests for dynamically loaded plugins.
-"""
+# test_dynamic_plugins.py
+
+'''Module for testing dynamic plugins'''
+from unittest.mock import patch
+import pytest
+from calculator.calculations import Calculations
 from tests.test_utils import execute_plugin_tests
 
-def test_dynamic_plugins(loaded_plugins):
+@pytest.fixture(autouse=True)
+def clear_history():
+    '''testing clear history'''
+    Calculations.clear_history()
+
+@patch('builtins.input', side_effect=["0", "0", "0", "0"])  # Add more values if necessary
+def test_dynamic_plugins(mock_input, loaded_plugins):
     """
     Test all dynamically loaded plugins.
     """

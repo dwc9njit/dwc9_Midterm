@@ -1,3 +1,4 @@
+# main.py
 """
 Main module for the command-line interface application.
 """
@@ -7,7 +8,7 @@ import sys
 import logging
 from decimal import Decimal, InvalidOperation
 from dotenv import load_dotenv
-from plugins.plugin_manager import PluginManager
+from plugin_manager import PluginManager
 from command_handler import CommandHandler
 
 # Add the project root to the Python path
@@ -16,14 +17,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 load_dotenv()
 
 def calculate_and_print(a_string, b_string, operation_string):
-    """
-    Calculate and print the result of an arithmetic operation.
-    
-    Args:
-        a_string (str): The first operand as a string.
-        b_string (str): The second operand as a string.
-        operation_string (str): The operation to perform (add, subtract, multiply, divide, exponent).
-    """
+    """Calculate and print the result of an arithmetic operation."""
     try:
         a = Decimal(a_string)
         b = Decimal(b_string)
@@ -49,9 +43,7 @@ class App:
     """Class representing the main application."""
 
     def __init__(self):
-        """
-        Initialize the App.
-        """
+        """Initialize the App."""
         self.plugin_manager = PluginManager(['plugins', 'calculator'])
         self.command_handler = CommandHandler(self.plugin_manager)
         self.running = True
@@ -64,9 +56,7 @@ class App:
         self.logger.info("API Key Loaded: %s", api_key)
 
     def start(self):
-        """
-        Start the application and handle user input.
-        """
+        """Start the application and handle user input."""
         self.logger.info("Starting the application")
 
         # Execute the 'menu' command on start
@@ -86,15 +76,15 @@ class App:
                 response = self.command_handler.execute_command(user_input)
                 if response:
                     print(response)
+            except ZeroDivisionError:
+                self.logger.error("An error occurred: Cannot divide by zero")
+                print("An error occurred: Cannot divide by zero")
             except Exception as e:
                 self.logger.error("An error occurred: %s", e)
                 print(f"An error occurred: {e}")
 
-
 def main():
-    """
-    Main entry point for the application.
-    """
+    """Main entry point for the application."""
     if len(sys.argv) == 1:
         print("No arguments provided. Entering command mode.")
         print("Usage: python main.py <number1> <number2> <operation>")

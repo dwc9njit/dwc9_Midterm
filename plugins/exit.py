@@ -14,7 +14,7 @@ class ExitCommand(CommandPlugin):
     
     def execute(self, *args, **kwargs):
         """Execute the command."""
-        print("Exiting...")
+#         print("Exiting...")
         raise SystemExit(0)
 
     def get_command_name(self):

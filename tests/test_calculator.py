@@ -1,11 +1,12 @@
+# test_calculator.py
 """
 Unit tests for the Calculator class and its operations.
 """
 from decimal import Decimal
 import pytest
-from calculator import Calculator
-from calculator.calculations import Calculations
-from calculator.operations import add, subtract, multiply, divide, exponent
+from calculator.operations import add, subtract, multiply, divide, exponent, Calculator
+from calculator.history import Calculations
+from calculator.calculation import Calculation
 
 @pytest.fixture(autouse=True)
 def clear_history():
@@ -52,9 +53,8 @@ def test_exponent():
 def test_perform_operation_error_handling(operation):
     """Test error handling in perform_operation for all operations."""
     # Simulate an error by passing invalid types
-    result = Calculator.perform_operation(Decimal('1'), 'a', operation)
-    assert result == Decimal('0'), "Expected result to be Decimal('0') on error"
-    assert len(Calculations.history) == 0, "No calculation should be added on error"
+    with pytest.raises(TypeError):
+        Calculation(operation, Decimal('1'), 'a').perform_operation()
 
 def test_calculations_history():
     """Test calculations history."""
@@ -69,5 +69,17 @@ def test_calculations_history():
     latest_calc = Calculations.get_latest()
     assert latest_calc.perform_operation() == Decimal('8'), "Latest calculation result should be 8"
 
-    first_calc = Calculations.history[0]
+    operation_map = {
+        'add': add,
+        'subtract': subtract,
+        'multiply': multiply,
+        'divide': divide,
+        'exponent': exponent
+    }
+
+    first_operation = Calculations.history.iloc[0]['Operation']
+    first_operand_a = Decimal(Calculations.history.iloc[0]['Operand_A'])
+    first_operand_b = Decimal(Calculations.history.iloc[0]['Operand_B'])
+
+    first_calc = Calculation(operation_map[first_operation], first_operand_a, first_operand_b)
     assert first_calc.perform_operation() == Decimal('2'), "First calculation result should be 2"

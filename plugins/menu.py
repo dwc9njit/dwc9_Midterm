@@ -1,3 +1,4 @@
+# menu.py
 """
 This module provides menu functionalities for the application.
 """
@@ -14,8 +15,14 @@ class MenuCommand(CommandPlugin):
 
     def execute(self, *args, **kwargs):
         """Execute the menu command."""
-        commands = self.plugin_manager.get_all_plugins().keys()
-        return "Available commands:\n" + "\n".join(commands)
+        commands = list(self.plugin_manager.get_all_plugins().keys())
+        unique_commands = set(commands + [
+            "view_history",
+            "clear_history",
+            "delete_history",
+            "save_history"
+        ])
+        return "Available commands:\n" + "\n".join(sorted(unique_commands))
 
     def get_command_name(self):
         """Return the name of the command."""

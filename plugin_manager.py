@@ -68,9 +68,7 @@ class PluginManager:
                 command_name = instance.get_command_name()
                 self.plugins[command_name] = instance
                 self.logger.info("Plugin loaded: %s", command_name)
-                print(f"Plugin loaded: {command_name}")  # Add this line for debugging
-            else:
-                print(f"Skipping: {attr}")  # Add this line for debugging
+ 
 
     def _is_valid_plugin_class(self, cls):
         """

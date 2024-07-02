@@ -1,3 +1,4 @@
+# plugin_interface.py
 """
 This module provides help functionalities for the application.
 """

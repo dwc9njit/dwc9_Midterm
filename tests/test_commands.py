@@ -1,8 +1,9 @@
+# test_commands.py
 """
 Unit tests for command functionalities.
 """
 from plugins.greet import GreetCommand
-from plugins.plugin_manager import PluginManager
+from plugin_manager import PluginManager
 from command_handler import CommandHandler
 
 def test_greet_command():

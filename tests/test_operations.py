@@ -1,8 +1,16 @@
+# test_operations.py
 '''Testing Operations'''
 from decimal import Decimal
 import pytest
 from calculator.calculation import Calculation
+from calculator.calculations import Calculations
 from calculator.operations import Calculator
+
+@pytest.fixture(autouse=True)
+def clear_history():
+    '''tesing clear historu'''
+    Calculations.clear_history()
+
 
 def test_operation_add():
     '''Testing the addition operation'''

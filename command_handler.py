@@ -1,7 +1,8 @@
 # command_handler.py
 import logging
-from plugins.plugin_interface import CommandPlugin
 from decimal import Decimal, InvalidOperation
+from plugins.plugin_interface import CommandPlugin
+from calculator.calculations import Calculations
 
 class CommandHandler:
     """
@@ -21,6 +22,24 @@ class CommandHandler:
             name (str): The name of the command to execute.
             args (tuple): Additional arguments to pass to the command.
         """
+        self.logger.info("Attempting to execute command: %s", name)
+
+        if name == "view_history":
+            return Calculations.view_history().to_string()
+        elif name == "clear_history":
+            Calculations.clear_history()
+            return "Calculation history cleared."
+        elif name == "delete_history":
+            Calculations.delete_history()
+            return "Calculation history deleted."
+        elif name == "save_history":
+            command = self.plugin_manager.get_plugin(name)
+            if command:
+                return command.execute()
+            else:
+                self.logger.warning("Command not found: %s", name)
+                return "Command not found."
+
         command = self.plugin_manager.get_plugin(name)
         if command:
             self.logger.info("Executing command: %s", name)

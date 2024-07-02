@@ -1,3 +1,4 @@
+# __init__.py
 """
 Calculator module that provides basic arithmetic operations.
 """
@@ -19,12 +20,13 @@ class Calculator:
                 raise ZeroDivisionError("Cannot divide by zero")
             calculation = Calculation(operation, operand_a, operand_b)
             result = calculation.perform_operation()
+#             print(f"Performing calculation: {calculation}")
             Calculations.add_calculation(calculation)
             return result
         except ZeroDivisionError as e:
             raise e
         except Exception as e:
-            print(f"Error performing calculation: {e}")
+#             print(f"Error performing calculation: {e}")
             return Decimal('0')
 
     @staticmethod

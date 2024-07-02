@@ -1,33 +1,9 @@
-"""
-This module provides basic arithmetic operations and the Calculator class for performing operations.
-"""
-
+# operations.py
 from decimal import Decimal
 from typing import Callable
 from .calculation import Calculation
-from .calculations import Calculations
-
-def add(a: Decimal, b: Decimal) -> Decimal:
-    """Perform addition of two decimal numbers."""
-    return a + b
-
-def subtract(a: Decimal, b: Decimal) -> Decimal:
-    """Perform subtraction of two decimal numbers."""
-    return a - b
-
-def multiply(a: Decimal, b: Decimal) -> Decimal:
-    """Perform multiplication of two decimal numbers."""
-    return a * b
-
-def divide(a: Decimal, b: Decimal) -> Decimal:
-    """Perform division of two decimal numbers. Raises ZeroDivisionError if b is zero."""
-    if b == 0:
-        raise ZeroDivisionError("Cannot divide by zero")
-    return a / b
-
-def exponent(a: Decimal, b: Decimal) -> Decimal:
-    """Perform exponentiation of two decimal numbers."""
-    return a ** b
+from .history import Calculations
+from .operation_functions import add, subtract, multiply, divide, exponent
 
 class Calculator:
     """Class for performing arithmetic operations using the Calculation class."""
@@ -52,7 +28,7 @@ class Calculator:
         except ZeroDivisionError as e:
             raise e
         except Exception as e:
-            print(f"Error performing calculation: {e}")
+#             print(f"Error performing calculation: {e}")
             return Decimal('0')
 
     @staticmethod
