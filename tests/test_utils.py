@@ -6,6 +6,16 @@ import sys
 from io import StringIO
 from contextlib import contextmanager
 import pytest
+from calculator.operations import add, subtract, multiply, divide, exponent
+
+# Operation dictionary to map operation names to their corresponding functions
+operation_dict = {
+    'add': add,
+    'subtract': subtract,
+    'multiply': multiply,
+    'divide': divide,
+    'exponent': exponent
+}
 
 def perform_operation_test(operand_a, operand_b, operation_func, expected):
     """Perform the operation test, handling ZeroDivisionError if expected."""

@@ -3,30 +3,23 @@
 from decimal import Decimal
 import pytest
 from faker import Faker
-from calculator.operation_functions import add, subtract, multiply, divide, exponent
+from tests.test_utils import operation_dict
 from plugin_manager import PluginManager
 
 fake = Faker()
 
 def generate_test_data(num_records):
     """Generate test data for various operations."""
-    operation_mappings = {
-        'add': add,
-        'subtract': subtract,
-        'multiply': multiply,
-        'divide': divide,
-        'exponent': exponent
-    }
     for _ in range(num_records):
         a = Decimal(fake.random_number(digits=2))
         b = Decimal(fake.random_number(digits=2)) if _ % 5 != 4 else Decimal(fake.random_number(digits=1))
-        operation_func = fake.random_element(elements=list(operation_mappings.values()))
+        operation_func = fake.random_element(elements=list(operation_dict.values()))
 
-        if operation_func is divide:
+        if operation_func is operation_dict['divide']:
             b = Decimal('1') if b == Decimal('0') else b
 
         try:
-            if operation_func is divide and b == Decimal('0'):
+            if operation_func is operation_dict['divide'] and b == Decimal('0'):
                 expected = "ZeroDivisionError"
             else:
                 expected = operation_func(a, b)

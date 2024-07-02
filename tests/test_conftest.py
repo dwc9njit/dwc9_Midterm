@@ -6,7 +6,7 @@
 from decimal import Decimal
 import pytest
 from faker import Faker
-from calculator.operations import add, subtract, multiply, divide, exponent
+from tests.test_utils import operation_dict
 from tests.conftest import generate_test_data, pytest_generate_tests
 
 @pytest.fixture
@@ -22,8 +22,8 @@ def test_generate_test_data(fake):
     for a, b, operation_func, expected in data:
         assert isinstance(a, Decimal)
         assert isinstance(b, Decimal)
-        assert operation_func in [add, subtract, multiply, divide, exponent]
-        if operation_func == divide and b == Decimal(0):
+        assert operation_func in operation_dict.values()
+        if operation_func == operation_dict['divide'] and b == Decimal(0):
             assert expected == "ZeroDivisionError"
         else:
             assert expected == operation_func(a, b)

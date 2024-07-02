@@ -11,7 +11,7 @@ def clear_history():
     '''testing clear history'''
     Calculations.clear_history()
 
-@patch('builtins.input', side_effect=["0", "0", "0", "0"])  # Add more values if necessary
+@patch('builtins.input', side_effect=["0", "0", "0", "0", "exit"])  # Add more values if necessary
 def test_dynamic_plugins(mock_input, loaded_plugins):
     """
     Test all dynamically loaded plugins.

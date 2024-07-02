@@ -6,7 +6,6 @@ Test suite for main.py to ensure optimal test coverage.
 from unittest.mock import patch
 import pytest
 from main import calculate_and_print, main, App
-from tests.test_utils import execute_plugin_tests  # Ensure this import is correct
 
 def test_calculate_and_print_addition(capsys):
     """
@@ -104,11 +103,3 @@ def test_app_handle_commands(mock_load_dotenv, mock_plugin_manager, mock_command
     assert mock_input.call_count == 2
     mock_command_handler_instance.execute_command.assert_any_call("greet")
     assert "Hello!" in mock_command_handler_instance.execute_command.return_value
-
-@patch('builtins.input', side_effect=["0", "0", "exit"])
-def test_dynamic_plugins(mock_input, loaded_plugins):
-    """
-    Test all dynamically loaded plugins.
-    """
-    plugins, mock_inputs = loaded_plugins
-    execute_plugin_tests(plugins, mock_inputs)
