@@ -127,3 +127,2053 @@
 2024-07-03 17:42:33,958 [INFO] command_handler: Attempting to execute command: menu
 2024-07-03 17:42:33,958 [INFO] command_handler: Executing command: menu
 2024-07-03 17:42:36,280 [INFO] __main__: Exiting the application
+2024-07-03 17:48:17,726 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:17,727 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:17,730 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:17,733 [INFO] calculator.operation_functions: Division: 36 / 47 = 0.7659574468085106382978723404
+2024-07-03 17:48:17,735 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:17,735 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:17,736 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:17,738 [INFO] calculator.operation_functions: Subtraction: 41 - 53 = -12
+2024-07-03 17:48:17,739 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:17,740 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:17,741 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:17,745 [INFO] calculator.operation_functions: Subtraction: 77 - 61 = 16
+2024-07-03 17:48:17,746 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:17,747 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:17,747 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:17,751 [INFO] calculator.operation_functions: Subtraction: 41 - 3 = 38
+2024-07-03 17:48:17,752 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:17,753 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:17,754 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:17,756 [INFO] calculator.operation_functions: Subtraction: 32 - 1 = 31
+2024-07-03 17:48:17,757 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:17,758 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:17,758 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:17,761 [INFO] calculator.calculation: Initialized Calculation: add with operands 1 and 1
+2024-07-03 17:48:17,761 [INFO] calculator.calculations: Adding calculation: Calculation(1, 1, add)
+2024-07-03 17:48:17,762 [INFO] calculator.operation_functions: Addition: 1 + 1 = 2
+2024-07-03 17:48:17,762 [INFO] calculator.calculation: Performed operation: add(1, 1) = 2
+2024-07-03 17:48:17,762 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:17,764 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:17,767 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:17,767 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0       add        1.0        1.0     2.0
+2024-07-03 17:48:17,785 [INFO] calculator.calculations: Viewing history.
+2024-07-03 17:48:17,785 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:17,786 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0       add        1.0        1.0     2.0
+2024-07-03 17:48:17,802 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:17,803 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:17,803 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:17,805 [INFO] calculator.calculation: Initialized Calculation: subtract with operands 3 and 1
+2024-07-03 17:48:17,805 [INFO] calculator.calculations: Adding calculation: Calculation(3, 1, subtract)
+2024-07-03 17:48:17,805 [INFO] calculator.operation_functions: Subtraction: 3 - 1 = 2
+2024-07-03 17:48:17,805 [INFO] calculator.calculation: Performed operation: subtract(3, 1) = 2
+2024-07-03 17:48:17,805 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:17,806 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:17,808 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:17,809 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0  subtract        3.0        1.0     2.0
+2024-07-03 17:48:17,824 [INFO] calculator.calculations: Viewing history.
+2024-07-03 17:48:17,824 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:17,825 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0  subtract        3.0        1.0     2.0
+2024-07-03 17:48:17,842 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:17,844 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:17,845 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:17,847 [INFO] calculator.calculation: Initialized Calculation: multiply with operands 2 and 3
+2024-07-03 17:48:17,847 [INFO] calculator.calculations: Adding calculation: Calculation(2, 3, multiply)
+2024-07-03 17:48:17,848 [INFO] calculator.operation_functions: Multiplication: 2 * 3 = 6
+2024-07-03 17:48:17,848 [INFO] calculator.calculation: Performed operation: multiply(2, 3) = 6
+2024-07-03 17:48:17,848 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:17,849 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:17,851 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:17,852 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0  multiply        2.0        3.0     6.0
+2024-07-03 17:48:17,866 [INFO] calculator.calculations: Viewing history.
+2024-07-03 17:48:17,866 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:17,867 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0  multiply        2.0        3.0     6.0
+2024-07-03 17:48:17,882 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:17,883 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:17,884 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:17,885 [INFO] calculator.calculation: Initialized Calculation: divide with operands 6 and 2
+2024-07-03 17:48:17,886 [INFO] calculator.calculations: Adding calculation: Calculation(6, 2, divide)
+2024-07-03 17:48:17,886 [INFO] calculator.operation_functions: Division: 6 / 2 = 3
+2024-07-03 17:48:17,886 [INFO] calculator.calculation: Performed operation: divide(6, 2) = 3
+2024-07-03 17:48:17,886 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:17,887 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:17,889 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:17,889 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0    divide        6.0        2.0     3.0
+2024-07-03 17:48:17,906 [INFO] calculator.calculations: Viewing history.
+2024-07-03 17:48:17,906 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:17,907 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0    divide        6.0        2.0     3.0
+2024-07-03 17:48:17,921 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:17,922 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:17,923 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:17,924 [INFO] calculator.calculation: Initialized Calculation: exponent with operands 2 and 3
+2024-07-03 17:48:17,924 [INFO] calculator.calculations: Adding calculation: Calculation(2, 3, exponent)
+2024-07-03 17:48:17,924 [INFO] calculator.operation_functions: Exponentiation: 2 ** 3 = 8
+2024-07-03 17:48:17,925 [INFO] calculator.calculation: Performed operation: exponent(2, 3) = 8
+2024-07-03 17:48:17,925 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:17,926 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:17,929 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:17,930 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0  exponent        2.0        3.0     8.0
+2024-07-03 17:48:17,942 [INFO] calculator.calculations: Viewing history.
+2024-07-03 17:48:17,942 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:17,943 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0  exponent        2.0        3.0     8.0
+2024-07-03 17:48:17,962 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:17,963 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:17,964 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:17,966 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:17,966 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:17,967 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:17,969 [INFO] calculator.calculations: Viewing history.
+2024-07-03 17:48:17,969 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:17,971 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:17,974 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:17,974 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:17,975 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:17,977 [INFO] calculator.calculation: Initialized Calculation: add with operands 1 and 1
+2024-07-03 17:48:17,977 [INFO] calculator.calculations: Adding calculation: Calculation(1, 1, add)
+2024-07-03 17:48:17,977 [INFO] calculator.operation_functions: Addition: 1 + 1 = 2
+2024-07-03 17:48:17,977 [INFO] calculator.calculation: Performed operation: add(1, 1) = 2
+2024-07-03 17:48:17,977 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:17,978 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:17,980 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:17,981 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0       add        1.0        1.0     2.0
+2024-07-03 17:48:18,001 [INFO] calculator.calculations: Attempting to delete history entry at index 0.
+2024-07-03 17:48:18,002 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:18,003 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0       add        1.0        1.0     2.0
+2024-07-03 17:48:18,017 [INFO] calculator.calculations: Deleted history entry at index 0.
+2024-07-03 17:48:18,017 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:18,018 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:18,019 [INFO] calculator.calculations: Viewing history.
+2024-07-03 17:48:18,019 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:18,020 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:18,023 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:18,023 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:18,024 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:18,025 [INFO] calculator.calculation: Initialized Calculation: add with operands 1 and 1
+2024-07-03 17:48:18,026 [INFO] calculator.calculations: Adding calculation: Calculation(1, 1, add)
+2024-07-03 17:48:18,026 [INFO] calculator.operation_functions: Addition: 1 + 1 = 2
+2024-07-03 17:48:18,026 [INFO] calculator.calculation: Performed operation: add(1, 1) = 2
+2024-07-03 17:48:18,026 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:18,027 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:18,029 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:18,030 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0       add        1.0        1.0     2.0
+2024-07-03 17:48:18,044 [INFO] calculator.calculations: Saving history to test_history.csv
+2024-07-03 17:48:18,045 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:18,046 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0       add        1.0        1.0     2.0
+2024-07-03 17:48:18,062 [INFO] calculator.calculations: History saved to test_history.csv
+2024-07-03 17:48:18,062 [INFO] calculator.calculations: Loading history from test_history.csv
+2024-07-03 17:48:18,063 [INFO] calculator.calculations: Loaded history from test_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0       add        1.0        1.0     2.0
+2024-07-03 17:48:18,075 [INFO] calculator.calculations: Viewing history.
+2024-07-03 17:48:18,075 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:18,076 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0       add        1.0        1.0     2.0
+2024-07-03 17:48:18,092 [INFO] calculator.operations: Performing operation: add(1, 1)
+2024-07-03 17:48:18,092 [INFO] calculator.calculation: Initialized Calculation: add with operands 1 and 1
+2024-07-03 17:48:18,092 [INFO] calculator.operation_functions: Addition: 1 + 1 = 2
+2024-07-03 17:48:18,092 [INFO] calculator.calculation: Performed operation: add(1, 1) = 2
+2024-07-03 17:48:18,092 [INFO] calculator.operation_functions: Addition: 1 + 1 = 2
+2024-07-03 17:48:18,092 [INFO] calculator.calculation: Performed operation: add(1, 1) = 2
+2024-07-03 17:48:18,099 [INFO] calculator.operations: Operation result: 2
+2024-07-03 17:48:18,102 [INFO] calculator.operations: Performing operation: subtract(2, 1)
+2024-07-03 17:48:18,102 [INFO] calculator.calculation: Initialized Calculation: subtract with operands 2 and 1
+2024-07-03 17:48:18,102 [INFO] calculator.operation_functions: Subtraction: 2 - 1 = 1
+2024-07-03 17:48:18,102 [INFO] calculator.calculation: Performed operation: subtract(2, 1) = 1
+2024-07-03 17:48:18,102 [INFO] calculator.operation_functions: Subtraction: 2 - 1 = 1
+2024-07-03 17:48:18,102 [INFO] calculator.calculation: Performed operation: subtract(2, 1) = 1
+2024-07-03 17:48:18,104 [INFO] calculator.operations: Operation result: 1
+2024-07-03 17:48:18,106 [INFO] calculator.operations: Performing operation: multiply(2, 2)
+2024-07-03 17:48:18,107 [INFO] calculator.calculation: Initialized Calculation: multiply with operands 2 and 2
+2024-07-03 17:48:18,107 [INFO] calculator.operation_functions: Multiplication: 2 * 2 = 4
+2024-07-03 17:48:18,107 [INFO] calculator.calculation: Performed operation: multiply(2, 2) = 4
+2024-07-03 17:48:18,107 [INFO] calculator.operation_functions: Multiplication: 2 * 2 = 4
+2024-07-03 17:48:18,107 [INFO] calculator.calculation: Performed operation: multiply(2, 2) = 4
+2024-07-03 17:48:18,109 [INFO] calculator.operations: Operation result: 4
+2024-07-03 17:48:18,113 [INFO] calculator.operations: Performing operation: divide(4, 2)
+2024-07-03 17:48:18,113 [INFO] calculator.calculation: Initialized Calculation: divide with operands 4 and 2
+2024-07-03 17:48:18,113 [INFO] calculator.operation_functions: Division: 4 / 2 = 2
+2024-07-03 17:48:18,113 [INFO] calculator.calculation: Performed operation: divide(4, 2) = 2
+2024-07-03 17:48:18,113 [INFO] calculator.operation_functions: Division: 4 / 2 = 2
+2024-07-03 17:48:18,113 [INFO] calculator.calculation: Performed operation: divide(4, 2) = 2
+2024-07-03 17:48:18,118 [INFO] calculator.operations: Operation result: 2
+2024-07-03 17:48:18,121 [INFO] calculator.operations: Performing operation: divide(1, 0)
+2024-07-03 17:48:18,121 [INFO] calculator.calculation: Initialized Calculation: divide with operands 1 and 0
+2024-07-03 17:48:18,121 [ERROR] calculator.operation_functions: Division by zero: 1 / 0
+2024-07-03 17:48:18,121 [ERROR] calculator.calculation: Error performing operation divide: Cannot divide by zero
+2024-07-03 17:48:18,121 [ERROR] calculator.operations: Error performing calculation: Cannot divide by zero
+2024-07-03 17:48:18,124 [INFO] calculator.operations: Performing operation: exponent(2, 3)
+2024-07-03 17:48:18,125 [INFO] calculator.calculation: Initialized Calculation: exponent with operands 2 and 3
+2024-07-03 17:48:18,125 [INFO] calculator.operation_functions: Exponentiation: 2 ** 3 = 8
+2024-07-03 17:48:18,125 [INFO] calculator.calculation: Performed operation: exponent(2, 3) = 8
+2024-07-03 17:48:18,125 [INFO] calculator.operation_functions: Exponentiation: 2 ** 3 = 8
+2024-07-03 17:48:18,125 [INFO] calculator.calculation: Performed operation: exponent(2, 3) = 8
+2024-07-03 17:48:18,128 [INFO] calculator.operations: Operation result: 8
+2024-07-03 17:48:18,130 [INFO] calculator.calculation: Initialized Calculation: add with operands 1 and a
+2024-07-03 17:48:18,131 [ERROR] calculator.calculation: Error performing operation add: unsupported operand type(s) for +: 'decimal.Decimal' and 'str'
+2024-07-03 17:48:18,134 [INFO] calculator.calculation: Initialized Calculation: subtract with operands 1 and a
+2024-07-03 17:48:18,134 [ERROR] calculator.calculation: Error performing operation subtract: unsupported operand type(s) for -: 'decimal.Decimal' and 'str'
+2024-07-03 17:48:18,137 [INFO] calculator.calculation: Initialized Calculation: multiply with operands 1 and a
+2024-07-03 17:48:18,137 [ERROR] calculator.calculation: Error performing operation multiply: can't multiply sequence by non-int of type 'decimal.Decimal'
+2024-07-03 17:48:18,139 [INFO] calculator.calculation: Initialized Calculation: divide with operands 1 and a
+2024-07-03 17:48:18,139 [ERROR] calculator.calculation: Error performing operation divide: unsupported operand type(s) for /: 'decimal.Decimal' and 'str'
+2024-07-03 17:48:18,141 [INFO] calculator.calculation: Initialized Calculation: exponent with operands 1 and a
+2024-07-03 17:48:18,142 [ERROR] calculator.calculation: Error performing operation exponent: unsupported operand type(s) for ** or pow(): 'decimal.Decimal' and 'str'
+2024-07-03 17:48:18,144 [INFO] calculator.operations: Performing operation: add(1, 1)
+2024-07-03 17:48:18,144 [INFO] calculator.calculation: Initialized Calculation: add with operands 1 and 1
+2024-07-03 17:48:18,144 [INFO] calculator.operation_functions: Addition: 1 + 1 = 2
+2024-07-03 17:48:18,144 [INFO] calculator.calculation: Performed operation: add(1, 1) = 2
+2024-07-03 17:48:18,145 [INFO] calculator.operation_functions: Addition: 1 + 1 = 2
+2024-07-03 17:48:18,145 [INFO] calculator.calculation: Performed operation: add(1, 1) = 2
+2024-07-03 17:48:18,147 [INFO] calculator.operations: Operation result: 2
+2024-07-03 17:48:18,147 [INFO] calculator.operations: Performing operation: subtract(2, 1)
+2024-07-03 17:48:18,147 [INFO] calculator.calculation: Initialized Calculation: subtract with operands 2 and 1
+2024-07-03 17:48:18,148 [INFO] calculator.operation_functions: Subtraction: 2 - 1 = 1
+2024-07-03 17:48:18,148 [INFO] calculator.calculation: Performed operation: subtract(2, 1) = 1
+2024-07-03 17:48:18,148 [INFO] calculator.operation_functions: Subtraction: 2 - 1 = 1
+2024-07-03 17:48:18,148 [INFO] calculator.calculation: Performed operation: subtract(2, 1) = 1
+2024-07-03 17:48:18,152 [INFO] calculator.operations: Operation result: 1
+2024-07-03 17:48:18,152 [INFO] calculator.operations: Performing operation: multiply(2, 2)
+2024-07-03 17:48:18,152 [INFO] calculator.calculation: Initialized Calculation: multiply with operands 2 and 2
+2024-07-03 17:48:18,153 [INFO] calculator.operation_functions: Multiplication: 2 * 2 = 4
+2024-07-03 17:48:18,153 [INFO] calculator.calculation: Performed operation: multiply(2, 2) = 4
+2024-07-03 17:48:18,153 [INFO] calculator.operation_functions: Multiplication: 2 * 2 = 4
+2024-07-03 17:48:18,153 [INFO] calculator.calculation: Performed operation: multiply(2, 2) = 4
+2024-07-03 17:48:18,166 [INFO] calculator.operations: Operation result: 4
+2024-07-03 17:48:18,167 [INFO] calculator.operations: Performing operation: divide(4, 2)
+2024-07-03 17:48:18,167 [INFO] calculator.calculation: Initialized Calculation: divide with operands 4 and 2
+2024-07-03 17:48:18,167 [INFO] calculator.operation_functions: Division: 4 / 2 = 2
+2024-07-03 17:48:18,167 [INFO] calculator.calculation: Performed operation: divide(4, 2) = 2
+2024-07-03 17:48:18,167 [INFO] calculator.operation_functions: Division: 4 / 2 = 2
+2024-07-03 17:48:18,167 [INFO] calculator.calculation: Performed operation: divide(4, 2) = 2
+2024-07-03 17:48:18,171 [INFO] calculator.operations: Operation result: 2
+2024-07-03 17:48:18,171 [INFO] calculator.operations: Performing operation: exponent(2, 3)
+2024-07-03 17:48:18,171 [INFO] calculator.calculation: Initialized Calculation: exponent with operands 2 and 3
+2024-07-03 17:48:18,171 [INFO] calculator.operation_functions: Exponentiation: 2 ** 3 = 8
+2024-07-03 17:48:18,171 [INFO] calculator.calculation: Performed operation: exponent(2, 3) = 8
+2024-07-03 17:48:18,172 [INFO] calculator.operation_functions: Exponentiation: 2 ** 3 = 8
+2024-07-03 17:48:18,172 [INFO] calculator.calculation: Performed operation: exponent(2, 3) = 8
+2024-07-03 17:48:18,183 [INFO] calculator.operations: Operation result: 8
+2024-07-03 17:48:18,184 [INFO] calculator.calculation: Initialized Calculation: exponent with operands 2 and 3
+2024-07-03 17:48:18,185 [INFO] calculator.operation_functions: Exponentiation: 2 ** 3 = 8
+2024-07-03 17:48:18,185 [INFO] calculator.calculation: Performed operation: exponent(2, 3) = 8
+2024-07-03 17:48:18,185 [INFO] calculator.calculation: Initialized Calculation: add with operands 1 and 1
+2024-07-03 17:48:18,185 [INFO] calculator.operation_functions: Addition: 1 + 1 = 2
+2024-07-03 17:48:18,185 [INFO] calculator.calculation: Performed operation: add(1, 1) = 2
+2024-07-03 17:48:18,188 [INFO] calculator: Addition operation with operands: 1, 1
+2024-07-03 17:48:18,188 [INFO] calculator.calculation: Initialized Calculation: add with operands 1 and 1
+2024-07-03 17:48:18,188 [INFO] calculator.operation_functions: Addition: 1 + 1 = 2
+2024-07-03 17:48:18,188 [INFO] calculator.calculation: Performed operation: add(1, 1) = 2
+2024-07-03 17:48:18,188 [INFO] calculator: Performing calculation: Calculation(1, 1, add)
+2024-07-03 17:48:18,188 [INFO] calculator.calculations: Adding calculation: Calculation(1, 1, add)
+2024-07-03 17:48:18,189 [INFO] calculator.operation_functions: Addition: 1 + 1 = 2
+2024-07-03 17:48:18,189 [INFO] calculator.calculation: Performed operation: add(1, 1) = 2
+2024-07-03 17:48:18,189 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:18,190 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0       add        1.0        1.0     2.0
+1  subtract        2.0        1.0     1.0
+2  multiply        2.0        2.0     4.0
+3    divide        4.0        2.0     2.0
+4  exponent        2.0        3.0     8.0
+2024-07-03 17:48:18,217 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:18,218 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0       add        1.0        1.0     2.0
+1  subtract        2.0        1.0     1.0
+2  multiply        2.0        2.0     4.0
+3    divide        4.0        2.0     2.0
+4  exponent        2.0        3.0     8.0
+5       add        1.0        1.0     2.0
+2024-07-03 17:48:18,238 [INFO] calculator: Subtraction operation with operands: 2, 1
+2024-07-03 17:48:18,238 [INFO] calculator.calculation: Initialized Calculation: subtract with operands 2 and 1
+2024-07-03 17:48:18,238 [INFO] calculator.operation_functions: Subtraction: 2 - 1 = 1
+2024-07-03 17:48:18,238 [INFO] calculator.calculation: Performed operation: subtract(2, 1) = 1
+2024-07-03 17:48:18,239 [INFO] calculator: Performing calculation: Calculation(2, 1, subtract)
+2024-07-03 17:48:18,239 [INFO] calculator.calculations: Adding calculation: Calculation(2, 1, subtract)
+2024-07-03 17:48:18,239 [INFO] calculator.operation_functions: Subtraction: 2 - 1 = 1
+2024-07-03 17:48:18,239 [INFO] calculator.calculation: Performed operation: subtract(2, 1) = 1
+2024-07-03 17:48:18,239 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:18,240 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0       add        1.0        1.0     2.0
+1  subtract        2.0        1.0     1.0
+2  multiply        2.0        2.0     4.0
+3    divide        4.0        2.0     2.0
+4  exponent        2.0        3.0     8.0
+5       add        1.0        1.0     2.0
+2024-07-03 17:48:18,258 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:18,259 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0       add        1.0        1.0     2.0
+1  subtract        2.0        1.0     1.0
+2  multiply        2.0        2.0     4.0
+3    divide        4.0        2.0     2.0
+4  exponent        2.0        3.0     8.0
+5       add        1.0        1.0     2.0
+6  subtract        2.0        1.0     1.0
+2024-07-03 17:48:18,280 [INFO] calculator: Multiplication operation with operands: 2, 2
+2024-07-03 17:48:18,281 [INFO] calculator.calculation: Initialized Calculation: multiply with operands 2 and 2
+2024-07-03 17:48:18,281 [INFO] calculator.operation_functions: Multiplication: 2 * 2 = 4
+2024-07-03 17:48:18,281 [INFO] calculator.calculation: Performed operation: multiply(2, 2) = 4
+2024-07-03 17:48:18,281 [INFO] calculator: Performing calculation: Calculation(2, 2, multiply)
+2024-07-03 17:48:18,281 [INFO] calculator.calculations: Adding calculation: Calculation(2, 2, multiply)
+2024-07-03 17:48:18,281 [INFO] calculator.operation_functions: Multiplication: 2 * 2 = 4
+2024-07-03 17:48:18,281 [INFO] calculator.calculation: Performed operation: multiply(2, 2) = 4
+2024-07-03 17:48:18,281 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:18,283 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0       add        1.0        1.0     2.0
+1  subtract        2.0        1.0     1.0
+2  multiply        2.0        2.0     4.0
+3    divide        4.0        2.0     2.0
+4  exponent        2.0        3.0     8.0
+5       add        1.0        1.0     2.0
+6  subtract        2.0        1.0     1.0
+2024-07-03 17:48:18,301 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:18,302 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0       add        1.0        1.0     2.0
+1  subtract        2.0        1.0     1.0
+2  multiply        2.0        2.0     4.0
+3    divide        4.0        2.0     2.0
+4  exponent        2.0        3.0     8.0
+5       add        1.0        1.0     2.0
+6  subtract        2.0        1.0     1.0
+7  multiply        2.0        2.0     4.0
+2024-07-03 17:48:18,322 [INFO] calculator: Division operation with operands: 4, 2
+2024-07-03 17:48:18,322 [INFO] calculator.calculation: Initialized Calculation: divide with operands 4 and 2
+2024-07-03 17:48:18,322 [INFO] calculator.operation_functions: Division: 4 / 2 = 2
+2024-07-03 17:48:18,322 [INFO] calculator.calculation: Performed operation: divide(4, 2) = 2
+2024-07-03 17:48:18,322 [INFO] calculator: Performing calculation: Calculation(4, 2, divide)
+2024-07-03 17:48:18,322 [INFO] calculator.calculations: Adding calculation: Calculation(4, 2, divide)
+2024-07-03 17:48:18,322 [INFO] calculator.operation_functions: Division: 4 / 2 = 2
+2024-07-03 17:48:18,322 [INFO] calculator.calculation: Performed operation: divide(4, 2) = 2
+2024-07-03 17:48:18,322 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:18,323 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0       add        1.0        1.0     2.0
+1  subtract        2.0        1.0     1.0
+2  multiply        2.0        2.0     4.0
+3    divide        4.0        2.0     2.0
+4  exponent        2.0        3.0     8.0
+5       add        1.0        1.0     2.0
+6  subtract        2.0        1.0     1.0
+7  multiply        2.0        2.0     4.0
+2024-07-03 17:48:18,344 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:18,345 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0       add        1.0        1.0     2.0
+1  subtract        2.0        1.0     1.0
+2  multiply        2.0        2.0     4.0
+3    divide        4.0        2.0     2.0
+4  exponent        2.0        3.0     8.0
+5       add        1.0        1.0     2.0
+6  subtract        2.0        1.0     1.0
+7  multiply        2.0        2.0     4.0
+8    divide        4.0        2.0     2.0
+2024-07-03 17:48:18,367 [INFO] calculator: Division operation with operands: 1, 0
+2024-07-03 17:48:18,367 [INFO] calculator.calculation: Initialized Calculation: divide with operands 1 and 0
+2024-07-03 17:48:18,368 [ERROR] calculator.operation_functions: Division by zero: 1 / 0
+2024-07-03 17:48:18,368 [ERROR] calculator.calculation: Error performing operation divide: Cannot divide by zero
+2024-07-03 17:48:18,368 [ERROR] calculator: ZeroDivisionError: Cannot divide by zero
+2024-07-03 17:48:18,369 [INFO] calculator: Exponentiation operation with operands: 2, 3
+2024-07-03 17:48:18,369 [INFO] calculator.calculation: Initialized Calculation: exponent with operands 2 and 3
+2024-07-03 17:48:18,369 [INFO] calculator.operation_functions: Exponentiation: 2 ** 3 = 8
+2024-07-03 17:48:18,369 [INFO] calculator.calculation: Performed operation: exponent(2, 3) = 8
+2024-07-03 17:48:18,369 [INFO] calculator: Performing calculation: Calculation(2, 3, exponent)
+2024-07-03 17:48:18,369 [INFO] calculator.calculations: Adding calculation: Calculation(2, 3, exponent)
+2024-07-03 17:48:18,370 [INFO] calculator.operation_functions: Exponentiation: 2 ** 3 = 8
+2024-07-03 17:48:18,370 [INFO] calculator.calculation: Performed operation: exponent(2, 3) = 8
+2024-07-03 17:48:18,370 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:18,371 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0       add        1.0        1.0     2.0
+1  subtract        2.0        1.0     1.0
+2  multiply        2.0        2.0     4.0
+3    divide        4.0        2.0     2.0
+4  exponent        2.0        3.0     8.0
+5       add        1.0        1.0     2.0
+6  subtract        2.0        1.0     1.0
+7  multiply        2.0        2.0     4.0
+8    divide        4.0        2.0     2.0
+2024-07-03 17:48:18,399 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:18,400 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0       add        1.0        1.0     2.0
+1  subtract        2.0        1.0     1.0
+2  multiply        2.0        2.0     4.0
+3    divide        4.0        2.0     2.0
+4  exponent        2.0        3.0     8.0
+5       add        1.0        1.0     2.0
+6  subtract        2.0        1.0     1.0
+7  multiply        2.0        2.0     4.0
+8    divide        4.0        2.0     2.0
+9  exponent        2.0        3.0     8.0
+2024-07-03 17:48:18,424 [INFO] calculator.calculation: Initialized Calculation: add with operands 1 and 1
+2024-07-03 17:48:18,424 [INFO] calculator: Addition operation with operands: 1, 1
+2024-07-03 17:48:18,425 [INFO] calculator.calculation: Initialized Calculation: add with operands 1 and 1
+2024-07-03 17:48:18,425 [INFO] calculator.operation_functions: Addition: 1 + 1 = 2
+2024-07-03 17:48:18,425 [INFO] calculator.calculation: Performed operation: add(1, 1) = 2
+2024-07-03 17:48:18,425 [INFO] calculator: Performing calculation: Calculation(1, 1, add)
+2024-07-03 17:48:18,425 [INFO] calculator.calculations: Adding calculation: Calculation(1, 1, add)
+2024-07-03 17:48:18,425 [INFO] calculator.operation_functions: Addition: 1 + 1 = 2
+2024-07-03 17:48:18,426 [INFO] calculator.calculation: Performed operation: add(1, 1) = 2
+2024-07-03 17:48:18,426 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:18,427 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+  Operation  Operand_A  Operand_B  Result
+0       add        1.0        1.0     2.0
+1  subtract        2.0        1.0     1.0
+2  multiply        2.0        2.0     4.0
+3    divide        4.0        2.0     2.0
+4  exponent        2.0        3.0     8.0
+5       add        1.0        1.0     2.0
+6  subtract        2.0        1.0     1.0
+7  multiply        2.0        2.0     4.0
+8    divide        4.0        2.0     2.0
+9  exponent        2.0        3.0     8.0
+2024-07-03 17:48:18,457 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:18,458 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+2024-07-03 17:48:18,484 [INFO] calculator.calculation: Performed operation: add(1, 1) = 2
+2024-07-03 17:48:18,485 [INFO] calculator: Performing calculation: Calculation(1, 1, add)
+2024-07-03 17:48:18,485 [INFO] calculator.calculations: Adding calculation: Calculation(1, 1, add)
+2024-07-03 17:48:18,485 [INFO] calculator: Addition operation with operands: 1, 1
+2024-07-03 17:48:18,485 [INFO] calculator.calculation: Initialized Calculation: add with operands 1 and 1
+2024-07-03 17:48:18,485 [INFO] calculator.operation_functions: Addition: 1 + 1 = 2
+2024-07-03 17:48:18,485 [INFO] calculator.calculation: Performed operation: add(1, 1) = 2
+2024-07-03 17:48:18,485 [INFO] calculator: Performing calculation: Calculation(1, 1, add)
+2024-07-03 17:48:18,486 [INFO] calculator.calculations: Adding calculation: Calculation(1, 1, add)
+2024-07-03 17:48:18,486 [INFO] calculator.operation_functions: Addition: 1 + 1 = 2
+2024-07-03 17:48:18,486 [INFO] calculator.calculation: Performed operation: add(1, 1) = 2
+2024-07-03 17:48:18,486 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:18,487 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+2024-07-03 17:48:18,508 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:18,508 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+2024-07-03 17:48:18,529 [INFO] calculator.calculation: Performed operation: add(1, 1) = 2
+2024-07-03 17:48:18,529 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:18,530 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+2024-07-03 17:48:18,551 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:18,551 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+2024-07-03 17:48:18,573 [INFO] calculator.calculation: Initialized Calculation: subtract with operands 2 and 1
+2024-07-03 17:48:18,574 [INFO] calculator: Subtraction operation with operands: 2, 1
+2024-07-03 17:48:18,574 [INFO] calculator.calculation: Initialized Calculation: subtract with operands 2 and 1
+2024-07-03 17:48:18,574 [INFO] calculator.operation_functions: Subtraction: 2 - 1 = 1
+2024-07-03 17:48:18,574 [INFO] calculator.calculation: Performed operation: subtract(2, 1) = 1
+2024-07-03 17:48:18,574 [INFO] calculator: Performing calculation: Calculation(2, 1, subtract)
+2024-07-03 17:48:18,574 [INFO] calculator.calculations: Adding calculation: Calculation(2, 1, subtract)
+2024-07-03 17:48:18,574 [INFO] calculator.operation_functions: Subtraction: 2 - 1 = 1
+2024-07-03 17:48:18,574 [INFO] calculator.calculation: Performed operation: subtract(2, 1) = 1
+2024-07-03 17:48:18,574 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:18,575 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+2024-07-03 17:48:18,601 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:18,602 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+2024-07-03 17:48:18,624 [INFO] calculator.calculation: Performed operation: subtract(2, 1) = 1
+2024-07-03 17:48:18,624 [INFO] calculator: Performing calculation: Calculation(2, 1, subtract)
+2024-07-03 17:48:18,624 [INFO] calculator.calculations: Adding calculation: Calculation(2, 1, subtract)
+2024-07-03 17:48:18,624 [INFO] calculator: Subtraction operation with operands: 2, 1
+2024-07-03 17:48:18,624 [INFO] calculator.calculation: Initialized Calculation: subtract with operands 2 and 1
+2024-07-03 17:48:18,624 [INFO] calculator.operation_functions: Subtraction: 2 - 1 = 1
+2024-07-03 17:48:18,624 [INFO] calculator.calculation: Performed operation: subtract(2, 1) = 1
+2024-07-03 17:48:18,624 [INFO] calculator: Performing calculation: Calculation(2, 1, subtract)
+2024-07-03 17:48:18,624 [INFO] calculator.calculations: Adding calculation: Calculation(2, 1, subtract)
+2024-07-03 17:48:18,625 [INFO] calculator.operation_functions: Subtraction: 2 - 1 = 1
+2024-07-03 17:48:18,625 [INFO] calculator.calculation: Performed operation: subtract(2, 1) = 1
+2024-07-03 17:48:18,625 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:18,626 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+2024-07-03 17:48:18,648 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:18,649 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+14  subtract        2.0        1.0     1.0
+2024-07-03 17:48:18,675 [INFO] calculator.calculation: Performed operation: subtract(2, 1) = 1
+2024-07-03 17:48:18,675 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:18,676 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+14  subtract        2.0        1.0     1.0
+2024-07-03 17:48:18,701 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:18,702 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+14  subtract        2.0        1.0     1.0
+15  subtract        2.0        1.0     1.0
+2024-07-03 17:48:18,730 [INFO] calculator.calculation: Initialized Calculation: multiply with operands 2 and 2
+2024-07-03 17:48:18,730 [INFO] calculator: Multiplication operation with operands: 2, 2
+2024-07-03 17:48:18,730 [INFO] calculator.calculation: Initialized Calculation: multiply with operands 2 and 2
+2024-07-03 17:48:18,730 [INFO] calculator.operation_functions: Multiplication: 2 * 2 = 4
+2024-07-03 17:48:18,730 [INFO] calculator.calculation: Performed operation: multiply(2, 2) = 4
+2024-07-03 17:48:18,730 [INFO] calculator: Performing calculation: Calculation(2, 2, multiply)
+2024-07-03 17:48:18,730 [INFO] calculator.calculations: Adding calculation: Calculation(2, 2, multiply)
+2024-07-03 17:48:18,730 [INFO] calculator.operation_functions: Multiplication: 2 * 2 = 4
+2024-07-03 17:48:18,730 [INFO] calculator.calculation: Performed operation: multiply(2, 2) = 4
+2024-07-03 17:48:18,731 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:18,732 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+14  subtract        2.0        1.0     1.0
+15  subtract        2.0        1.0     1.0
+2024-07-03 17:48:18,759 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:18,760 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+14  subtract        2.0        1.0     1.0
+15  subtract        2.0        1.0     1.0
+16  multiply        2.0        2.0     4.0
+2024-07-03 17:48:18,784 [INFO] calculator.calculation: Performed operation: multiply(2, 2) = 4
+2024-07-03 17:48:18,785 [INFO] calculator: Performing calculation: Calculation(2, 2, multiply)
+2024-07-03 17:48:18,785 [INFO] calculator.calculations: Adding calculation: Calculation(2, 2, multiply)
+2024-07-03 17:48:18,785 [INFO] calculator: Multiplication operation with operands: 2, 2
+2024-07-03 17:48:18,785 [INFO] calculator.calculation: Initialized Calculation: multiply with operands 2 and 2
+2024-07-03 17:48:18,785 [INFO] calculator.operation_functions: Multiplication: 2 * 2 = 4
+2024-07-03 17:48:18,785 [INFO] calculator.calculation: Performed operation: multiply(2, 2) = 4
+2024-07-03 17:48:18,785 [INFO] calculator: Performing calculation: Calculation(2, 2, multiply)
+2024-07-03 17:48:18,785 [INFO] calculator.calculations: Adding calculation: Calculation(2, 2, multiply)
+2024-07-03 17:48:18,785 [INFO] calculator.operation_functions: Multiplication: 2 * 2 = 4
+2024-07-03 17:48:18,785 [INFO] calculator.calculation: Performed operation: multiply(2, 2) = 4
+2024-07-03 17:48:18,785 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:18,786 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+14  subtract        2.0        1.0     1.0
+15  subtract        2.0        1.0     1.0
+16  multiply        2.0        2.0     4.0
+2024-07-03 17:48:18,811 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:18,812 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+14  subtract        2.0        1.0     1.0
+15  subtract        2.0        1.0     1.0
+16  multiply        2.0        2.0     4.0
+17  multiply        2.0        2.0     4.0
+2024-07-03 17:48:18,840 [INFO] calculator.calculation: Performed operation: multiply(2, 2) = 4
+2024-07-03 17:48:18,840 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:18,842 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+14  subtract        2.0        1.0     1.0
+15  subtract        2.0        1.0     1.0
+16  multiply        2.0        2.0     4.0
+17  multiply        2.0        2.0     4.0
+2024-07-03 17:48:18,877 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:18,878 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+14  subtract        2.0        1.0     1.0
+15  subtract        2.0        1.0     1.0
+16  multiply        2.0        2.0     4.0
+17  multiply        2.0        2.0     4.0
+18  multiply        2.0        2.0     4.0
+2024-07-03 17:48:18,913 [INFO] calculator.calculation: Initialized Calculation: divide with operands 4 and 2
+2024-07-03 17:48:18,913 [INFO] calculator: Division operation with operands: 4, 2
+2024-07-03 17:48:18,913 [INFO] calculator.calculation: Initialized Calculation: divide with operands 4 and 2
+2024-07-03 17:48:18,913 [INFO] calculator.operation_functions: Division: 4 / 2 = 2
+2024-07-03 17:48:18,913 [INFO] calculator.calculation: Performed operation: divide(4, 2) = 2
+2024-07-03 17:48:18,914 [INFO] calculator: Performing calculation: Calculation(4, 2, divide)
+2024-07-03 17:48:18,914 [INFO] calculator.calculations: Adding calculation: Calculation(4, 2, divide)
+2024-07-03 17:48:18,914 [INFO] calculator.operation_functions: Division: 4 / 2 = 2
+2024-07-03 17:48:18,914 [INFO] calculator.calculation: Performed operation: divide(4, 2) = 2
+2024-07-03 17:48:18,914 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:18,915 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+14  subtract        2.0        1.0     1.0
+15  subtract        2.0        1.0     1.0
+16  multiply        2.0        2.0     4.0
+17  multiply        2.0        2.0     4.0
+18  multiply        2.0        2.0     4.0
+2024-07-03 17:48:18,950 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:18,951 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+14  subtract        2.0        1.0     1.0
+15  subtract        2.0        1.0     1.0
+16  multiply        2.0        2.0     4.0
+17  multiply        2.0        2.0     4.0
+18  multiply        2.0        2.0     4.0
+19    divide        4.0        2.0     2.0
+2024-07-03 17:48:18,976 [INFO] calculator.calculation: Performed operation: divide(4, 2) = 2
+2024-07-03 17:48:18,976 [INFO] calculator: Performing calculation: Calculation(4, 2, divide)
+2024-07-03 17:48:18,976 [INFO] calculator.calculations: Adding calculation: Calculation(4, 2, divide)
+2024-07-03 17:48:18,976 [INFO] calculator: Division operation with operands: 4, 2
+2024-07-03 17:48:18,977 [INFO] calculator.calculation: Initialized Calculation: divide with operands 4 and 2
+2024-07-03 17:48:18,977 [INFO] calculator.operation_functions: Division: 4 / 2 = 2
+2024-07-03 17:48:18,977 [INFO] calculator.calculation: Performed operation: divide(4, 2) = 2
+2024-07-03 17:48:18,977 [INFO] calculator: Performing calculation: Calculation(4, 2, divide)
+2024-07-03 17:48:18,977 [INFO] calculator.calculations: Adding calculation: Calculation(4, 2, divide)
+2024-07-03 17:48:18,977 [INFO] calculator.operation_functions: Division: 4 / 2 = 2
+2024-07-03 17:48:18,977 [INFO] calculator.calculation: Performed operation: divide(4, 2) = 2
+2024-07-03 17:48:18,977 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:18,978 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+14  subtract        2.0        1.0     1.0
+15  subtract        2.0        1.0     1.0
+16  multiply        2.0        2.0     4.0
+17  multiply        2.0        2.0     4.0
+18  multiply        2.0        2.0     4.0
+19    divide        4.0        2.0     2.0
+2024-07-03 17:48:19,004 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:19,005 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+14  subtract        2.0        1.0     1.0
+15  subtract        2.0        1.0     1.0
+16  multiply        2.0        2.0     4.0
+17  multiply        2.0        2.0     4.0
+18  multiply        2.0        2.0     4.0
+19    divide        4.0        2.0     2.0
+20    divide        4.0        2.0     2.0
+2024-07-03 17:48:19,030 [INFO] calculator.calculation: Performed operation: divide(4, 2) = 2
+2024-07-03 17:48:19,030 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:19,031 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+14  subtract        2.0        1.0     1.0
+15  subtract        2.0        1.0     1.0
+16  multiply        2.0        2.0     4.0
+17  multiply        2.0        2.0     4.0
+18  multiply        2.0        2.0     4.0
+19    divide        4.0        2.0     2.0
+20    divide        4.0        2.0     2.0
+2024-07-03 17:48:19,058 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:19,058 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+14  subtract        2.0        1.0     1.0
+15  subtract        2.0        1.0     1.0
+16  multiply        2.0        2.0     4.0
+17  multiply        2.0        2.0     4.0
+18  multiply        2.0        2.0     4.0
+19    divide        4.0        2.0     2.0
+20    divide        4.0        2.0     2.0
+21    divide        4.0        2.0     2.0
+2024-07-03 17:48:19,086 [ERROR] calculator: ZeroDivisionError: Cannot divide by zero
+2024-07-03 17:48:19,087 [INFO] calculator.calculation: Initialized Calculation: exponent with operands 2 and 3
+2024-07-03 17:48:19,088 [INFO] calculator: Exponentiation operation with operands: 2, 3
+2024-07-03 17:48:19,088 [INFO] calculator.calculation: Initialized Calculation: exponent with operands 2 and 3
+2024-07-03 17:48:19,088 [INFO] calculator.operation_functions: Exponentiation: 2 ** 3 = 8
+2024-07-03 17:48:19,088 [INFO] calculator.calculation: Performed operation: exponent(2, 3) = 8
+2024-07-03 17:48:19,088 [INFO] calculator: Performing calculation: Calculation(2, 3, exponent)
+2024-07-03 17:48:19,088 [INFO] calculator.calculations: Adding calculation: Calculation(2, 3, exponent)
+2024-07-03 17:48:19,088 [INFO] calculator.operation_functions: Exponentiation: 2 ** 3 = 8
+2024-07-03 17:48:19,088 [INFO] calculator.calculation: Performed operation: exponent(2, 3) = 8
+2024-07-03 17:48:19,088 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:19,089 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+14  subtract        2.0        1.0     1.0
+15  subtract        2.0        1.0     1.0
+16  multiply        2.0        2.0     4.0
+17  multiply        2.0        2.0     4.0
+18  multiply        2.0        2.0     4.0
+19    divide        4.0        2.0     2.0
+20    divide        4.0        2.0     2.0
+21    divide        4.0        2.0     2.0
+2024-07-03 17:48:19,120 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:19,121 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+14  subtract        2.0        1.0     1.0
+15  subtract        2.0        1.0     1.0
+16  multiply        2.0        2.0     4.0
+17  multiply        2.0        2.0     4.0
+18  multiply        2.0        2.0     4.0
+19    divide        4.0        2.0     2.0
+20    divide        4.0        2.0     2.0
+21    divide        4.0        2.0     2.0
+22  exponent        2.0        3.0     8.0
+2024-07-03 17:48:19,152 [INFO] calculator.calculation: Performed operation: exponent(2, 3) = 8
+2024-07-03 17:48:19,152 [INFO] calculator: Performing calculation: Calculation(2, 3, exponent)
+2024-07-03 17:48:19,152 [INFO] calculator.calculations: Adding calculation: Calculation(2, 3, exponent)
+2024-07-03 17:48:19,153 [INFO] calculator: Exponentiation operation with operands: 2, 3
+2024-07-03 17:48:19,153 [INFO] calculator.calculation: Initialized Calculation: exponent with operands 2 and 3
+2024-07-03 17:48:19,153 [INFO] calculator.operation_functions: Exponentiation: 2 ** 3 = 8
+2024-07-03 17:48:19,153 [INFO] calculator.calculation: Performed operation: exponent(2, 3) = 8
+2024-07-03 17:48:19,153 [INFO] calculator: Performing calculation: Calculation(2, 3, exponent)
+2024-07-03 17:48:19,153 [INFO] calculator.calculations: Adding calculation: Calculation(2, 3, exponent)
+2024-07-03 17:48:19,153 [INFO] calculator.operation_functions: Exponentiation: 2 ** 3 = 8
+2024-07-03 17:48:19,153 [INFO] calculator.calculation: Performed operation: exponent(2, 3) = 8
+2024-07-03 17:48:19,153 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:19,154 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+14  subtract        2.0        1.0     1.0
+15  subtract        2.0        1.0     1.0
+16  multiply        2.0        2.0     4.0
+17  multiply        2.0        2.0     4.0
+18  multiply        2.0        2.0     4.0
+19    divide        4.0        2.0     2.0
+20    divide        4.0        2.0     2.0
+21    divide        4.0        2.0     2.0
+22  exponent        2.0        3.0     8.0
+2024-07-03 17:48:19,183 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:19,184 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+14  subtract        2.0        1.0     1.0
+15  subtract        2.0        1.0     1.0
+16  multiply        2.0        2.0     4.0
+17  multiply        2.0        2.0     4.0
+18  multiply        2.0        2.0     4.0
+19    divide        4.0        2.0     2.0
+20    divide        4.0        2.0     2.0
+21    divide        4.0        2.0     2.0
+22  exponent        2.0        3.0     8.0
+23  exponent        2.0        3.0     8.0
+2024-07-03 17:48:19,211 [INFO] calculator.calculation: Performed operation: exponent(2, 3) = 8
+2024-07-03 17:48:19,211 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:19,212 [INFO] calculator.calculations: Loaded history from data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+14  subtract        2.0        1.0     1.0
+15  subtract        2.0        1.0     1.0
+16  multiply        2.0        2.0     4.0
+17  multiply        2.0        2.0     4.0
+18  multiply        2.0        2.0     4.0
+19    divide        4.0        2.0     2.0
+20    divide        4.0        2.0     2.0
+21    divide        4.0        2.0     2.0
+22  exponent        2.0        3.0     8.0
+23  exponent        2.0        3.0     8.0
+2024-07-03 17:48:19,241 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:19,241 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+   Operation  Operand_A  Operand_B  Result
+0        add        1.0        1.0     2.0
+1   subtract        2.0        1.0     1.0
+2   multiply        2.0        2.0     4.0
+3     divide        4.0        2.0     2.0
+4   exponent        2.0        3.0     8.0
+5        add        1.0        1.0     2.0
+6   subtract        2.0        1.0     1.0
+7   multiply        2.0        2.0     4.0
+8     divide        4.0        2.0     2.0
+9   exponent        2.0        3.0     8.0
+10       add        1.0        1.0     2.0
+11       add        1.0        1.0     2.0
+12       add        1.0        1.0     2.0
+13  subtract        2.0        1.0     1.0
+14  subtract        2.0        1.0     1.0
+15  subtract        2.0        1.0     1.0
+16  multiply        2.0        2.0     4.0
+17  multiply        2.0        2.0     4.0
+18  multiply        2.0        2.0     4.0
+19    divide        4.0        2.0     2.0
+20    divide        4.0        2.0     2.0
+21    divide        4.0        2.0     2.0
+22  exponent        2.0        3.0     8.0
+23  exponent        2.0        3.0     8.0
+24  exponent        2.0        3.0     8.0
+2024-07-03 17:48:19,273 [INFO] plugin_manager: Loading module: goodbye
+2024-07-03 17:48:19,273 [INFO] plugin_manager: Plugin loaded: goodbye
+2024-07-03 17:48:19,273 [INFO] plugin_manager: Loading module: menu
+2024-07-03 17:48:19,274 [INFO] plugin_manager: Plugin loaded: menu
+2024-07-03 17:48:19,274 [INFO] plugin_manager: Loading module: delete_history
+2024-07-03 17:48:19,274 [INFO] plugin_manager: Plugin loaded: delete_history
+2024-07-03 17:48:19,274 [INFO] plugin_manager: Loading module: greet
+2024-07-03 17:48:19,274 [INFO] plugin_manager: Plugin loaded: greet
+2024-07-03 17:48:19,274 [INFO] plugin_manager: Loading module: save_history
+2024-07-03 17:48:19,275 [INFO] plugin_manager: Plugin loaded: save_history
+2024-07-03 17:48:19,275 [INFO] plugin_manager: Loading module: view_history
+2024-07-03 17:48:19,275 [INFO] plugin_manager: Plugin loaded: view_history
+2024-07-03 17:48:19,275 [INFO] plugin_manager: Loading module: help
+2024-07-03 17:48:19,275 [INFO] plugin_manager: Plugin loaded: help
+2024-07-03 17:48:19,275 [INFO] plugin_manager: Loading module: exit
+2024-07-03 17:48:19,276 [INFO] plugin_manager: Plugin loaded: exit
+2024-07-03 17:48:19,276 [INFO] plugin_manager: Loading module: delete_history_entry
+2024-07-03 17:48:19,276 [INFO] plugin_manager: Plugin loaded: delete_history_entry
+2024-07-03 17:48:19,276 [INFO] plugin_manager: Loading module: load_history
+2024-07-03 17:48:19,276 [INFO] plugin_manager: Plugin loaded: load_history
+2024-07-03 17:48:19,277 [INFO] plugin_manager: Loading module: clear_history
+2024-07-03 17:48:19,277 [INFO] plugin_manager: Plugin loaded: clear_history
+2024-07-03 17:48:19,277 [INFO] plugin_manager: Loading module: plugin_interface
+2024-07-03 17:48:19,279 [INFO] plugin_manager: Loading module: goodbye
+2024-07-03 17:48:19,279 [INFO] plugin_manager: Plugin loaded: goodbye
+2024-07-03 17:48:19,279 [INFO] plugin_manager: Loading module: menu
+2024-07-03 17:48:19,279 [INFO] plugin_manager: Plugin loaded: menu
+2024-07-03 17:48:19,279 [INFO] plugin_manager: Loading module: delete_history
+2024-07-03 17:48:19,280 [INFO] plugin_manager: Plugin loaded: delete_history
+2024-07-03 17:48:19,280 [INFO] plugin_manager: Loading module: greet
+2024-07-03 17:48:19,280 [INFO] plugin_manager: Plugin loaded: greet
+2024-07-03 17:48:19,280 [INFO] plugin_manager: Loading module: save_history
+2024-07-03 17:48:19,280 [INFO] plugin_manager: Plugin loaded: save_history
+2024-07-03 17:48:19,280 [INFO] plugin_manager: Loading module: view_history
+2024-07-03 17:48:19,280 [INFO] plugin_manager: Plugin loaded: view_history
+2024-07-03 17:48:19,281 [INFO] plugin_manager: Loading module: help
+2024-07-03 17:48:19,281 [INFO] plugin_manager: Plugin loaded: help
+2024-07-03 17:48:19,281 [INFO] plugin_manager: Loading module: exit
+2024-07-03 17:48:19,281 [INFO] plugin_manager: Plugin loaded: exit
+2024-07-03 17:48:19,281 [INFO] plugin_manager: Loading module: delete_history_entry
+2024-07-03 17:48:19,281 [INFO] plugin_manager: Plugin loaded: delete_history_entry
+2024-07-03 17:48:19,281 [INFO] plugin_manager: Loading module: load_history
+2024-07-03 17:48:19,281 [INFO] plugin_manager: Plugin loaded: load_history
+2024-07-03 17:48:19,282 [INFO] plugin_manager: Loading module: clear_history
+2024-07-03 17:48:19,282 [INFO] plugin_manager: Plugin loaded: clear_history
+2024-07-03 17:48:19,282 [INFO] plugin_manager: Loading module: plugin_interface
+2024-07-03 17:48:19,282 [INFO] plugin_manager: Loading module: calculation
+2024-07-03 17:48:19,282 [INFO] plugin_manager: Loading module: calculations
+2024-07-03 17:48:19,282 [INFO] plugin_manager: Loading module: multiply
+2024-07-03 17:48:19,283 [INFO] plugin_manager: Plugin loaded: multiply
+2024-07-03 17:48:19,283 [INFO] plugin_manager: Loading module: add
+2024-07-03 17:48:19,283 [INFO] plugin_manager: Plugin loaded: add
+2024-07-03 17:48:19,283 [INFO] plugin_manager: Loading module: history
+2024-07-03 17:48:19,283 [INFO] plugin_manager: Loading module: exponent
+2024-07-03 17:48:19,284 [INFO] plugin_manager: Plugin loaded: exponent
+2024-07-03 17:48:19,284 [INFO] plugin_manager: Loading module: divide
+2024-07-03 17:48:19,284 [INFO] plugin_manager: Plugin loaded: divide
+2024-07-03 17:48:19,285 [INFO] plugin_manager: Loading module: operations
+2024-07-03 17:48:19,285 [INFO] plugin_manager: Loading module: subtract
+2024-07-03 17:48:19,285 [INFO] plugin_manager: Plugin loaded: subtract
+2024-07-03 17:48:19,285 [INFO] plugin_manager: Loading module: operation_functions
+2024-07-03 17:48:19,285 [INFO] plugin_manager: Loading module: goodbye
+2024-07-03 17:48:19,285 [INFO] plugin_manager: Plugin loaded: goodbye
+2024-07-03 17:48:19,285 [INFO] plugin_manager: Loading module: menu
+2024-07-03 17:48:19,286 [INFO] plugin_manager: Plugin loaded: menu
+2024-07-03 17:48:19,286 [INFO] plugin_manager: Loading module: delete_history
+2024-07-03 17:48:19,286 [INFO] plugin_manager: Plugin loaded: delete_history
+2024-07-03 17:48:19,286 [INFO] plugin_manager: Loading module: greet
+2024-07-03 17:48:19,286 [INFO] plugin_manager: Plugin loaded: greet
+2024-07-03 17:48:19,286 [INFO] plugin_manager: Loading module: save_history
+2024-07-03 17:48:19,286 [INFO] plugin_manager: Plugin loaded: save_history
+2024-07-03 17:48:19,286 [INFO] plugin_manager: Loading module: view_history
+2024-07-03 17:48:19,286 [INFO] plugin_manager: Plugin loaded: view_history
+2024-07-03 17:48:19,287 [INFO] plugin_manager: Loading module: help
+2024-07-03 17:48:19,287 [INFO] plugin_manager: Plugin loaded: help
+2024-07-03 17:48:19,287 [INFO] plugin_manager: Loading module: exit
+2024-07-03 17:48:19,287 [INFO] plugin_manager: Plugin loaded: exit
+2024-07-03 17:48:19,287 [INFO] plugin_manager: Loading module: delete_history_entry
+2024-07-03 17:48:19,287 [INFO] plugin_manager: Plugin loaded: delete_history_entry
+2024-07-03 17:48:19,287 [INFO] plugin_manager: Loading module: load_history
+2024-07-03 17:48:19,287 [INFO] plugin_manager: Plugin loaded: load_history
+2024-07-03 17:48:19,287 [INFO] plugin_manager: Loading module: clear_history
+2024-07-03 17:48:19,287 [INFO] plugin_manager: Plugin loaded: clear_history
+2024-07-03 17:48:19,288 [INFO] plugin_manager: Loading module: plugin_interface
+2024-07-03 17:48:19,288 [INFO] plugin_manager: Loading module: calculation
+2024-07-03 17:48:19,288 [INFO] plugin_manager: Loading module: calculations
+2024-07-03 17:48:19,288 [INFO] plugin_manager: Loading module: multiply
+2024-07-03 17:48:19,288 [INFO] plugin_manager: Plugin loaded: multiply
+2024-07-03 17:48:19,288 [INFO] plugin_manager: Loading module: add
+2024-07-03 17:48:19,288 [INFO] plugin_manager: Plugin loaded: add
+2024-07-03 17:48:19,289 [INFO] plugin_manager: Loading module: history
+2024-07-03 17:48:19,289 [INFO] plugin_manager: Loading module: exponent
+2024-07-03 17:48:19,289 [INFO] plugin_manager: Plugin loaded: exponent
+2024-07-03 17:48:19,289 [INFO] plugin_manager: Loading module: divide
+2024-07-03 17:48:19,289 [INFO] plugin_manager: Plugin loaded: divide
+2024-07-03 17:48:19,289 [INFO] plugin_manager: Loading module: operations
+2024-07-03 17:48:19,289 [INFO] plugin_manager: Loading module: subtract
+2024-07-03 17:48:19,289 [INFO] plugin_manager: Plugin loaded: subtract
+2024-07-03 17:48:19,289 [INFO] plugin_manager: Loading module: operation_functions
+2024-07-03 17:48:19,290 [INFO] command_handler: Attempting to execute command: greet
+2024-07-03 17:48:19,290 [INFO] command_handler: Executing command: greet
+2024-07-03 17:48:19,290 [INFO] command_handler: Attempting to execute command: goodbye
+2024-07-03 17:48:19,290 [INFO] command_handler: Executing command: goodbye
+2024-07-03 17:48:19,290 [INFO] command_handler: Attempting to execute command: menu
+2024-07-03 17:48:19,290 [INFO] command_handler: Executing command: menu
+2024-07-03 17:48:19,306 [INFO] calculator.operation_functions: Addition: 10 + 8 = 18
+2024-07-03 17:48:19,306 [INFO] calculator.operation_functions: Multiplication: 22 * 95 = 2090
+2024-07-03 17:48:19,306 [INFO] calculator.operation_functions: Addition: 92 + 67 = 159
+2024-07-03 17:48:19,306 [INFO] calculator.operation_functions: Addition: 11 + 37 = 48
+2024-07-03 17:48:19,306 [INFO] calculator.operation_functions: Exponentiation: 51 ** 6 = 17596287801
+2024-07-03 17:48:19,307 [INFO] calculator.operation_functions: Addition: 46 + 48 = 94
+2024-07-03 17:48:19,307 [INFO] calculator.operation_functions: Division: 73 / 96 = 0.7604166666666666666666666667
+2024-07-03 17:48:19,307 [INFO] calculator.operation_functions: Subtraction: 41 - 27 = 14
+2024-07-03 17:48:19,307 [INFO] calculator.operation_functions: Subtraction: 78 - 0 = 78
+2024-07-03 17:48:19,307 [INFO] calculator.operation_functions: Multiplication: 41 * 5 = 205
+2024-07-03 17:48:19,307 [INFO] calculator.operation_functions: Addition: 10 + 8 = 18
+2024-07-03 17:48:19,307 [INFO] calculator.operation_functions: Multiplication: 22 * 95 = 2090
+2024-07-03 17:48:19,307 [INFO] calculator.operation_functions: Addition: 92 + 67 = 159
+2024-07-03 17:48:19,307 [INFO] calculator.operation_functions: Addition: 11 + 37 = 48
+2024-07-03 17:48:19,307 [INFO] calculator.operation_functions: Exponentiation: 51 ** 6 = 17596287801
+2024-07-03 17:48:19,307 [INFO] calculator.operation_functions: Addition: 46 + 48 = 94
+2024-07-03 17:48:19,308 [INFO] calculator.operation_functions: Division: 73 / 96 = 0.7604166666666666666666666667
+2024-07-03 17:48:19,308 [INFO] calculator.operation_functions: Subtraction: 41 - 27 = 14
+2024-07-03 17:48:19,308 [INFO] calculator.operation_functions: Subtraction: 78 - 0 = 78
+2024-07-03 17:48:19,308 [INFO] calculator.operation_functions: Multiplication: 41 * 5 = 205
+2024-07-03 17:48:19,312 [INFO] plugin_manager: Loading module: goodbye
+2024-07-03 17:48:19,312 [INFO] plugin_manager: Plugin loaded: goodbye
+2024-07-03 17:48:19,312 [INFO] plugin_manager: Loading module: menu
+2024-07-03 17:48:19,312 [INFO] plugin_manager: Plugin loaded: menu
+2024-07-03 17:48:19,312 [INFO] plugin_manager: Loading module: delete_history
+2024-07-03 17:48:19,313 [INFO] plugin_manager: Plugin loaded: delete_history
+2024-07-03 17:48:19,313 [INFO] plugin_manager: Loading module: greet
+2024-07-03 17:48:19,313 [INFO] plugin_manager: Plugin loaded: greet
+2024-07-03 17:48:19,313 [INFO] plugin_manager: Loading module: save_history
+2024-07-03 17:48:19,313 [INFO] plugin_manager: Plugin loaded: save_history
+2024-07-03 17:48:19,313 [INFO] plugin_manager: Loading module: view_history
+2024-07-03 17:48:19,313 [INFO] plugin_manager: Plugin loaded: view_history
+2024-07-03 17:48:19,313 [INFO] plugin_manager: Loading module: help
+2024-07-03 17:48:19,314 [INFO] plugin_manager: Plugin loaded: help
+2024-07-03 17:48:19,314 [INFO] plugin_manager: Loading module: exit
+2024-07-03 17:48:19,314 [INFO] plugin_manager: Plugin loaded: exit
+2024-07-03 17:48:19,314 [INFO] plugin_manager: Loading module: delete_history_entry
+2024-07-03 17:48:19,314 [INFO] plugin_manager: Plugin loaded: delete_history_entry
+2024-07-03 17:48:19,314 [INFO] plugin_manager: Loading module: load_history
+2024-07-03 17:48:19,314 [INFO] plugin_manager: Plugin loaded: load_history
+2024-07-03 17:48:19,315 [INFO] plugin_manager: Loading module: clear_history
+2024-07-03 17:48:19,315 [INFO] plugin_manager: Plugin loaded: clear_history
+2024-07-03 17:48:19,315 [INFO] plugin_manager: Loading module: plugin_interface
+2024-07-03 17:48:19,315 [INFO] plugin_manager: Loading module: calculation
+2024-07-03 17:48:19,315 [INFO] plugin_manager: Loading module: calculations
+2024-07-03 17:48:19,315 [INFO] plugin_manager: Loading module: multiply
+2024-07-03 17:48:19,315 [INFO] plugin_manager: Plugin loaded: multiply
+2024-07-03 17:48:19,315 [INFO] plugin_manager: Loading module: add
+2024-07-03 17:48:19,316 [INFO] plugin_manager: Plugin loaded: add
+2024-07-03 17:48:19,316 [INFO] plugin_manager: Loading module: history
+2024-07-03 17:48:19,316 [INFO] plugin_manager: Loading module: exponent
+2024-07-03 17:48:19,316 [INFO] plugin_manager: Plugin loaded: exponent
+2024-07-03 17:48:19,316 [INFO] plugin_manager: Loading module: divide
+2024-07-03 17:48:19,316 [INFO] plugin_manager: Plugin loaded: divide
+2024-07-03 17:48:19,317 [INFO] plugin_manager: Loading module: operations
+2024-07-03 17:48:19,318 [INFO] plugin_manager: Loading module: subtract
+2024-07-03 17:48:19,318 [INFO] plugin_manager: Plugin loaded: subtract
+2024-07-03 17:48:19,318 [INFO] plugin_manager: Loading module: operation_functions
+2024-07-03 17:48:19,318 [INFO] plugin_manager: Loading module: goodbye
+2024-07-03 17:48:19,318 [INFO] plugin_manager: Plugin loaded: goodbye
+2024-07-03 17:48:19,318 [INFO] plugin_manager: Loading module: menu
+2024-07-03 17:48:19,319 [INFO] plugin_manager: Plugin loaded: menu
+2024-07-03 17:48:19,319 [INFO] plugin_manager: Loading module: delete_history
+2024-07-03 17:48:19,319 [INFO] plugin_manager: Plugin loaded: delete_history
+2024-07-03 17:48:19,319 [INFO] plugin_manager: Loading module: greet
+2024-07-03 17:48:19,319 [INFO] plugin_manager: Plugin loaded: greet
+2024-07-03 17:48:19,319 [INFO] plugin_manager: Loading module: save_history
+2024-07-03 17:48:19,319 [INFO] plugin_manager: Plugin loaded: save_history
+2024-07-03 17:48:19,319 [INFO] plugin_manager: Loading module: view_history
+2024-07-03 17:48:19,319 [INFO] plugin_manager: Plugin loaded: view_history
+2024-07-03 17:48:19,320 [INFO] plugin_manager: Loading module: help
+2024-07-03 17:48:19,320 [INFO] plugin_manager: Plugin loaded: help
+2024-07-03 17:48:19,320 [INFO] plugin_manager: Loading module: exit
+2024-07-03 17:48:19,320 [INFO] plugin_manager: Plugin loaded: exit
+2024-07-03 17:48:19,320 [INFO] plugin_manager: Loading module: delete_history_entry
+2024-07-03 17:48:19,320 [INFO] plugin_manager: Plugin loaded: delete_history_entry
+2024-07-03 17:48:19,320 [INFO] plugin_manager: Loading module: load_history
+2024-07-03 17:48:19,320 [INFO] plugin_manager: Plugin loaded: load_history
+2024-07-03 17:48:19,320 [INFO] plugin_manager: Loading module: clear_history
+2024-07-03 17:48:19,321 [INFO] plugin_manager: Plugin loaded: clear_history
+2024-07-03 17:48:19,321 [INFO] plugin_manager: Loading module: plugin_interface
+2024-07-03 17:48:19,321 [INFO] plugin_manager: Loading module: calculation
+2024-07-03 17:48:19,321 [INFO] plugin_manager: Loading module: calculations
+2024-07-03 17:48:19,321 [INFO] plugin_manager: Loading module: multiply
+2024-07-03 17:48:19,321 [INFO] plugin_manager: Plugin loaded: multiply
+2024-07-03 17:48:19,321 [INFO] plugin_manager: Loading module: add
+2024-07-03 17:48:19,321 [INFO] plugin_manager: Plugin loaded: add
+2024-07-03 17:48:19,321 [INFO] plugin_manager: Loading module: history
+2024-07-03 17:48:19,322 [INFO] plugin_manager: Loading module: exponent
+2024-07-03 17:48:19,322 [INFO] plugin_manager: Plugin loaded: exponent
+2024-07-03 17:48:19,322 [INFO] plugin_manager: Loading module: divide
+2024-07-03 17:48:19,322 [INFO] plugin_manager: Plugin loaded: divide
+2024-07-03 17:48:19,322 [INFO] plugin_manager: Loading module: operations
+2024-07-03 17:48:19,322 [INFO] plugin_manager: Loading module: subtract
+2024-07-03 17:48:19,322 [INFO] plugin_manager: Plugin loaded: subtract
+2024-07-03 17:48:19,322 [INFO] plugin_manager: Loading module: operation_functions
+2024-07-03 17:48:19,323 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:19,324 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:19,324 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:19,327 [INFO] calculator.calculations: Deleted history file: data/calculation_history.csv
+2024-07-03 17:48:19,327 [INFO] calculator.calculations: Saving history to 0
+2024-07-03 17:48:19,327 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:19,328 [WARNING] calculator.calculations: No existing history found or file is empty. Creating new history.
+2024-07-03 17:48:19,329 [INFO] calculator.calculations: History saved to 0
+2024-07-03 17:48:19,329 [INFO] calculator.calculations: Viewing history.
+2024-07-03 17:48:19,329 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:19,329 [WARNING] calculator.calculations: No existing history found or file is empty. Creating new history.
+2024-07-03 17:48:19,330 [INFO] calculator.calculations: Attempting to delete history entry at index 0.
+2024-07-03 17:48:19,330 [INFO] calculator.calculations: Attempting to load history from data/calculation_history.csv
+2024-07-03 17:48:19,331 [WARNING] calculator.calculations: No existing history found or file is empty. Creating new history.
+2024-07-03 17:48:19,332 [WARNING] calculator.calculations: Index 0 is out of range. No entry deleted.
+2024-07-03 17:48:19,332 [INFO] calculator.calculations: Loading history from 0
+2024-07-03 17:48:19,334 [INFO] calculator.calculations: Loaded history from 0:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:19,336 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:19,337 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:19,337 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:19,339 [INFO] calculator.operations: Performing operation: multiply(2, 3)
+2024-07-03 17:48:19,339 [INFO] calculator.calculation: Initialized Calculation: multiply with operands 2 and 3
+2024-07-03 17:48:19,339 [INFO] calculator.operation_functions: Multiplication: 2 * 3 = 6
+2024-07-03 17:48:19,339 [INFO] calculator.calculation: Performed operation: multiply(2, 3) = 6
+2024-07-03 17:48:19,339 [INFO] calculator.operation_functions: Multiplication: 2 * 3 = 6
+2024-07-03 17:48:19,339 [INFO] calculator.calculation: Performed operation: multiply(2, 3) = 6
+2024-07-03 17:48:19,341 [INFO] calculator.operations: Operation result: 6
+2024-07-03 17:48:19,342 [INFO] calculator.operations: Performing operation: add(1, 2)
+2024-07-03 17:48:19,342 [INFO] calculator.calculation: Initialized Calculation: add with operands 1 and 2
+2024-07-03 17:48:19,342 [INFO] calculator.operation_functions: Addition: 1 + 2 = 3
+2024-07-03 17:48:19,342 [INFO] calculator.calculation: Performed operation: add(1, 2) = 3
+2024-07-03 17:48:19,342 [INFO] calculator.operation_functions: Addition: 1 + 2 = 3
+2024-07-03 17:48:19,342 [INFO] calculator.calculation: Performed operation: add(1, 2) = 3
+2024-07-03 17:48:19,344 [INFO] calculator.operations: Operation result: 3
+2024-07-03 17:48:19,344 [INFO] calculator.operations: Performing operation: exponent(2, 3)
+2024-07-03 17:48:19,344 [INFO] calculator.calculation: Initialized Calculation: exponent with operands 2 and 3
+2024-07-03 17:48:19,344 [INFO] calculator.operation_functions: Exponentiation: 2 ** 3 = 8
+2024-07-03 17:48:19,344 [INFO] calculator.calculation: Performed operation: exponent(2, 3) = 8
+2024-07-03 17:48:19,344 [INFO] calculator.operation_functions: Exponentiation: 2 ** 3 = 8
+2024-07-03 17:48:19,344 [INFO] calculator.calculation: Performed operation: exponent(2, 3) = 8
+2024-07-03 17:48:19,346 [INFO] calculator.operations: Operation result: 8
+2024-07-03 17:48:19,346 [INFO] calculator.operations: Performing operation: divide(6, 2)
+2024-07-03 17:48:19,346 [INFO] calculator.calculation: Initialized Calculation: divide with operands 6 and 2
+2024-07-03 17:48:19,346 [INFO] calculator.operation_functions: Division: 6 / 2 = 3
+2024-07-03 17:48:19,346 [INFO] calculator.calculation: Performed operation: divide(6, 2) = 3
+2024-07-03 17:48:19,347 [INFO] calculator.operation_functions: Division: 6 / 2 = 3
+2024-07-03 17:48:19,347 [INFO] calculator.calculation: Performed operation: divide(6, 2) = 3
+2024-07-03 17:48:19,349 [INFO] calculator.operations: Operation result: 3
+2024-07-03 17:48:19,350 [INFO] calculator.operations: Performing operation: subtract(5, 3)
+2024-07-03 17:48:19,350 [INFO] calculator.calculation: Initialized Calculation: subtract with operands 5 and 3
+2024-07-03 17:48:19,350 [INFO] calculator.operation_functions: Subtraction: 5 - 3 = 2
+2024-07-03 17:48:19,350 [INFO] calculator.calculation: Performed operation: subtract(5, 3) = 2
+2024-07-03 17:48:19,350 [INFO] calculator.operation_functions: Subtraction: 5 - 3 = 2
+2024-07-03 17:48:19,350 [INFO] calculator.calculation: Performed operation: subtract(5, 3) = 2
+2024-07-03 17:48:19,353 [INFO] calculator.operations: Operation result: 2
+2024-07-03 17:48:19,356 [INFO] calculator.calculation: Initialized Calculation: add with operands 1 and 2
+2024-07-03 17:48:19,356 [INFO] calculator.operation_functions: Addition: 1 + 2 = 3
+2024-07-03 17:48:19,356 [INFO] calculator.calculation: Performed operation: add(1, 2) = 3
+2024-07-03 17:48:19,361 [INFO] calculator.calculation: Initialized Calculation: subtract with operands 3 and 1
+2024-07-03 17:48:19,361 [INFO] calculator.operation_functions: Subtraction: 3 - 1 = 2
+2024-07-03 17:48:19,361 [INFO] calculator.calculation: Performed operation: subtract(3, 1) = 2
+2024-07-03 17:48:19,368 [INFO] calculator.calculation: Initialized Calculation: multiply with operands 2 and 3
+2024-07-03 17:48:19,368 [INFO] calculator.operation_functions: Multiplication: 2 * 3 = 6
+2024-07-03 17:48:19,369 [INFO] calculator.calculation: Performed operation: multiply(2, 3) = 6
+2024-07-03 17:48:19,376 [INFO] calculator.calculation: Initialized Calculation: divide with operands 6 and 2
+2024-07-03 17:48:19,376 [INFO] calculator.operation_functions: Division: 6 / 2 = 3
+2024-07-03 17:48:19,376 [INFO] calculator.calculation: Performed operation: divide(6, 2) = 3
+2024-07-03 17:48:19,383 [INFO] calculator.calculation: Initialized Calculation: exponent with operands 2 and 3
+2024-07-03 17:48:19,383 [INFO] calculator.operation_functions: Exponentiation: 2 ** 3 = 8
+2024-07-03 17:48:19,383 [INFO] calculator.calculation: Performed operation: exponent(2, 3) = 8
+2024-07-03 17:48:19,391 [INFO] calculator.calculation: Initialized Calculation: add with operands 1 and 2
+2024-07-03 17:48:19,391 [INFO] calculator.operation_functions: Addition: 1 + 2 = 3
+2024-07-03 17:48:19,391 [INFO] calculator.calculation: Performed operation: add(1, 2) = 3
+2024-07-03 17:48:19,399 [INFO] calculator.calculation: Initialized Calculation: add with operands 1 and 2
+2024-07-03 17:48:19,399 [INFO] calculator.operation_functions: Addition: 1 + 2 = 3
+2024-07-03 17:48:19,399 [INFO] calculator.calculation: Performed operation: add(1, 2) = 3
+2024-07-03 17:48:19,407 [INFO] calculator.calculation: Initialized Calculation: add with operands 1 and 2
+2024-07-03 17:48:19,407 [INFO] calculator.operation_functions: Addition: 1 + 2 = 3
+2024-07-03 17:48:19,407 [INFO] calculator.calculation: Performed operation: add(1, 2) = 3
+2024-07-03 17:48:19,414 [INFO] calculator.calculation: Initialized Calculation: add with operands 1 and 2
+2024-07-03 17:48:19,414 [INFO] calculator.calculation: Initialized Calculation: subtract with operands 3 and 1
+2024-07-03 17:48:19,414 [INFO] calculator.operation_functions: Addition: 1 + 2 = 3
+2024-07-03 17:48:19,415 [INFO] calculator.calculation: Performed operation: add(1, 2) = 3
+2024-07-03 17:48:19,418 [INFO] calculator.operation_functions: Subtraction: 3 - 1 = 2
+2024-07-03 17:48:19,418 [INFO] calculator.calculation: Performed operation: subtract(3, 1) = 2
+2024-07-03 17:48:19,422 [INFO] calculator.calculation: Initialized Calculation: subtract with operands 3 and 1
+2024-07-03 17:48:19,425 [INFO] calculator.calculation: Initialized Calculation: add with operands 1 and 2
+2024-07-03 17:48:19,426 [INFO] calculator.calculation: Initialized Calculation: subtract with operands 3 and 1
+2024-07-03 17:48:19,426 [INFO] calculator.operation_functions: Addition: 1 + 2 = 3
+2024-07-03 17:48:19,426 [INFO] calculator.calculation: Performed operation: add(1, 2) = 3
+2024-07-03 17:48:19,428 [INFO] calculator.operation_functions: Subtraction: 3 - 1 = 2
+2024-07-03 17:48:19,428 [INFO] calculator.calculation: Performed operation: subtract(3, 1) = 2
+2024-07-03 17:48:19,437 [INFO] calculator.calculation: Initialized Calculation: add with operands 1 and 2
+2024-07-03 17:48:19,437 [INFO] calculator.operation_functions: Addition: 1 + 2 = 3
+2024-07-03 17:48:19,438 [INFO] calculator.calculation: Performed operation: add(1, 2) = 3
+2024-07-03 17:48:19,444 [INFO] main: Calculating: 1 add 2
+2024-07-03 17:48:19,444 [INFO] plugin_manager: Loading module: goodbye
+2024-07-03 17:48:19,444 [INFO] plugin_manager: Plugin loaded: goodbye
+2024-07-03 17:48:19,444 [INFO] plugin_manager: Loading module: menu
+2024-07-03 17:48:19,445 [INFO] plugin_manager: Plugin loaded: menu
+2024-07-03 17:48:19,445 [INFO] plugin_manager: Loading module: delete_history
+2024-07-03 17:48:19,445 [INFO] plugin_manager: Plugin loaded: delete_history
+2024-07-03 17:48:19,445 [INFO] plugin_manager: Loading module: greet
+2024-07-03 17:48:19,445 [INFO] plugin_manager: Plugin loaded: greet
+2024-07-03 17:48:19,445 [INFO] plugin_manager: Loading module: save_history
+2024-07-03 17:48:19,445 [INFO] plugin_manager: Plugin loaded: save_history
+2024-07-03 17:48:19,446 [INFO] plugin_manager: Loading module: view_history
+2024-07-03 17:48:19,446 [INFO] plugin_manager: Plugin loaded: view_history
+2024-07-03 17:48:19,446 [INFO] plugin_manager: Loading module: help
+2024-07-03 17:48:19,446 [INFO] plugin_manager: Plugin loaded: help
+2024-07-03 17:48:19,446 [INFO] plugin_manager: Loading module: exit
+2024-07-03 17:48:19,446 [INFO] plugin_manager: Plugin loaded: exit
+2024-07-03 17:48:19,446 [INFO] plugin_manager: Loading module: delete_history_entry
+2024-07-03 17:48:19,446 [INFO] plugin_manager: Plugin loaded: delete_history_entry
+2024-07-03 17:48:19,447 [INFO] plugin_manager: Loading module: load_history
+2024-07-03 17:48:19,447 [INFO] plugin_manager: Plugin loaded: load_history
+2024-07-03 17:48:19,447 [INFO] plugin_manager: Loading module: clear_history
+2024-07-03 17:48:19,447 [INFO] plugin_manager: Plugin loaded: clear_history
+2024-07-03 17:48:19,447 [INFO] plugin_manager: Loading module: plugin_interface
+2024-07-03 17:48:19,448 [INFO] plugin_manager: Loading module: calculation
+2024-07-03 17:48:19,448 [INFO] plugin_manager: Loading module: calculations
+2024-07-03 17:48:19,448 [INFO] plugin_manager: Loading module: multiply
+2024-07-03 17:48:19,448 [INFO] plugin_manager: Plugin loaded: multiply
+2024-07-03 17:48:19,448 [INFO] plugin_manager: Loading module: add
+2024-07-03 17:48:19,449 [INFO] plugin_manager: Plugin loaded: add
+2024-07-03 17:48:19,449 [INFO] plugin_manager: Loading module: history
+2024-07-03 17:48:19,449 [INFO] plugin_manager: Loading module: exponent
+2024-07-03 17:48:19,449 [INFO] plugin_manager: Plugin loaded: exponent
+2024-07-03 17:48:19,449 [INFO] plugin_manager: Loading module: divide
+2024-07-03 17:48:19,450 [INFO] plugin_manager: Plugin loaded: divide
+2024-07-03 17:48:19,450 [INFO] plugin_manager: Loading module: operations
+2024-07-03 17:48:19,450 [INFO] plugin_manager: Loading module: subtract
+2024-07-03 17:48:19,450 [INFO] plugin_manager: Plugin loaded: subtract
+2024-07-03 17:48:19,450 [INFO] plugin_manager: Loading module: operation_functions
+2024-07-03 17:48:19,451 [INFO] plugin_manager: Loading module: goodbye
+2024-07-03 17:48:19,451 [INFO] plugin_manager: Plugin loaded: goodbye
+2024-07-03 17:48:19,451 [INFO] plugin_manager: Loading module: menu
+2024-07-03 17:48:19,451 [INFO] plugin_manager: Plugin loaded: menu
+2024-07-03 17:48:19,451 [INFO] plugin_manager: Loading module: delete_history
+2024-07-03 17:48:19,451 [INFO] plugin_manager: Plugin loaded: delete_history
+2024-07-03 17:48:19,452 [INFO] plugin_manager: Loading module: greet
+2024-07-03 17:48:19,452 [INFO] plugin_manager: Plugin loaded: greet
+2024-07-03 17:48:19,452 [INFO] plugin_manager: Loading module: save_history
+2024-07-03 17:48:19,453 [INFO] plugin_manager: Plugin loaded: save_history
+2024-07-03 17:48:19,453 [INFO] plugin_manager: Loading module: view_history
+2024-07-03 17:48:19,453 [INFO] plugin_manager: Plugin loaded: view_history
+2024-07-03 17:48:19,454 [INFO] plugin_manager: Loading module: help
+2024-07-03 17:48:19,454 [INFO] plugin_manager: Plugin loaded: help
+2024-07-03 17:48:19,454 [INFO] plugin_manager: Loading module: exit
+2024-07-03 17:48:19,454 [INFO] plugin_manager: Plugin loaded: exit
+2024-07-03 17:48:19,454 [INFO] plugin_manager: Loading module: delete_history_entry
+2024-07-03 17:48:19,454 [INFO] plugin_manager: Plugin loaded: delete_history_entry
+2024-07-03 17:48:19,454 [INFO] plugin_manager: Loading module: load_history
+2024-07-03 17:48:19,454 [INFO] plugin_manager: Plugin loaded: load_history
+2024-07-03 17:48:19,455 [INFO] plugin_manager: Loading module: clear_history
+2024-07-03 17:48:19,455 [INFO] plugin_manager: Plugin loaded: clear_history
+2024-07-03 17:48:19,455 [INFO] plugin_manager: Loading module: plugin_interface
+2024-07-03 17:48:19,455 [INFO] plugin_manager: Loading module: calculation
+2024-07-03 17:48:19,455 [INFO] plugin_manager: Loading module: calculations
+2024-07-03 17:48:19,455 [INFO] plugin_manager: Loading module: multiply
+2024-07-03 17:48:19,455 [INFO] plugin_manager: Plugin loaded: multiply
+2024-07-03 17:48:19,455 [INFO] plugin_manager: Loading module: add
+2024-07-03 17:48:19,456 [INFO] plugin_manager: Plugin loaded: add
+2024-07-03 17:48:19,456 [INFO] plugin_manager: Loading module: history
+2024-07-03 17:48:19,456 [INFO] plugin_manager: Loading module: exponent
+2024-07-03 17:48:19,456 [INFO] plugin_manager: Plugin loaded: exponent
+2024-07-03 17:48:19,456 [INFO] plugin_manager: Loading module: divide
+2024-07-03 17:48:19,456 [INFO] plugin_manager: Plugin loaded: divide
+2024-07-03 17:48:19,456 [INFO] plugin_manager: Loading module: operations
+2024-07-03 17:48:19,457 [INFO] plugin_manager: Loading module: subtract
+2024-07-03 17:48:19,457 [INFO] plugin_manager: Plugin loaded: subtract
+2024-07-03 17:48:19,457 [INFO] plugin_manager: Loading module: operation_functions
+2024-07-03 17:48:19,457 [INFO] calculator.operations: Performing operation: add(1, 2)
+2024-07-03 17:48:19,457 [INFO] calculator.calculation: Initialized Calculation: add with operands 1 and 2
+2024-07-03 17:48:19,457 [INFO] calculator.operation_functions: Addition: 1 + 2 = 3
+2024-07-03 17:48:19,457 [INFO] calculator.calculation: Performed operation: add(1, 2) = 3
+2024-07-03 17:48:19,457 [INFO] calculator.operation_functions: Addition: 1 + 2 = 3
+2024-07-03 17:48:19,457 [INFO] calculator.calculation: Performed operation: add(1, 2) = 3
+2024-07-03 17:48:19,460 [INFO] calculator.operations: Operation result: 3
+2024-07-03 17:48:19,460 [INFO] main: Result: The result of 1 add 2 is equal to 3
+2024-07-03 17:48:19,462 [INFO] main: Calculating: one add 2
+2024-07-03 17:48:19,462 [ERROR] main: Invalid number input: one or 2
+2024-07-03 17:48:19,463 [INFO] main: Calculating: 1 unknown 2
+2024-07-03 17:48:19,463 [INFO] plugin_manager: Loading module: goodbye
+2024-07-03 17:48:19,463 [INFO] plugin_manager: Plugin loaded: goodbye
+2024-07-03 17:48:19,463 [INFO] plugin_manager: Loading module: menu
+2024-07-03 17:48:19,464 [INFO] plugin_manager: Plugin loaded: menu
+2024-07-03 17:48:19,464 [INFO] plugin_manager: Loading module: delete_history
+2024-07-03 17:48:19,464 [INFO] plugin_manager: Plugin loaded: delete_history
+2024-07-03 17:48:19,464 [INFO] plugin_manager: Loading module: greet
+2024-07-03 17:48:19,464 [INFO] plugin_manager: Plugin loaded: greet
+2024-07-03 17:48:19,464 [INFO] plugin_manager: Loading module: save_history
+2024-07-03 17:48:19,465 [INFO] plugin_manager: Plugin loaded: save_history
+2024-07-03 17:48:19,465 [INFO] plugin_manager: Loading module: view_history
+2024-07-03 17:48:19,465 [INFO] plugin_manager: Plugin loaded: view_history
+2024-07-03 17:48:19,465 [INFO] plugin_manager: Loading module: help
+2024-07-03 17:48:19,465 [INFO] plugin_manager: Plugin loaded: help
+2024-07-03 17:48:19,465 [INFO] plugin_manager: Loading module: exit
+2024-07-03 17:48:19,465 [INFO] plugin_manager: Plugin loaded: exit
+2024-07-03 17:48:19,465 [INFO] plugin_manager: Loading module: delete_history_entry
+2024-07-03 17:48:19,466 [INFO] plugin_manager: Plugin loaded: delete_history_entry
+2024-07-03 17:48:19,466 [INFO] plugin_manager: Loading module: load_history
+2024-07-03 17:48:19,466 [INFO] plugin_manager: Plugin loaded: load_history
+2024-07-03 17:48:19,466 [INFO] plugin_manager: Loading module: clear_history
+2024-07-03 17:48:19,466 [INFO] plugin_manager: Plugin loaded: clear_history
+2024-07-03 17:48:19,466 [INFO] plugin_manager: Loading module: plugin_interface
+2024-07-03 17:48:19,466 [INFO] plugin_manager: Loading module: calculation
+2024-07-03 17:48:19,466 [INFO] plugin_manager: Loading module: calculations
+2024-07-03 17:48:19,466 [INFO] plugin_manager: Loading module: multiply
+2024-07-03 17:48:19,466 [INFO] plugin_manager: Plugin loaded: multiply
+2024-07-03 17:48:19,467 [INFO] plugin_manager: Loading module: add
+2024-07-03 17:48:19,467 [INFO] plugin_manager: Plugin loaded: add
+2024-07-03 17:48:19,467 [INFO] plugin_manager: Loading module: history
+2024-07-03 17:48:19,467 [INFO] plugin_manager: Loading module: exponent
+2024-07-03 17:48:19,468 [INFO] plugin_manager: Plugin loaded: exponent
+2024-07-03 17:48:19,468 [INFO] plugin_manager: Loading module: divide
+2024-07-03 17:48:19,468 [INFO] plugin_manager: Plugin loaded: divide
+2024-07-03 17:48:19,469 [INFO] plugin_manager: Loading module: operations
+2024-07-03 17:48:19,469 [INFO] plugin_manager: Loading module: subtract
+2024-07-03 17:48:19,469 [INFO] plugin_manager: Plugin loaded: subtract
+2024-07-03 17:48:19,469 [INFO] plugin_manager: Loading module: operation_functions
+2024-07-03 17:48:19,469 [INFO] plugin_manager: Loading module: goodbye
+2024-07-03 17:48:19,470 [INFO] plugin_manager: Plugin loaded: goodbye
+2024-07-03 17:48:19,470 [INFO] plugin_manager: Loading module: menu
+2024-07-03 17:48:19,470 [INFO] plugin_manager: Plugin loaded: menu
+2024-07-03 17:48:19,470 [INFO] plugin_manager: Loading module: delete_history
+2024-07-03 17:48:19,470 [INFO] plugin_manager: Plugin loaded: delete_history
+2024-07-03 17:48:19,470 [INFO] plugin_manager: Loading module: greet
+2024-07-03 17:48:19,470 [INFO] plugin_manager: Plugin loaded: greet
+2024-07-03 17:48:19,470 [INFO] plugin_manager: Loading module: save_history
+2024-07-03 17:48:19,470 [INFO] plugin_manager: Plugin loaded: save_history
+2024-07-03 17:48:19,470 [INFO] plugin_manager: Loading module: view_history
+2024-07-03 17:48:19,470 [INFO] plugin_manager: Plugin loaded: view_history
+2024-07-03 17:48:19,471 [INFO] plugin_manager: Loading module: help
+2024-07-03 17:48:19,471 [INFO] plugin_manager: Plugin loaded: help
+2024-07-03 17:48:19,471 [INFO] plugin_manager: Loading module: exit
+2024-07-03 17:48:19,471 [INFO] plugin_manager: Plugin loaded: exit
+2024-07-03 17:48:19,471 [INFO] plugin_manager: Loading module: delete_history_entry
+2024-07-03 17:48:19,471 [INFO] plugin_manager: Plugin loaded: delete_history_entry
+2024-07-03 17:48:19,471 [INFO] plugin_manager: Loading module: load_history
+2024-07-03 17:48:19,471 [INFO] plugin_manager: Plugin loaded: load_history
+2024-07-03 17:48:19,471 [INFO] plugin_manager: Loading module: clear_history
+2024-07-03 17:48:19,471 [INFO] plugin_manager: Plugin loaded: clear_history
+2024-07-03 17:48:19,472 [INFO] plugin_manager: Loading module: plugin_interface
+2024-07-03 17:48:19,472 [INFO] plugin_manager: Loading module: calculation
+2024-07-03 17:48:19,472 [INFO] plugin_manager: Loading module: calculations
+2024-07-03 17:48:19,472 [INFO] plugin_manager: Loading module: multiply
+2024-07-03 17:48:19,472 [INFO] plugin_manager: Plugin loaded: multiply
+2024-07-03 17:48:19,472 [INFO] plugin_manager: Loading module: add
+2024-07-03 17:48:19,472 [INFO] plugin_manager: Plugin loaded: add
+2024-07-03 17:48:19,472 [INFO] plugin_manager: Loading module: history
+2024-07-03 17:48:19,472 [INFO] plugin_manager: Loading module: exponent
+2024-07-03 17:48:19,473 [INFO] plugin_manager: Plugin loaded: exponent
+2024-07-03 17:48:19,473 [INFO] plugin_manager: Loading module: divide
+2024-07-03 17:48:19,473 [INFO] plugin_manager: Plugin loaded: divide
+2024-07-03 17:48:19,473 [INFO] plugin_manager: Loading module: operations
+2024-07-03 17:48:19,473 [INFO] plugin_manager: Loading module: subtract
+2024-07-03 17:48:19,473 [INFO] plugin_manager: Plugin loaded: subtract
+2024-07-03 17:48:19,473 [INFO] plugin_manager: Loading module: operation_functions
+2024-07-03 17:48:19,473 [WARNING] main: Unknown operation: unknown
+2024-07-03 17:48:19,475 [INFO] main: Calculating: 1 divide 0
+2024-07-03 17:48:19,475 [INFO] plugin_manager: Loading module: goodbye
+2024-07-03 17:48:19,475 [INFO] plugin_manager: Plugin loaded: goodbye
+2024-07-03 17:48:19,475 [INFO] plugin_manager: Loading module: menu
+2024-07-03 17:48:19,476 [INFO] plugin_manager: Plugin loaded: menu
+2024-07-03 17:48:19,476 [INFO] plugin_manager: Loading module: delete_history
+2024-07-03 17:48:19,476 [INFO] plugin_manager: Plugin loaded: delete_history
+2024-07-03 17:48:19,476 [INFO] plugin_manager: Loading module: greet
+2024-07-03 17:48:19,476 [INFO] plugin_manager: Plugin loaded: greet
+2024-07-03 17:48:19,476 [INFO] plugin_manager: Loading module: save_history
+2024-07-03 17:48:19,476 [INFO] plugin_manager: Plugin loaded: save_history
+2024-07-03 17:48:19,476 [INFO] plugin_manager: Loading module: view_history
+2024-07-03 17:48:19,476 [INFO] plugin_manager: Plugin loaded: view_history
+2024-07-03 17:48:19,476 [INFO] plugin_manager: Loading module: help
+2024-07-03 17:48:19,476 [INFO] plugin_manager: Plugin loaded: help
+2024-07-03 17:48:19,477 [INFO] plugin_manager: Loading module: exit
+2024-07-03 17:48:19,477 [INFO] plugin_manager: Plugin loaded: exit
+2024-07-03 17:48:19,477 [INFO] plugin_manager: Loading module: delete_history_entry
+2024-07-03 17:48:19,477 [INFO] plugin_manager: Plugin loaded: delete_history_entry
+2024-07-03 17:48:19,477 [INFO] plugin_manager: Loading module: load_history
+2024-07-03 17:48:19,477 [INFO] plugin_manager: Plugin loaded: load_history
+2024-07-03 17:48:19,477 [INFO] plugin_manager: Loading module: clear_history
+2024-07-03 17:48:19,477 [INFO] plugin_manager: Plugin loaded: clear_history
+2024-07-03 17:48:19,477 [INFO] plugin_manager: Loading module: plugin_interface
+2024-07-03 17:48:19,478 [INFO] plugin_manager: Loading module: calculation
+2024-07-03 17:48:19,478 [INFO] plugin_manager: Loading module: calculations
+2024-07-03 17:48:19,478 [INFO] plugin_manager: Loading module: multiply
+2024-07-03 17:48:19,478 [INFO] plugin_manager: Plugin loaded: multiply
+2024-07-03 17:48:19,478 [INFO] plugin_manager: Loading module: add
+2024-07-03 17:48:19,478 [INFO] plugin_manager: Plugin loaded: add
+2024-07-03 17:48:19,478 [INFO] plugin_manager: Loading module: history
+2024-07-03 17:48:19,478 [INFO] plugin_manager: Loading module: exponent
+2024-07-03 17:48:19,478 [INFO] plugin_manager: Plugin loaded: exponent
+2024-07-03 17:48:19,479 [INFO] plugin_manager: Loading module: divide
+2024-07-03 17:48:19,479 [INFO] plugin_manager: Plugin loaded: divide
+2024-07-03 17:48:19,479 [INFO] plugin_manager: Loading module: operations
+2024-07-03 17:48:19,479 [INFO] plugin_manager: Loading module: subtract
+2024-07-03 17:48:19,479 [INFO] plugin_manager: Plugin loaded: subtract
+2024-07-03 17:48:19,479 [INFO] plugin_manager: Loading module: operation_functions
+2024-07-03 17:48:19,479 [INFO] plugin_manager: Loading module: goodbye
+2024-07-03 17:48:19,479 [INFO] plugin_manager: Plugin loaded: goodbye
+2024-07-03 17:48:19,479 [INFO] plugin_manager: Loading module: menu
+2024-07-03 17:48:19,479 [INFO] plugin_manager: Plugin loaded: menu
+2024-07-03 17:48:19,480 [INFO] plugin_manager: Loading module: delete_history
+2024-07-03 17:48:19,480 [INFO] plugin_manager: Plugin loaded: delete_history
+2024-07-03 17:48:19,480 [INFO] plugin_manager: Loading module: greet
+2024-07-03 17:48:19,480 [INFO] plugin_manager: Plugin loaded: greet
+2024-07-03 17:48:19,480 [INFO] plugin_manager: Loading module: save_history
+2024-07-03 17:48:19,480 [INFO] plugin_manager: Plugin loaded: save_history
+2024-07-03 17:48:19,480 [INFO] plugin_manager: Loading module: view_history
+2024-07-03 17:48:19,480 [INFO] plugin_manager: Plugin loaded: view_history
+2024-07-03 17:48:19,480 [INFO] plugin_manager: Loading module: help
+2024-07-03 17:48:19,481 [INFO] plugin_manager: Plugin loaded: help
+2024-07-03 17:48:19,481 [INFO] plugin_manager: Loading module: exit
+2024-07-03 17:48:19,481 [INFO] plugin_manager: Plugin loaded: exit
+2024-07-03 17:48:19,482 [INFO] plugin_manager: Loading module: delete_history_entry
+2024-07-03 17:48:19,482 [INFO] plugin_manager: Plugin loaded: delete_history_entry
+2024-07-03 17:48:19,482 [INFO] plugin_manager: Loading module: load_history
+2024-07-03 17:48:19,482 [INFO] plugin_manager: Plugin loaded: load_history
+2024-07-03 17:48:19,482 [INFO] plugin_manager: Loading module: clear_history
+2024-07-03 17:48:19,482 [INFO] plugin_manager: Plugin loaded: clear_history
+2024-07-03 17:48:19,482 [INFO] plugin_manager: Loading module: plugin_interface
+2024-07-03 17:48:19,482 [INFO] plugin_manager: Loading module: calculation
+2024-07-03 17:48:19,483 [INFO] plugin_manager: Loading module: calculations
+2024-07-03 17:48:19,483 [INFO] plugin_manager: Loading module: multiply
+2024-07-03 17:48:19,483 [INFO] plugin_manager: Plugin loaded: multiply
+2024-07-03 17:48:19,483 [INFO] plugin_manager: Loading module: add
+2024-07-03 17:48:19,483 [INFO] plugin_manager: Plugin loaded: add
+2024-07-03 17:48:19,483 [INFO] plugin_manager: Loading module: history
+2024-07-03 17:48:19,483 [INFO] plugin_manager: Loading module: exponent
+2024-07-03 17:48:19,483 [INFO] plugin_manager: Plugin loaded: exponent
+2024-07-03 17:48:19,483 [INFO] plugin_manager: Loading module: divide
+2024-07-03 17:48:19,484 [INFO] plugin_manager: Plugin loaded: divide
+2024-07-03 17:48:19,484 [INFO] plugin_manager: Loading module: operations
+2024-07-03 17:48:19,484 [INFO] plugin_manager: Loading module: subtract
+2024-07-03 17:48:19,485 [INFO] plugin_manager: Plugin loaded: subtract
+2024-07-03 17:48:19,485 [INFO] plugin_manager: Loading module: operation_functions
+2024-07-03 17:48:19,486 [INFO] calculator.operations: Performing operation: divide(1, 0)
+2024-07-03 17:48:19,486 [INFO] calculator.calculation: Initialized Calculation: divide with operands 1 and 0
+2024-07-03 17:48:19,486 [ERROR] calculator.operation_functions: Division by zero: 1 / 0
+2024-07-03 17:48:19,486 [ERROR] calculator.calculation: Error performing operation divide: Cannot divide by zero
+2024-07-03 17:48:19,486 [ERROR] calculator.operations: Error performing calculation: Cannot divide by zero
+2024-07-03 17:48:19,486 [INFO] main: Result: Cannot divide by zero.
+2024-07-03 17:48:19,489 [INFO] main: API Key Loaded
+2024-07-03 17:48:19,490 [INFO] main: Starting the application
+2024-07-03 17:48:19,490 [INFO] main: Exiting the application
+2024-07-03 17:48:19,493 [INFO] main: API Key Loaded
+2024-07-03 17:48:19,493 [INFO] main: Starting the application
+2024-07-03 17:48:19,494 [INFO] main: Exiting the application
+2024-07-03 17:48:19,503 [INFO] main: API Key Loaded
+2024-07-03 17:48:19,503 [INFO] main: Starting the application
+2024-07-03 17:48:19,504 [INFO] main: Executing command: greet
+2024-07-03 17:48:19,504 [INFO] main: Exiting the application
+2024-07-03 17:48:19,506 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:19,507 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:19,507 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:19,509 [INFO] calculator.operation_functions: Addition: 1 + 2 = 3
+2024-07-03 17:48:19,510 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:19,511 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:19,511 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:19,514 [INFO] calculator.operation_functions: Subtraction: 5 - 3 = 2
+2024-07-03 17:48:19,515 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:19,516 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:19,517 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:19,519 [INFO] calculator.operation_functions: Multiplication: 2 * 3 = 6
+2024-07-03 17:48:19,521 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:19,522 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:19,522 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:19,524 [INFO] calculator.operation_functions: Division: 6 / 2 = 3
+2024-07-03 17:48:19,525 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:19,526 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:19,526 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:19,528 [ERROR] calculator.operation_functions: Division by zero: 1 / 0
+2024-07-03 17:48:19,529 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:19,530 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:19,531 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:19,533 [INFO] calculator.operation_functions: Exponentiation: 2 ** 3 = 8
+2024-07-03 17:48:19,535 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:19,536 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:19,536 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:19,538 [INFO] calculator.calculation: Initialized Calculation: add with operands 10 and 5
+2024-07-03 17:48:19,538 [INFO] calculator.operations: Performing operation: add(10, 5)
+2024-07-03 17:48:19,538 [INFO] calculator.calculation: Initialized Calculation: add with operands 10 and 5
+2024-07-03 17:48:19,539 [INFO] calculator.operation_functions: Addition: 10 + 5 = 15
+2024-07-03 17:48:19,539 [INFO] calculator.calculation: Performed operation: add(10, 5) = 15
+2024-07-03 17:48:19,539 [INFO] calculator.operation_functions: Addition: 10 + 5 = 15
+2024-07-03 17:48:19,539 [INFO] calculator.calculation: Performed operation: add(10, 5) = 15
+2024-07-03 17:48:19,541 [INFO] calculator.operations: Operation result: 15
+2024-07-03 17:48:19,541 [INFO] calculator.calculation: Performed operation: add(10, 5) = 15
+2024-07-03 17:48:19,542 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:19,543 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:19,543 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:19,545 [INFO] calculator.calculation: Initialized Calculation: subtract with operands 10 and 5
+2024-07-03 17:48:19,545 [INFO] calculator.operations: Performing operation: subtract(10, 5)
+2024-07-03 17:48:19,546 [INFO] calculator.calculation: Initialized Calculation: subtract with operands 10 and 5
+2024-07-03 17:48:19,546 [INFO] calculator.operation_functions: Subtraction: 10 - 5 = 5
+2024-07-03 17:48:19,546 [INFO] calculator.calculation: Performed operation: subtract(10, 5) = 5
+2024-07-03 17:48:19,546 [INFO] calculator.operation_functions: Subtraction: 10 - 5 = 5
+2024-07-03 17:48:19,546 [INFO] calculator.calculation: Performed operation: subtract(10, 5) = 5
+2024-07-03 17:48:19,549 [INFO] calculator.operations: Operation result: 5
+2024-07-03 17:48:19,549 [INFO] calculator.calculation: Performed operation: subtract(10, 5) = 5
+2024-07-03 17:48:19,551 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:19,552 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:19,553 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:19,556 [INFO] calculator.calculation: Initialized Calculation: multiply with operands 10 and 5
+2024-07-03 17:48:19,556 [INFO] calculator.operations: Performing operation: multiply(10, 5)
+2024-07-03 17:48:19,556 [INFO] calculator.calculation: Initialized Calculation: multiply with operands 10 and 5
+2024-07-03 17:48:19,556 [INFO] calculator.operation_functions: Multiplication: 10 * 5 = 50
+2024-07-03 17:48:19,556 [INFO] calculator.calculation: Performed operation: multiply(10, 5) = 50
+2024-07-03 17:48:19,556 [INFO] calculator.operation_functions: Multiplication: 10 * 5 = 50
+2024-07-03 17:48:19,556 [INFO] calculator.calculation: Performed operation: multiply(10, 5) = 50
+2024-07-03 17:48:19,559 [INFO] calculator.operations: Operation result: 50
+2024-07-03 17:48:19,559 [INFO] calculator.calculation: Performed operation: multiply(10, 5) = 50
+2024-07-03 17:48:19,561 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:19,561 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:19,562 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:19,564 [INFO] calculator.calculation: Initialized Calculation: divide with operands 10 and 5
+2024-07-03 17:48:19,564 [INFO] calculator.operations: Performing operation: divide(10, 5)
+2024-07-03 17:48:19,564 [INFO] calculator.calculation: Initialized Calculation: divide with operands 10 and 5
+2024-07-03 17:48:19,565 [INFO] calculator.operation_functions: Division: 10 / 5 = 2
+2024-07-03 17:48:19,565 [INFO] calculator.calculation: Performed operation: divide(10, 5) = 2
+2024-07-03 17:48:19,565 [INFO] calculator.operation_functions: Division: 10 / 5 = 2
+2024-07-03 17:48:19,565 [INFO] calculator.calculation: Performed operation: divide(10, 5) = 2
+2024-07-03 17:48:19,569 [INFO] calculator.operations: Operation result: 2
+2024-07-03 17:48:19,569 [INFO] calculator.calculation: Performed operation: divide(10, 5) = 2
+2024-07-03 17:48:19,571 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:19,572 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:19,572 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:19,574 [INFO] calculator.calculation: Initialized Calculation: divide with operands 10 and 0
+2024-07-03 17:48:19,574 [INFO] calculator.operations: Performing operation: divide(10, 0)
+2024-07-03 17:48:19,574 [INFO] calculator.calculation: Initialized Calculation: divide with operands 10 and 0
+2024-07-03 17:48:19,575 [ERROR] calculator.operation_functions: Division by zero: 10 / 0
+2024-07-03 17:48:19,575 [ERROR] calculator.calculation: Error performing operation divide: Cannot divide by zero
+2024-07-03 17:48:19,575 [ERROR] calculator.operations: Error performing calculation: Cannot divide by zero
+2024-07-03 17:48:19,575 [ERROR] calculator.calculation: Error performing operation divide: Cannot divide by zero
+2024-07-03 17:48:19,576 [INFO] calculator.calculations: Clearing history.
+2024-07-03 17:48:19,577 [INFO] calculator.calculations: Saving history to data/calculation_history.csv
+2024-07-03 17:48:19,577 [INFO] calculator.calculations: Saved history to data/calculation_history.csv:
+Empty DataFrame
+Columns: [Operation, Operand_A, Operand_B, Result]
+Index: []
+2024-07-03 17:48:19,580 [INFO] calculator.calculation: Initialized Calculation: exponent with operands 2 and 3
+2024-07-03 17:48:19,580 [INFO] calculator.operations: Performing operation: exponent(2, 3)
+2024-07-03 17:48:19,580 [INFO] calculator.calculation: Initialized Calculation: exponent with operands 2 and 3
+2024-07-03 17:48:19,580 [INFO] calculator.operation_functions: Exponentiation: 2 ** 3 = 8
+2024-07-03 17:48:19,580 [INFO] calculator.calculation: Performed operation: exponent(2, 3) = 8
+2024-07-03 17:48:19,580 [INFO] calculator.operation_functions: Exponentiation: 2 ** 3 = 8
+2024-07-03 17:48:19,580 [INFO] calculator.calculation: Performed operation: exponent(2, 3) = 8
+2024-07-03 17:48:19,583 [INFO] calculator.operations: Operation result: 8
+2024-07-03 17:48:19,584 [INFO] calculator.calculation: Performed operation: exponent(2, 3) = 8
+2024-07-03 17:48:19,587 [INFO] plugin_manager: Loading module: goodbye
+2024-07-03 17:48:19,587 [INFO] plugin_manager: Plugin loaded: goodbye
+2024-07-03 17:48:19,588 [INFO] plugin_manager: Loading module: menu
+2024-07-03 17:48:19,588 [INFO] plugin_manager: Plugin loaded: menu
+2024-07-03 17:48:19,588 [INFO] plugin_manager: Loading module: delete_history
+2024-07-03 17:48:19,588 [INFO] plugin_manager: Plugin loaded: delete_history
+2024-07-03 17:48:19,588 [INFO] plugin_manager: Loading module: greet
+2024-07-03 17:48:19,588 [INFO] plugin_manager: Plugin loaded: greet
+2024-07-03 17:48:19,588 [INFO] plugin_manager: Loading module: save_history
+2024-07-03 17:48:19,588 [INFO] plugin_manager: Plugin loaded: save_history
+2024-07-03 17:48:19,589 [INFO] plugin_manager: Loading module: view_history
+2024-07-03 17:48:19,589 [INFO] plugin_manager: Plugin loaded: view_history
+2024-07-03 17:48:19,589 [INFO] plugin_manager: Loading module: help
+2024-07-03 17:48:19,589 [INFO] plugin_manager: Plugin loaded: help
+2024-07-03 17:48:19,589 [INFO] plugin_manager: Loading module: exit
+2024-07-03 17:48:19,589 [INFO] plugin_manager: Plugin loaded: exit
+2024-07-03 17:48:19,589 [INFO] plugin_manager: Loading module: delete_history_entry
+2024-07-03 17:48:19,589 [INFO] plugin_manager: Plugin loaded: delete_history_entry
+2024-07-03 17:48:19,589 [INFO] plugin_manager: Loading module: load_history
+2024-07-03 17:48:19,589 [INFO] plugin_manager: Plugin loaded: load_history
+2024-07-03 17:48:19,589 [INFO] plugin_manager: Loading module: clear_history
+2024-07-03 17:48:19,590 [INFO] plugin_manager: Plugin loaded: clear_history
+2024-07-03 17:48:19,590 [INFO] plugin_manager: Loading module: plugin_interface
+2024-07-03 17:48:19,590 [INFO] plugin_manager: Loading module: calculation
+2024-07-03 17:48:19,590 [INFO] plugin_manager: Loading module: calculations
+2024-07-03 17:48:19,590 [INFO] plugin_manager: Loading module: multiply
+2024-07-03 17:48:19,590 [INFO] plugin_manager: Plugin loaded: multiply
+2024-07-03 17:48:19,590 [INFO] plugin_manager: Loading module: add
+2024-07-03 17:48:19,590 [INFO] plugin_manager: Plugin loaded: add
+2024-07-03 17:48:19,590 [INFO] plugin_manager: Loading module: history
+2024-07-03 17:48:19,591 [INFO] plugin_manager: Loading module: exponent
+2024-07-03 17:48:19,591 [INFO] plugin_manager: Plugin loaded: exponent
+2024-07-03 17:48:19,591 [INFO] plugin_manager: Loading module: divide
+2024-07-03 17:48:19,591 [INFO] plugin_manager: Plugin loaded: divide
+2024-07-03 17:48:19,591 [INFO] plugin_manager: Loading module: operations
+2024-07-03 17:48:19,591 [INFO] plugin_manager: Loading module: subtract
+2024-07-03 17:48:19,591 [INFO] plugin_manager: Plugin loaded: subtract
+2024-07-03 17:48:19,591 [INFO] plugin_manager: Loading module: operation_functions
+2024-07-03 17:48:19,592 [INFO] plugin_manager: Loading module: goodbye
+2024-07-03 17:48:19,592 [INFO] plugin_manager: Plugin loaded: goodbye
+2024-07-03 17:48:19,592 [INFO] plugin_manager: Loading module: menu
+2024-07-03 17:48:19,592 [INFO] plugin_manager: Plugin loaded: menu
+2024-07-03 17:48:19,592 [INFO] plugin_manager: Loading module: delete_history
+2024-07-03 17:48:19,592 [INFO] plugin_manager: Plugin loaded: delete_history
+2024-07-03 17:48:19,592 [INFO] plugin_manager: Loading module: greet
+2024-07-03 17:48:19,592 [INFO] plugin_manager: Plugin loaded: greet
+2024-07-03 17:48:19,592 [INFO] plugin_manager: Loading module: save_history
+2024-07-03 17:48:19,592 [INFO] plugin_manager: Plugin loaded: save_history
+2024-07-03 17:48:19,593 [INFO] plugin_manager: Loading module: view_history
+2024-07-03 17:48:19,593 [INFO] plugin_manager: Plugin loaded: view_history
+2024-07-03 17:48:19,593 [INFO] plugin_manager: Loading module: help
+2024-07-03 17:48:19,593 [INFO] plugin_manager: Plugin loaded: help
+2024-07-03 17:48:19,593 [INFO] plugin_manager: Loading module: exit
+2024-07-03 17:48:19,593 [INFO] plugin_manager: Plugin loaded: exit
+2024-07-03 17:48:19,593 [INFO] plugin_manager: Loading module: delete_history_entry
+2024-07-03 17:48:19,593 [INFO] plugin_manager: Plugin loaded: delete_history_entry
+2024-07-03 17:48:19,593 [INFO] plugin_manager: Loading module: load_history
+2024-07-03 17:48:19,594 [INFO] plugin_manager: Plugin loaded: load_history
+2024-07-03 17:48:19,594 [INFO] plugin_manager: Loading module: clear_history
+2024-07-03 17:48:19,594 [INFO] plugin_manager: Plugin loaded: clear_history
+2024-07-03 17:48:19,594 [INFO] plugin_manager: Loading module: plugin_interface
+2024-07-03 17:48:19,594 [INFO] plugin_manager: Loading module: calculation
+2024-07-03 17:48:19,594 [INFO] plugin_manager: Loading module: calculations
+2024-07-03 17:48:19,594 [INFO] plugin_manager: Loading module: multiply
+2024-07-03 17:48:19,594 [INFO] plugin_manager: Plugin loaded: multiply
+2024-07-03 17:48:19,594 [INFO] plugin_manager: Loading module: add
+2024-07-03 17:48:19,594 [INFO] plugin_manager: Plugin loaded: add
+2024-07-03 17:48:19,595 [INFO] plugin_manager: Loading module: history
+2024-07-03 17:48:19,595 [INFO] plugin_manager: Loading module: exponent
+2024-07-03 17:48:19,595 [INFO] plugin_manager: Plugin loaded: exponent
+2024-07-03 17:48:19,595 [INFO] plugin_manager: Loading module: divide
+2024-07-03 17:48:19,595 [INFO] plugin_manager: Plugin loaded: divide
+2024-07-03 17:48:19,595 [INFO] plugin_manager: Loading module: operations
+2024-07-03 17:48:19,595 [INFO] plugin_manager: Loading module: subtract
+2024-07-03 17:48:19,595 [INFO] plugin_manager: Plugin loaded: subtract
+2024-07-03 17:48:19,595 [INFO] plugin_manager: Loading module: operation_functions
+2024-07-03 17:48:19,597 [INFO] plugin_manager: Loading module: goodbye
+2024-07-03 17:48:19,597 [INFO] plugin_manager: Plugin loaded: goodbye
+2024-07-03 17:48:19,598 [INFO] plugin_manager: Loading module: menu
+2024-07-03 17:48:19,598 [INFO] plugin_manager: Plugin loaded: menu
+2024-07-03 17:48:19,598 [INFO] plugin_manager: Loading module: delete_history
+2024-07-03 17:48:19,598 [INFO] plugin_manager: Plugin loaded: delete_history
+2024-07-03 17:48:19,598 [INFO] plugin_manager: Loading module: greet
+2024-07-03 17:48:19,598 [INFO] plugin_manager: Plugin loaded: greet
+2024-07-03 17:48:19,599 [INFO] plugin_manager: Loading module: save_history
+2024-07-03 17:48:19,599 [INFO] plugin_manager: Plugin loaded: save_history
+2024-07-03 17:48:19,599 [INFO] plugin_manager: Loading module: view_history
+2024-07-03 17:48:19,599 [INFO] plugin_manager: Plugin loaded: view_history
+2024-07-03 17:48:19,599 [INFO] plugin_manager: Loading module: help
+2024-07-03 17:48:19,599 [INFO] plugin_manager: Plugin loaded: help
+2024-07-03 17:48:19,599 [INFO] plugin_manager: Loading module: exit
+2024-07-03 17:48:19,599 [INFO] plugin_manager: Plugin loaded: exit
+2024-07-03 17:48:19,599 [INFO] plugin_manager: Loading module: delete_history_entry
+2024-07-03 17:48:19,600 [INFO] plugin_manager: Plugin loaded: delete_history_entry
+2024-07-03 17:48:19,600 [INFO] plugin_manager: Loading module: load_history
+2024-07-03 17:48:19,600 [INFO] plugin_manager: Plugin loaded: load_history
+2024-07-03 17:48:19,600 [INFO] plugin_manager: Loading module: clear_history
+2024-07-03 17:48:19,600 [INFO] plugin_manager: Plugin loaded: clear_history
+2024-07-03 17:48:19,600 [INFO] plugin_manager: Loading module: plugin_interface
+2024-07-03 17:48:19,600 [INFO] plugin_manager: Loading module: calculation
+2024-07-03 17:48:19,600 [INFO] plugin_manager: Loading module: calculations
+2024-07-03 17:48:19,600 [INFO] plugin_manager: Loading module: multiply
+2024-07-03 17:48:19,600 [INFO] plugin_manager: Plugin loaded: multiply
+2024-07-03 17:48:19,601 [INFO] plugin_manager: Loading module: add
+2024-07-03 17:48:19,601 [INFO] plugin_manager: Plugin loaded: add
+2024-07-03 17:48:19,601 [INFO] plugin_manager: Loading module: history
+2024-07-03 17:48:19,602 [INFO] plugin_manager: Loading module: exponent
+2024-07-03 17:48:19,602 [INFO] plugin_manager: Plugin loaded: exponent
+2024-07-03 17:48:19,602 [INFO] plugin_manager: Loading module: divide
+2024-07-03 17:48:19,603 [INFO] plugin_manager: Plugin loaded: divide
+2024-07-03 17:48:19,603 [INFO] plugin_manager: Loading module: operations
+2024-07-03 17:48:19,603 [INFO] plugin_manager: Loading module: subtract
+2024-07-03 17:48:19,603 [INFO] plugin_manager: Plugin loaded: subtract
+2024-07-03 17:48:19,603 [INFO] plugin_manager: Loading module: operation_functions
+2024-07-03 17:48:19,604 [INFO] plugin_manager: Loading module: goodbye
+2024-07-03 17:48:19,604 [INFO] plugin_manager: Plugin loaded: goodbye
+2024-07-03 17:48:19,604 [INFO] plugin_manager: Loading module: menu
+2024-07-03 17:48:19,604 [INFO] plugin_manager: Plugin loaded: menu
+2024-07-03 17:48:19,604 [INFO] plugin_manager: Loading module: delete_history
+2024-07-03 17:48:19,604 [INFO] plugin_manager: Plugin loaded: delete_history
+2024-07-03 17:48:19,604 [INFO] plugin_manager: Loading module: greet
+2024-07-03 17:48:19,604 [INFO] plugin_manager: Plugin loaded: greet
+2024-07-03 17:48:19,605 [INFO] plugin_manager: Loading module: save_history
+2024-07-03 17:48:19,605 [INFO] plugin_manager: Plugin loaded: save_history
+2024-07-03 17:48:19,605 [INFO] plugin_manager: Loading module: view_history
+2024-07-03 17:48:19,605 [INFO] plugin_manager: Plugin loaded: view_history
+2024-07-03 17:48:19,605 [INFO] plugin_manager: Loading module: help
+2024-07-03 17:48:19,605 [INFO] plugin_manager: Plugin loaded: help
+2024-07-03 17:48:19,605 [INFO] plugin_manager: Loading module: exit
+2024-07-03 17:48:19,605 [INFO] plugin_manager: Plugin loaded: exit
+2024-07-03 17:48:19,605 [INFO] plugin_manager: Loading module: delete_history_entry
+2024-07-03 17:48:19,605 [INFO] plugin_manager: Plugin loaded: delete_history_entry
+2024-07-03 17:48:19,606 [INFO] plugin_manager: Loading module: load_history
+2024-07-03 17:48:19,606 [INFO] plugin_manager: Plugin loaded: load_history
+2024-07-03 17:48:19,606 [INFO] plugin_manager: Loading module: clear_history
+2024-07-03 17:48:19,606 [INFO] plugin_manager: Plugin loaded: clear_history
+2024-07-03 17:48:19,606 [INFO] plugin_manager: Loading module: plugin_interface
+2024-07-03 17:48:19,606 [INFO] plugin_manager: Loading module: calculation
+2024-07-03 17:48:19,606 [INFO] plugin_manager: Loading module: calculations
+2024-07-03 17:48:19,606 [INFO] plugin_manager: Loading module: multiply
+2024-07-03 17:48:19,606 [INFO] plugin_manager: Plugin loaded: multiply
+2024-07-03 17:48:19,607 [INFO] plugin_manager: Loading module: add
+2024-07-03 17:48:19,607 [INFO] plugin_manager: Plugin loaded: add
+2024-07-03 17:48:19,607 [INFO] plugin_manager: Loading module: history
+2024-07-03 17:48:19,607 [INFO] plugin_manager: Loading module: exponent
+2024-07-03 17:48:19,607 [INFO] plugin_manager: Plugin loaded: exponent
+2024-07-03 17:48:19,607 [INFO] plugin_manager: Loading module: divide
+2024-07-03 17:48:19,607 [INFO] plugin_manager: Plugin loaded: divide
+2024-07-03 17:48:19,607 [INFO] plugin_manager: Loading module: operations
+2024-07-03 17:48:19,607 [INFO] plugin_manager: Loading module: subtract
+2024-07-03 17:48:19,608 [INFO] plugin_manager: Plugin loaded: subtract
+2024-07-03 17:48:19,608 [INFO] plugin_manager: Loading module: operation_functions
