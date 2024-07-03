@@ -5,4 +5,5 @@
 venv/
 .env
 O
-test_history.csv
+test_history.csv__pycache__/
+__pycache__/
