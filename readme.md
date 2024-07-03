@@ -27,7 +27,7 @@ This calculator application is designed to perform basic arithmetic operations, 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/calculator-app.git
+   git clone https://github.com/dwc9njit/dwc9_Midterm.git
    cd calculator-app
    ```
 
