@@ -29,6 +29,10 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y libdbus-1-dev libgirepository1.0-dev build-essential
 
+    - name: Remove old virtual environment if exists
+      run: |
+        if [ -d "venv" ]; then rm -rf venv; fi
+
     - name: Install Python dependencies
       run: |
         python -m venv venv
