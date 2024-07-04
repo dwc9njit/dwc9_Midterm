@@ -75,3 +75,5 @@ MANIFEST
 .ipynb_checkpoints/
 
 venv/
+# Documentation files
+oopconcepts.md
